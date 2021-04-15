@@ -1,7 +1,7 @@
 from django.db import models
 
 class Article(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=300)
     image = models.CharField(max_length=300)
     text = models.TextField(max_length=1000)
     author = models.CharField(max_length=50)

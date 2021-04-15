@@ -1,5 +1,5 @@
 from rest_framework import serializers 
-from ..models import Meal 
+from ..models import Article 
 
 class ArticleSerializer(serializers.ModelSerializer):
 
