@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'jwt_auth',
     'articles',
     'videos',
-    'recipes'
+    'recipes',
+    'comments'
 ]
 
 MIDDLEWARE = [

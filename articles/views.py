@@ -5,16 +5,17 @@ from rest_framework.exceptions import NotFound
 
 from .models import Article
 from .serializers.common import ArticleSerializer
+from .serializers.populated import PopulatedArticleSerializer
 
 class ArticleListView(APIView):
 
     def get(self, _request):
         articles = Article.objects.all()
-        serialized_articles = ArticleSerializer(articles, many=True)
+        serialized_articles = PopulatedArticleSerializer(articles, many=True)
         return Response(serialized_articles.data, status=status.HTTP_200_OK)
 
     def post(self, request):
-        #request.data["owner"] = request.user.id 
+        request.data["owner"] = request.user.id 
         article_to_add = ArticleSerializer(data=request.data)
         if article_to_add.is_valid():
             article_to_add.save()
@@ -32,7 +33,7 @@ class ArticleDetailView(APIView):
 
     def get(self, _request, pk):
         article = self.get_article(pk=pk)
-        serialized_article = ArticleSerializer(article)
+        serialized_article = PopulatedArticleSerializer(article)
         return Response(serialized_article.data, status=status.HTTP_200_OK)
 
     def delete(self, _request, pk):

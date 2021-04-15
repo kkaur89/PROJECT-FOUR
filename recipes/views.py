@@ -5,14 +5,24 @@ from rest_framework.exceptions import NotFound
 
 from .models import Recipe
 from .serializers.common import RecipeSerializer
+from .serializers.populated import PopulatedRecipeSerializer
+
 # Create your views here.
 
 class RecipeListView(APIView):
     
     def get(self, _request):
         recipes = Recipe.objects.all()
-        serialized_recipes = RecipeSerializer(recipes, many=True)
+        serialized_recipes = PopulatedRecipeSerializer(recipes, many=True)
         return Response(serialized_recipes.data, status=status.HTTP_200_OK)
+    
+    def post(self, request):
+        request.data["owner"] = request.user.id 
+        recipe_to_add = RecipeSerializer(data=request.data)
+        if recipe_to_add.is_valid():
+            recipe_to_add.save()
+            return Response(recipe_to_add.data, status=status.HTTP_201_CREATED)
+        return Response(recipe_to_add.errors, status=status.UNPROCESSABLE_ENTITY)
 
 
 class RecipeDetailView(APIView):
@@ -25,7 +35,7 @@ class RecipeDetailView(APIView):
 
     def get(self, _request, pk):
         recipe = self.get_recipe(pk=pk)
-        serialized_recipe = RecipeSerializer(recipe)
+        serialized_recipe = PopulatedRecipeSerializer(recipe)
         return Response(serialized_recipe.data, status=status.HTTP_200_OK)
 
     def delete(self, _request, pk):

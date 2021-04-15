@@ -5,16 +5,17 @@ from rest_framework.exceptions import NotFound
 
 from .models import Video
 from .serializers.common import VideoSerializer
+from .serializers.populated import PopulatedVideoSerializer
 
 class VideoListView(APIView):
 
     def get(self, _request):
         videos = Video.objects.all()
-        serialized_video = VideoSerializer(Video, many=True)
+        serialized_video = PopulatedVideoSerializer(Video, many=True)
         return Response(serialized_video.data, status=status.HTTP_200_OK)
 
     def post(self, request):
-        #request.data["owner"] = request.user.id 
+        request.data["owner"] = request.user.id 
         video_to_add = VideoSerializer(data=request.data) 
         if video_to_add.is_valid():
             video_to_add.save()
@@ -31,7 +32,7 @@ class VideoDetailView(APIView):
 
     def get(self, _request, pk):
         video = self.get_video(pk=pk)
-        serialized_video = VideoSerializer(video)
+        serialized_video = PopulatedVideoSerializer(video)
         return Response(serialized_video.data, status=status.HTTP_200_OK)
 
     def delete(self, _request, pk):

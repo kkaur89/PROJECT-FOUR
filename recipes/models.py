@@ -39,6 +39,11 @@ class Recipe(models.Model):
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default=VEGAN)
     time = models.CharField(max_length=50, choices=TIME_CHOICES, default=LESS_THAN_20_MINS)
     created_at = models.DateTimeField(auto_now_add=True)
+    owner = models.ForeignKey(
+      "jwt_auth.User",
+      related_name ='recipe',
+      on_delete= models.CASCADE
+    )
 
     def __str__(self):
         return f"{self.name}, {self.category}, {self.time}"
