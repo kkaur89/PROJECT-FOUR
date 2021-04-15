@@ -42,4 +42,4 @@ class Video(models.Model):
     )
     
     def __str__(self):
-        return f"{self.name}, {self.author}, {self.category} {self.difficulty}"
+        return f"{self.video_name}, {self.author}, {self.category} {self.difficulty}"

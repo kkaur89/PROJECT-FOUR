@@ -11,7 +11,7 @@ class VideoListView(APIView):
 
     def get(self, _request):
         videos = Video.objects.all()
-        serialized_video = PopulatedVideoSerializer(Video, many=True)
+        serialized_video = PopulatedVideoSerializer(videos, many=True)
         return Response(serialized_video.data, status=status.HTTP_200_OK)
 
     def post(self, request):

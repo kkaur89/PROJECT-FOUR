@@ -1,0 +1,68 @@
+[
+{
+  "model": "jwt_auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$JhlZJG2BCmDv7BFGFtgWrb$rSefPkFCwF1oZrcxgbNCVjUApSAyXr2jWTMK4OafLJg=",
+    "last_login": "2021-04-15T15:56:24.540Z",
+    "is_superuser": true,
+    "username": "admin",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-04-15T15:55:54.038Z",
+    "email": "admin@email.com",
+    "first_name": "",
+    "last_name": "",
+    "profile_image": "",
+    "slug": "admin",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "password",
+    "last_login": "2021-04-15T15:56:54Z",
+    "is_superuser": false,
+    "username": "Harry",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-15T15:56:35Z",
+    "email": "harryfrwarwick@gmail.com",
+    "first_name": "Harry",
+    "last_name": "Warwick",
+    "profile_image": "harry.jpg",
+    "slug": "harry",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "password",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "karen",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-15T15:57:37Z",
+    "email": "karen@email.com",
+    "first_name": "karen",
+    "last_name": "w",
+    "profile_image": "harry.jpg",
+    "slug": "karen",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": []
+  }
+}
+]
