@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'jwt_auth',
     'articles',
-    'videos'
+    'videos',
+    'recipes'
 ]
 
 MIDDLEWARE = [
