@@ -2,8 +2,8 @@ from django.db import models
 
 class Article(models.Model):
     name = models.CharField(max_length=300)
-    image = models.CharField(max_length=300)
-    text = models.TextField(max_length=1000)
+    image = models.JSONField(max_length=2500)
+    text = models.TextField(max_length=8000)
     author = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
     owner = models.ForeignKey(
