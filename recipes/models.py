@@ -34,7 +34,8 @@ class Recipe(models.Model):
 
 
     name = models.CharField(max_length=100)
-    text = models.TextField(max_length=1000)
+    text = models.TextField(max_length=10000)
+    ingredients = models.JSONField(max_length=1000)
     image = models.CharField(max_length=500)
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default=VEGAN)
     time = models.CharField(max_length=50, choices=TIME_CHOICES, default=LESS_THAN_20_MINS)
