@@ -1,0 +1,157 @@
+[
+{
+  "model": "recipes.recipe",
+  "pk": 1,
+  "fields": {
+    "name": "Broccoli Pesto & Pancetta Pasta",
+    "text": "Method:\r\n\r\nSTEP 1\r\nBring a pan of lightly salted water to the boil. Add the broccoli and boil for 5 mins. Scoop out with a slotted spoon and set aside.\r\n\r\nSTEP 2\r\nPut the pasta in the same pan and cook following pack instructions. Meanwhile, tip the broccoli into a food processor with the pine nuts, basil, garlic, parmesan and oil, and blitz until smooth. Season with black pepper and a little salt (the pancetta is very salty).\r\n\r\nSTEP 3\r\nSet a frying pan over a medium heat and cook the pancetta for 2 mins. Add the tomatoes and cook for 3 mins, or until softened. Toss the pasta with the broccoli pesto, tomatoes and pancetta, and loosen with a splash of pasta water, if needed. Spoon into bowls and serve.",
+    "ingredients": [
+      "300g head broccoli , broken into florets",
+      "300g pasta (we used orecchiette)",
+      "1 tbsp pine nuts",
+      "1 large bunch of basil",
+      "1 large garlic clove",
+      "2 tbsp parmesan , finely grated",
+      "1 tbsp olive oil",
+      "50g smoked pancetta , diced",
+      "200g cherry tomatoes , halved"
+    ],
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/broccoli-pesto-pancetta-pasta-75e3452.jpg?quality=90&webp=true&resize=440,400",
+    "category": "Low Carbs",
+    "time": "Less than 40 mins",
+    "created_at": "2021-04-15T14:02:55.158Z",
+    "owner": 2
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 2,
+  "fields": {
+    "name": "Turkey Escalopes & Giant Couscous",
+    "text": "Method:\r\n\r\nSTEP 1\r\nHeat 2 tbsp of the oil in a saucepan over a medium heat. Fry the onion and aubergine for 15-20 mins, or until softened. Add the garlic and chilli flakes and cook for 1 min more. Tip in the tomatoes and olives and cook for another 10 mins.\r\n\r\nSTEP 2\r\nMeanwhile, heat the grill high. Mix the remaining oil and the lemon zest together, then rub on both sides of the turkey escalopes. Put the escalopes on a baking sheet and grill for 5-6 mins on each side serving until cooked through.\r\n\r\nSTEP 3\r\nCook the couscous following pack instructions, then drain and stir through the tomato sauce along with the basil. Slice the escalopes and serve with the couscous, parmesan and extra basil leaves.",
+    "ingredients": [
+      "3 tbsp rapeseed oil",
+      "1 onion , finely chopped",
+      "1 aubergine , cut into 3cm cubes",
+      "2 large garlic cloves , crushed",
+      "¼ tsp chilli flakes",
+      "400g can chopped tomatoes",
+      "70g black olives , pitted and sliced",
+      "1 lemon , zested",
+      "4 turkey escalopes",
+      "250g giant couscous",
+      "½ small bunch basil , chopped, plus some extra torn leaves to serve",
+      "20g parmesan , shaved, to serve"
+    ],
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/turkey-escalopes-giant-couscous-da3c4a8.jpg?quality=90&webp=true&resize=440,400",
+    "category": "High Protein",
+    "time": "Up to an hour",
+    "created_at": "2021-04-15T14:16:32.171Z",
+    "owner": 2
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 3,
+  "fields": {
+    "name": "Tomato Penne with Avocado",
+    "text": "Method:\r\n\r\nSTEP 1\r\nCook the pasta in salted water for 10-12 mins until al dente. Meanwhile, heat the oil in a medium pan. Add the sliced onion and pepper and fry, stirring frequently for 10 mins until golden. Stir in the garlic and spices, then tip in the tomatoes, half a can of water, the corn and bouillon. Cover and simmer for 15 mins.\r\n\r\nSTEP 2\r\nMeanwhile, toss the avocado with the lime juice and zest, and the finely chopped onion.\r\n\r\nSTEP 3\r\nDrain the penne and toss into the sauce with the coriander. Spoon the pasta into bowls, top with the avocado and scatter over the coriander leaves.",
+    "ingredients": [
+      "100g wholemeal penne",
+      "1 tsp rapeseed oil",
+      "1 large onion, sliced, plus 1 tbsp finely chopped",
+      "1 orange pepper, deseeded and cut into chunks",
+      "2 garlic cloves, grated",
+      "2 tsp mild chilli powder",
+      "1 tsp ground coriander",
+      "½ tsp cumin seeds",
+      "400g can chopped tomatoes",
+      "196g can sweetcorn in water",
+      "1 tsp vegetable bouillon powder",
+      "1 avocado, stoned and chopped",
+      "1/2 lime, zest and juice",
+      "handful coriander, chopped, plus extra to serve"
+    ],
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mexican-penne-5cd4efb.jpg?quality=90&webp=true&resize=440,400",
+    "category": "Vegetarian",
+    "time": "Less than 20 mins",
+    "created_at": "2021-04-15T14:20:40.438Z",
+    "owner": 2
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 4,
+  "fields": {
+    "name": "Charred Cauliflower, Lemon & Caper Orzo",
+    "text": "Method:\r\n\r\nSTEP 1\r\nHeat the grill to high. Toss the cauliflower with half the oil and some seasoning. Tip onto a baking tray and grill for 15-20 mins until golden, charred, and tender all the way through.\r\n\r\nSTEP 2\r\nMeanwhile, cook the orzo in a pan of boiling salted water for 8 mins, or until al dente. Drain.\r\n\r\nSTEP 3\r\nHeat the remaining oil in a frying pan and sizzle the capers and garlic until golden. Stir in the orzo, cauliflower, lemon zest and juice and the stock. Bubble for 1 min, then spoon half into a bowl and top with the rocket. Leave the leftovers to cool for the lunchbox, see tip below.",
+    "ingredients": [
+      "½ cauliflower , broken into florets, stalk chopped into cubes",
+      "2 tsp olive oil",
+      "100g orzo",
+      "2 tsp capers , drained and rinsed",
+      "1 small garlic clove , sliced",
+      "½ lemon , zested and juiced",
+      "100ml low-salt vegetable stock (check it’s vegan, if required)",
+      "handful of rocket leaves , to serve"
+    ],
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/cauliflower_orzo-3912eb0.jpg?quality=90&webp=true&resize=440,400",
+    "category": "Vegan",
+    "time": "Less than 20 mins",
+    "created_at": "2021-04-15T14:24:21.554Z",
+    "owner": 2
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 5,
+  "fields": {
+    "name": "Salsa Verde Salmon with Smashed Chickpea Salad",
+    "text": "Method:\r\n\r\nSTEP 1\r\nHeat the grill to high. Whisk 1 tsp of the oil with the orange zest, a splash of the juice, lots of black pepper and a small pinch of salt. Put the salmon, skin-side down, on a non-stick baking tray and pour over the marinade. Leave to marinate at room temperature while you make the salsa.\r\n\r\nSTEP 2\r\nPut the parsley, mustard, half the shallot, the vinegar, 1 tsp oil, and the remaining orange juice in a small food processor and blitz to a thick sauce, adding a splash of water to loosen if needed.\r\n\r\nSTEP 3\r\nHeat the remaining oil in a frying pan and fry the remaining shallot for 5 mins. Stir in the chickpeas and some seasoning, turn up the heat and stir until the chickpeas are just starting to crisp. Mash roughly with a potato masher and stir in the roasted peppers and kale. Add a splash of water and cover with a lid until the kale is wilted. Keep warm over a low heat.\r\n\r\nSTEP 4\r\nGrill the salmon for 4-6 mins, or until cooked to your liking. Spoon half the chickpeas onto a plate, top with a salmon fillet (leaving the skin behind if you like), and spoon over some of the salsa verde. Leave the remaining salmon fillet to cool to use in the lunchbox, see tip below.",
+    "ingredients": [
+      "3 tsp olive oil",
+      "1 orange , zested and juiced",
+      "2 skin-on salmon fillets",
+      "Small bunch of parsley (including stalks), finely chopped",
+      "½ tbsp Dijon mustard",
+      "1 shallot or 1/2 small red onion, finely chopped",
+      "½ tbsp red wine vinegar",
+      "400g can chickpeas , drained and rinsed",
+      "2 roasted red peppers from a jar, drained and chopped",
+      "50g kale"
+    ],
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/salsa-verde-salmon-with-smashed-chickpea-salad-447f6cc.jpg?quality=90&webp=true&resize=440,400",
+    "category": "Low Carbs",
+    "time": "Less than 40 mins",
+    "created_at": "2021-04-15T14:34:09.775Z",
+    "owner": 2
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 6,
+  "fields": {
+    "name": "South American-style Quinoa with Fried Eggs",
+    "text": "Method:\r\n\r\nSTEP 1\r\nPut the quinoa in a small pan with 250ml water and bring to the boil. Reduce the heat to low, cover and gently simmer for 15-20 mins, stirring occasionally until most of the water has been absorbed and the grains have doubled in size (if there’s any water left in the pan, drain well).\r\n\r\nSTEP 2\r\nTip into a bowl and stir through the beans, spices, lime zest and juice and vinegar. Stir well, then add the tomatoes, avocado, coriander and onion, and spoon onto plates.\r\n\r\nSTEP 3\r\nHeat a drop of oil in a non-stick frying pan and fry the eggs until the whites are set with a crispy edge and the yolk is runny. Serve the quinoa topped with the eggs.:",
+    "ingredients": [
+      "75g quinoa",
+      "400g can black beans , drained",
+      "½ tsp ground cumin",
+      "½ tsp ground coriander",
+      "1 lime , zested and juiced, plus extra wedges to serve",
+      "1 tsp cider vinegar",
+      "160g cherry tomatoes , halved",
+      "1 small avocado , stoned, peeled and roughly chopped",
+      "2 tbsp finely chopped coriander",
+      "3 spring onions or ½ small red onion, finely chopped",
+      "Rapeseed oil , for frying",
+      "2 medium eggs"
+    ],
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/south-american-style-quinoa-with-fried-eggs-d59a1b7.jpg?quality=90&webp=true&resize=440,400",
+    "category": "Vegetarian",
+    "time": "Less than 20 mins",
+    "created_at": "2021-04-15T14:42:07.575Z",
+    "owner": 2
+  }
+}
+]
