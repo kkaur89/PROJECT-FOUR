@@ -3,29 +3,59 @@
 .home-container {
   max-width: 100vw;
   max-height: 80vh;
-  //background-image: url());
 }
 
-.section .article-container {
+// Main Page
+.section {
   display: flex;
-  flex-direction: row;
-  align-content: flex-end;
+  flex-direction: column;
+}
+.article {
+  display: flex;
+  flex-direction: row;  
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.video {
+  display: flex;
+  flex-direction: row;  
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.recipe {
+  display: flex;
+  flex-direction: row;  
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 .article-container {
   width: 87vw;
   height: 68vh;
   display: flex;
-  flex-direction: row;
   align-content: flex-end;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  box-shadow: 0 0 1px 0 white;
+  padding-left: 0;
+  margin-left: 6.5vw;
+  margin-bottom: 2vh;
+}
+.video-container {
+  width: 87vw;
+  height: 68vh;
+  display: flex;
+  align-content: flex-end;
+  box-shadow: 0 0 1px 0 white;
+  padding-left: 0;
+  margin-left: 6.5vw;
+  margin-bottom: 2vh;
+}
+.recipe-container {
+  width: 87vw;
+  height: 68vh;
+  display: flex;
+  align-content: flex-end;
   box-shadow: 0 0 1px 0 white;
   padding-left: 0;
   margin-left: 6.5vw;
   margin-bottom: 2vh;
 }
 
-.article-container img {
-  width: 50%;
-  height: 50%;
-}

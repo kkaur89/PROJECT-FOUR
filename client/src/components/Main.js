@@ -43,24 +43,30 @@ const Main = () => {
   return (
     <>
       <div className="section">
-        {article.map(item => (
-          <div className="article-container" key={item._id}>
-            <h4>{item.name}</h4>
-            <img src={item.image} />
-          </div>
-        ))}
-        {video.map(item => (
-          <div className="video-container" key={item._id}>
-            <h4>{item.video_name}</h4>
-            <video width="750" height="500" controls> <source src={item.video} type="video/mp4"/> </video>
-          </div>
-        ))}
-        {recipe.map(item => (
-          <div className="recipe-container" key={item._id}>
-            <h4>{item.name}</h4>
-            <img src={item.image} />
-          </div>
-        ))}
+        <div className="article">
+          {article.map(item => (
+            <div className="article-container" key={item._id}>
+              <h4>{item.name}</h4>
+              <img src={item.image} />
+            </div>
+          ))}
+        </div>
+        <div className="video">
+          {video.map(item => (
+            <div className="video-container" key={item._id}>
+              <h4>{item.video_name}</h4>
+              <iframe width='1199' height='584' src={item.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
+            </div>
+          ))}
+        </div>
+        <div className="recipe">
+          {recipe.map(item => (
+            <div className="recipe-container" key={item._id}>
+              <h4>{item.name}</h4>
+              <img src={item.image} />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   )
