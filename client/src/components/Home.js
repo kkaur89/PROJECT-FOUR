@@ -11,7 +11,7 @@ const Home = () => {
       <div className="hero-body">
       </div>
       <Jumbotron>
-        <h1>Hello, world!</h1>
+        <h1>Articles</h1>
         <p>
     This is a simple hero unit, a simple jumbotron-style component for calling
     extra attention to featured content or information.
@@ -21,7 +21,7 @@ const Home = () => {
         </p>
       </Jumbotron>
       <Jumbotron>
-        <h1>Hello, world!</h1>
+        <h1>Videos</h1>
         <p>
     This is a simple hero unit, a simple jumbotron-style component for calling
     extra attention to featured content or information.
@@ -31,7 +31,7 @@ const Home = () => {
         </p>
       </Jumbotron>
       <Jumbotron>
-        <h1>Hello, world!</h1>
+        <h1>Recipes</h1>
         <p>
     This is a simple hero unit, a simple jumbotron-style component for calling
     extra attention to featured content or information.
