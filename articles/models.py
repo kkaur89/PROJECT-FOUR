@@ -11,6 +11,7 @@ class Article(models.Model):
       related_name ='articles',
       on_delete= models.CASCADE
     )
+    like = models.ManyToManyField('jwt_auth.User', related_name="liked_article", blank=True)
     
     def __str__(self):
         return f"{self.name}, {self.author}"

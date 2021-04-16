@@ -45,6 +45,7 @@ class Recipe(models.Model):
       related_name ='recipe',
       on_delete= models.CASCADE
     )
+    like = models.ManyToManyField('jwt_auth.User', related_name="liked_recipe", blank=True)
 
     def __str__(self):
         return f"{self.name}, {self.category}, {self.time}"

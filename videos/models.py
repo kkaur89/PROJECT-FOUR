@@ -40,6 +40,7 @@ class Video(models.Model):
       related_name ="video",
       on_delete= models.CASCADE
     )
-    
+    like = models.ManyToManyField('jwt_auth.User', related_name="liked_video", blank=True)
+
     def __str__(self):
         return f"{self.video_name}, {self.author}, {self.category} {self.difficulty}"

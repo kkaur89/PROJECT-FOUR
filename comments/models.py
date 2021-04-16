@@ -32,6 +32,7 @@ class Comment(models.Model):
       on_delete= models.CASCADE
     )
     created_at = models.DateTimeField(auto_now_add=True)
+    like = models.ManyToManyField('jwt_auth.User', related_name="liked_comment", blank=True)
 
     def __str__(self):
         return f"{self.owner}, {self.text}, {self.created_at}"
