@@ -9,6 +9,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-body">
+        <img className="logo-homepage" src='/assets/logo_white_large.png' />
       </div>
       <Jumbotron>
         <h1>Hello, world!</h1>
