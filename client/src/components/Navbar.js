@@ -9,17 +9,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 const Navbar1 = () => {
   return (
     <>
-      <Navbar bg="light" expand="lg" >
-        <Navbar.Brand href="#home">
-          <img
-            alt=""
-            src="/logo.svg"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{' '}
-      FitBox
-        </Navbar.Brand>
+      <Navbar expand="lg" className="bring-to-front">
+        <Navbar.Brand href="/"><img className="logo" src='/assets/logo_small.png'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
