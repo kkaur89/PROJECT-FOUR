@@ -19,7 +19,7 @@
   "fields": {
     "video_name": "Yoga For Beginners - 40 Minute Home Yoga Workout",
     "author": "yogawithadriene",
-    "video": "https://www.youtube.com/watch?v=OQ6NfFIr2jw",
+    "video": "https://www.youtube.com/embed/OQ6NfFIr2jw",
     "category": "Yoga",
     "duraration": "40 minutes",
     "difficulty": "Beginner",
@@ -33,7 +33,7 @@
   "fields": {
     "video_name": "10 Min INTENSE LOWER ABS Workout | Total Core",
     "author": "MadFit",
-    "video": "https://www.youtube.com/watch?v=IRHcJ8W9S6Y",
+    "video": "https://www.youtube.com/embed/IRHcJ8W9S6Y",
     "category": "Abs",
     "duraration": "10 minutes",
     "difficulty": "Intermediate",
@@ -47,7 +47,7 @@
   "fields": {
     "video_name": "Guided Meditation for Positive Energy, Relaxation, Peace",
     "author": "Lavendaire",
-    "video": "https://www.youtube.com/watch?v=86m4RC_ADEY",
+    "video": "https://www.youtube.com/embed/86m4RC_ADEY?list=RDCMUC-ga3onzHSJFAGsIebtVeBg",
     "category": "Meditation",
     "duraration": "20 minutes",
     "difficulty": "Beginner",
@@ -61,7 +61,7 @@
   "fields": {
     "video_name": "15 Min. Full Body Stretch | Daily Routine for Flexibility, Mobility & Relaxation",
     "author": "Mady Morrison",
-    "video": "https://www.youtube.com/watch?v=g_tea8ZNk5A",
+    "video": "https://www.youtube.com/embed/g_tea8ZNk5A",
     "category": "Streches",
     "duraration": "15 minutes",
     "difficulty": "Beginner",

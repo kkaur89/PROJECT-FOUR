@@ -1,0 +1,27 @@
+import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+// components
+import Home from './components/Home'
+import Navbar1 from './components/Navbar'
+import Main from './components/Main'
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Navbar1 />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path='/main'>
+          <Main />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  )
+}
+
+
+
+export default App
