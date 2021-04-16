@@ -21,7 +21,7 @@ const Main = () => {
     const getData = async () => {
       const response = await axios.get('/api/videos')
       setVideo(response.data)
-      console.log('DATA>>>', response.data)
+      console.log('VIDEO>>>', response.data)
     }
     getData()
   }, [])

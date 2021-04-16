@@ -24,7 +24,7 @@ class VideoListView(APIView):
 
 class VideoDetailView(APIView):
 
-    def get_(self, pk):
+    def get_video(self, pk):
         try:
             return Video.objects.get(pk=pk)
         except Video.DoesNotExist:

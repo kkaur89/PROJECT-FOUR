@@ -24,7 +24,7 @@ class ArticleListView(APIView):
 
 class ArticleDetailView(APIView):
 
-    def get_(self, pk):
+    def get_article(self, pk):
         try:
             return Article.objects.get(pk=pk)
         except Article.DoesNotExist:
