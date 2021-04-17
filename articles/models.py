@@ -12,6 +12,11 @@ class Article(models.Model):
       on_delete= models.CASCADE
     )
     like = models.ManyToManyField('jwt_auth.User', related_name="liked_article", blank=True)
+    text_two = models.TextField(max_length=8000, null=True, blank=True)
+    text_three = models.TextField(max_length=8000, null=True, blank=True)
+    text_four = models.TextField(max_length=8000, null=True, blank=True)
+    text_five = models.TextField(max_length=8000, null=True, blank=True)
+    text_six = models.TextField(max_length=8000, null=True, blank=True)
     
     def __str__(self):
         return f"{self.name}, {self.author}"

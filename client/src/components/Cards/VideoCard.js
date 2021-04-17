@@ -3,22 +3,20 @@ import { Link } from 'react-router-dom'
 
 // Bootstrap
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
 
-const VideoCard = ({ id, video_name, video, author, duration, difficulty, like }) => {
+
+const VideoCard = ({ id, name, video }) => {
   return (
     <div className="videoShow">
-      <Link to={`/videos/${id}`}>
-        <Card style={{ width: '100vh' }}>
-          <Card.Img variant="top" src={video} alt={video_name} />
+      <Link to={`/videos/${id}`} style={{ color: '#333333' }}>
+        <Card style={{ width: '50vh' }} className="card">
+
+          <iframe width='384' height='284' src={video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
+  
           <Card.Body>
-            <Card.Title>{video_name}</Card.Title>
             <Card.Text>
-              {author}
-              {duration}
-              {difficulty}
+              {name}
             </Card.Text>
-            <Button variant="primary">{like}</Button>
           </Card.Body>
         </Card>
       </Link>

@@ -5,6 +5,7 @@ from rest_framework.exceptions import PermissionDenied
 from django.contrib.auth import get_user_model
 from datetime import datetime, timedelta
 from django.conf import settings
+from rest_framework.exceptions import NotFound
 import jwt
 
 from .serializers.common import UserSerializer
@@ -21,6 +22,8 @@ class RegisterView(APIView):
         return Response(user_to_create.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 class LoginView(APIView):
+
+
 
     def post(self, request):
         email = request.data.get('email')
@@ -42,3 +45,18 @@ class LoginView(APIView):
         )
 
         return Response({ 'token': token, 'message': f'Welcome back {user_to_login.first_name}'})
+
+
+class UserDetailView(APIView):
+
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            raise NotFound(detail="Cannot find that article")
+
+
+    def get(self, _request, pk):
+        user = self.get_user(pk=pk)
+        serialized_user = UserSerializer(user)
+        return Response(serialized_user.data, status=status.HTTP_200_OK)

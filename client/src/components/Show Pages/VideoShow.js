@@ -26,7 +26,7 @@ const VideoShow = () => {
   return (
     <div className="videoShow">
       <Card style={{ width: '100vh' }}>
-        <Card.Img variant="top"/> <iframe width='1199' height='584' src={video.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
+        <Card.Img variant="top"/> <iframe width='1199' height='900' src={video.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
         <Card.Body>
           <Card.Title>{video.video_name}</Card.Title>
           <Card.Text>

@@ -41,10 +41,22 @@
   flex-direction: row;  
   overflow-y: hidden;
   overflow-x: scroll;
+  width: 85vw;
+  height: 55vh;
+  margin-top: 5%;
+  position: absolute;
+  left: 17%;  
+  top: 40%;             
 }
 .video {
   display: flex;
   flex-direction: row;  
+  width: 85vw;
+  height: 55vh;
+  margin-top: 5%;
+  position: absolute;
+  left: 17%;            
+  top: 100%; 
   overflow-y: hidden;
   overflow-x: scroll;
 }
@@ -53,23 +65,31 @@
   flex-direction: row;  
   overflow-y: hidden;
   overflow-x: scroll;
+  width: 85vw;
+  height: 55vh;
+  margin-top: 5%;
+  position: absolute;
+  left: 17%;            
+  top: 160%; 
 }
 .article-container {
-  width: 87vw;
-  height: 68vh;
+  width: 50vw;
+  height: 50vh;
   display: flex;
-  flex-direction: column;
-  align-content: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
   box-shadow: 0 0 1px 0 white;
   padding-left: 0;
   margin-left: 6.5vw;
   margin-bottom: 2vh;
 }
+
+
 .video-container {
-  width: 87vw;
-  height: 68vh;
+  width: 50vw;
+  height: 50vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: flex-end;
   box-shadow: 0 0 1px 0 white;
   padding-left: 0;
@@ -77,14 +97,87 @@
   margin-bottom: 2vh;
 }
 .recipe-container {
-  width: 87vw;
-  height: 68vh;
+  width: 50vw;
+  height: 50vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: flex-end;
   box-shadow: 0 0 1px 0 white;
   padding-left: 0;
   margin-left: 6.5vw;
   margin-bottom: 2vh;
+}
+
+div.card-card {
+  height: 45vh;
+}
+
+
+
+.menu-bar {
+  position: relative;
+  width: 15vw;
+  height: 200vh;
+  background-color: rgb(222, 223, 222);
+}
+
+.main-hero {
+  width: 100vw;
+  height: 30vh;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../images/about-iv-therapy-header-img-5e8f550203b03.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  margin-bottom: 3%;
+}
+
+.logo-mainpage {
+  width: 30%;
+  text-align: center; 
+  margin-top: 10%; 
+  margin: 0 auto;
+  position: absolute;  
+  left: 50%;            
+  top: 23%;             
+  transform: translate(-50%, -50%);
+}
+
+
+// Article ShowPage
+
+.article-hero-body {
+  width: 100vw;
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/20170710193708-GettyImages-499778755.jpeg');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3%;
+}
+
+.article-logo-homepage {
+  width: 50%;
+  text-align: center; 
+  margin-top: 10%; 
+  margin: 0 auto;
+  position: absolute;  
+  left: 50%;            
+  top: 33%;             
+  transform: translate(-50%, -50%);
+}
+
+.article-jt {
+  height: 50vh;
+}
+
+.float-left-mr-2-mb-1 {
+  margin-right: 10%;
+}
+
+.article-jt-one {
+  height: 55vh;
+}
+
+.article-jt-one, .article-jt {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 

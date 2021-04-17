@@ -28,7 +28,7 @@ class Video(models.Model):
         (INTERMEDIATE, 'Intermediate'),
         (PRO, 'Pro'),
     ]
-    video_name = models.CharField(max_length=300)
+    name = models.CharField(max_length=300)
     author = models.CharField(max_length=50)
     video = models.CharField(max_length=300)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default=CARDIO)
