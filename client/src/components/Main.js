@@ -47,9 +47,17 @@ const Main = () => {
 
     <div className="section">
       <div className="main-hero">
-        <img className="logo-mainpage" src='/assets/logo_white_large.png' />
+        <img className="logo-mainpage" src='/assets/logo_white_large 2.png' />
       </div>
       <div className="menu-bar">
+        <div className="text-container">
+          <img className="mini-logo" src='/assets/logo_small_icon_only_inverted.png'/>
+          <p>Workout Videos</p>
+          <p>Articles</p>
+          <p>Recipes</p>
+          <p>Recently visited</p>
+          <p>Saved</p>
+        </div>
       </div>       
       <div className="article">
         <p className="article-header">Health Articles</p>

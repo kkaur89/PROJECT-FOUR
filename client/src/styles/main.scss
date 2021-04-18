@@ -2,6 +2,10 @@
 
 @import "~bootstrap/scss/bootstrap";
 
+.body {
+  color:rgb(54, 54, 54);
+}
+
 // Homepage
 .hero-body {
   width: 100vw;
@@ -45,7 +49,7 @@
   height: 55vh;
   margin-top: 5%;
   position: absolute;
-  left: 17%;  
+  left: 22%;  
   top: 40%;             
 }
 .video {
@@ -55,7 +59,7 @@
   height: 55vh;
   margin-top: 5%;
   position: absolute;
-  left: 17%;            
+  left: 22%;            
   top: 100%; 
   overflow-y: hidden;
   overflow-x: scroll;
@@ -69,7 +73,7 @@
   height: 55vh;
   margin-top: 5%;
   position: absolute;
-  left: 17%;            
+  left: 22%;            
   top: 160%; 
 }
 .article-container {
@@ -116,9 +120,10 @@ div.card-card {
 
 .menu-bar {
   position: relative;
-  width: 15vw;
+  width: 20vw;
   height: 200vh;
   background-color: rgb(222, 223, 222);
+  display: flex;
 }
 
 .main-hero {
@@ -139,6 +144,19 @@ div.card-card {
   left: 50%;            
   top: 23%;             
   transform: translate(-50%, -50%);
+}
+
+
+.text-container {
+  margin-top: 15%;
+  margin-left: 20%;
+  align-items: space-between;
+}
+
+.mini-logo {
+  width: 45%;
+  margin-left: 15%;
+  padding-bottom: 10%;
 }
 
 
@@ -164,17 +182,17 @@ div.card-card {
   transform: translate(-50%, -50%);
 }
 
-.article-jt {
-  height: 50vh;
-}
+// .article-jt {
+//   background-size: auto 100%;
+// }
 
-.float-left-mr-2-mb-1 {
+img.float-left-mr-2-mb-1 {
   margin-right: 10%;
 }
 
-.article-jt-one {
-  height: 55vh;
-}
+// .article-jt-one {
+//   background-size: auto 100%;
+// }
 
 .article-jt-one, .article-jt {
   margin-left: 10%;
@@ -185,3 +203,11 @@ div.card-card {
   white-space: pre-line;
 }
 
+div.media-body {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 3%;
+  background-color: rgb(239, 245, 244);
+  padding: 3%;
+  color:rgb(54, 54, 54);
+}
