@@ -47,8 +47,8 @@ const Navbar1 = () => {
           <Nav className="mr-auto">
             <Nav.Link href="/main" className="nav-text">Home</Nav.Link>
             <Nav.Link href="/register"className="nav-text">Register</Nav.Link>
-            <Nav.Link href="#link"className="nav-text" onClick={handleShow}>Login</Nav.Link>
-            <Nav.Link href="#link"className="nav-text">Profile</Nav.Link>
+            <Nav.Link className="nav-text" onClick={handleShow}>Login</Nav.Link>
+            <Nav.Link href="/profile"className="nav-text">Profile</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -67,7 +67,7 @@ const Navbar1 = () => {
                   placeholder="Email"
                   name="email"
                   value={formData.email}
-                  onChange={(event) => handleChange(event)}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -80,7 +80,7 @@ const Navbar1 = () => {
                   placeholder="Password"
                   name="password"
                   value={formData.password}
-                  onChange={(event) => handleChange(event)}
+                  onChange={handleChange}
                 />
               </div>
             </div>

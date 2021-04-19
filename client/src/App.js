@@ -9,6 +9,7 @@ import VideoShow from './components/Show Pages/VideoShow'
 import ArticleShow from './components/Show Pages/ArticleShow'
 import RecipeShow from './components/Show Pages/RecipeShow'
 import Register from './components/Register'
+import UserProfile from './components/UserProfile'
 
 const App = () => {
   return (
@@ -26,6 +27,9 @@ const App = () => {
         </Route>
         <Route exact path="/register">
           <Register />
+        </Route>
+        <Route exact path="/profile">
+          <UserProfile />
         </Route>
         <Route exact path="/">
           <Home />
