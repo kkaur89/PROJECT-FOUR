@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { getPayLoadFromToken, getTokenFromLocalStorage } from '../helpers/Auth'
 
 
 const UserProfile = () => {
@@ -7,12 +8,13 @@ const UserProfile = () => {
 
   const [user, getUser] = useState(null)
 
+  const userID = getPayLoadFromToken().sub
+
   useEffect(() => {
     const getData = async () => {
-      const token = window.localStorage.getItem('token')
-      const response = await axios.get('/api/auth/', {
+      const response = await axios.get(`/api/auth/${userID}`, {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
         },
       })
       getUser(response.data)
@@ -22,12 +24,12 @@ const UserProfile = () => {
   }, [])
 
   if (!user) return null
-  console.log(user)
+  console.log('user',user)
 
   return (
     <>
       <div className="caption">
-        <p className="welcome-caption">Welcome Back, {user.username}!</p>
+        <p>Welcome Back, {user.username}!</p>
       </div>
       <div className="menu-bar">
         <div className="text-container">

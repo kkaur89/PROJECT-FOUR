@@ -33,7 +33,7 @@ const Navbar1 = () => {
     const response = await axios.post('api/auth/login/', formData)
     window.localStorage.setItem('token', response.data.token)
     console.log('TOKEN>>',response.data.token)
-    history.push('/main')
+    history.push('/profile')
   }
 
 
