@@ -3,6 +3,7 @@ import React from 'react'
 // Bootstrap
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Button from 'react-bootstrap/Button'
+import Image from 'react-bootstrap/Image'
 
 const Home = () => {
 
@@ -57,6 +58,17 @@ const Home = () => {
           </div>
         </div>
       </Jumbotron>
+      <Jumbotron>
+        <div className="footer-container">
+          <h4>Meet the Team</h4>
+          <p>Founders of FitBox: Harry and Karen</p>
+          <div className="owner-container">
+            <Image src="/assets/Screenshot 2021-04-19 at 16.50.11.png" roundedCircle />
+            <Image src="/assets/Screenshot 2021-04-19 at 16.49.58.png" roundedCircle />
+          </div>
+        </div>
+      </Jumbotron>
+
     </div>
     
   )

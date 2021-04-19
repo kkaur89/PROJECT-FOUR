@@ -60,6 +60,18 @@
 .jumbotron {
   background-color: white;
 }
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(228, 225, 225);
+  
+}
+
+.owner-container {
+  padding-bottom: 3%;
+}
+
 //Navbar
 .logo {
   height: 40px;
@@ -206,6 +218,8 @@ img.recipe-image {
 #nav-dropdown {
   margin-bottom: 15%;
 }
+
+
 
 
 // Article ShowPage
