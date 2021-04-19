@@ -116,6 +116,9 @@ div.card-card {
   height: 45vh;
 }
 
+img.recipe-image {
+  height: 45vh;
+}
 
 
 .menu-bar {
@@ -132,7 +135,7 @@ div.card-card {
   background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../images/about-iv-therapy-header-img-5e8f550203b03.jpg');
   background-size: cover;
   background-position: center bottom;
-  margin-bottom: 3%;
+
 }
 
 .logo-mainpage {
@@ -157,6 +160,11 @@ div.card-card {
   width: 45%;
   margin-left: 15%;
   padding-bottom: 10%;
+  margin-bottom: 15%;
+}
+
+#nav-dropdown {
+  margin-bottom: 15%;
 }
 
 

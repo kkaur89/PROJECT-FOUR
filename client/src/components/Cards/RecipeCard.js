@@ -10,7 +10,7 @@ const RecipeCard = ({ id, name, image }) => {
     <>
       <Link to={`/recipes/${id}`} style={{ color: '#333333' }}>
         <Card style={{ width: '30vw' }} className="card">
-          <Card.Img variant="top" src={image} />
+          <Card.Img variant="top" src={image} className="recipe-image"/>
           <Card.Body>
             <Card.Text>
               {name}

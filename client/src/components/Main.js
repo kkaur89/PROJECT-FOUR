@@ -4,6 +4,10 @@ import ArticleCard from './Cards/ArticleCard'
 import VideoCard from './Cards/VideoCard'
 import RecipeCard from './Cards/RecipeCard'
 
+
+import Nav from 'react-bootstrap/Nav'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+
 const Main = () => {
   const [article, setArticle] = useState(null)
   const [video, setVideo] = useState(null)
@@ -39,6 +43,10 @@ const Main = () => {
     getData()
   }, [])
 
+  const handleSelect = event => {
+    console.log(event)
+  }
+
   if (!article) return null
   if (!video) return null
   if (!recipe) return null
@@ -47,16 +55,53 @@ const Main = () => {
 
     <div className="section">
       <div className="main-hero">
-        <img className="logo-mainpage" src='/assets/logo_white_large 2.png' />
+        <img className="logo-mainpage" src='/assets/logo_white_large.png' />
       </div>
       <div className="menu-bar">
         <div className="text-container">
           <img className="mini-logo" src='/assets/logo_small_icon_only_inverted.png'/>
-          <p>Workout Videos</p>
-          <p>Articles</p>
-          <p>Recipes</p>
-          <p>Recently visited</p>
-          <p>Saved</p>
+          <Nav variant="pills" activeKey="1" onSelect={handleSelect} >
+            <NavDropdown title="Articles" id="nav-dropdown" >
+              <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
+            <NavDropdown title="Workout Videos" id="nav-dropdown" >
+              <NavDropdown.Item eventKey="4.1">Yoga</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.2">Hiit</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.3">Cardio</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.4">Abs</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.5">Weights</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.6">Meditation</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.7">Stretches</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
+            <NavDropdown title="Healthy Recipes" id="nav-dropdown" bg="light">
+              <NavDropdown.Item eventKey="4.1">High Protein</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.2">Low Carbs</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.3">Vegan</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.4">Vegetarian</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.5">Breakfast</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.6">Snacks</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.7">Dessert</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
+            <NavDropdown title="Recently Visited" id="nav-dropdown" bg="light">
+              <NavDropdown.Item eventKey="4.1">Articles</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.2">Videos</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.2">Recipes</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
+            <NavDropdown title="Saved" id="nav-dropdown" bg="light">
+              <NavDropdown.Item eventKey="4.1">Articles</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.2">Videos</NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.2">Recipes</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
         </div>
       </div>       
       <div className="article">

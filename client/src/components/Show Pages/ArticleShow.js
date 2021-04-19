@@ -46,7 +46,7 @@ const ArticleShow = () => {
     <>
       <div className="article-section">
         <div className="article-hero-body">
-          <img className="article-logo-homepage" src='/assets/logo_white_large 2.png' />
+          <img className="article-logo-homepage" src='/assets/logo_white_large.png' />
         </div>
         <Media>
           <Media.Body>

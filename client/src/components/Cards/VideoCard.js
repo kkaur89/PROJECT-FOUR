@@ -11,7 +11,7 @@ const VideoCard = ({ id, name, video }) => {
       <Link to={`/videos/${id}`} style={{ color: '#333333' }}>
         <Card style={{ width: '50vh' }} className="card">
 
-          <iframe width='384' height='284' src={video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
+          <iframe width='100%' height='284' src={video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
   
           <Card.Body>
             <Card.Text>
