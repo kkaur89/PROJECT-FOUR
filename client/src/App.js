@@ -7,6 +7,7 @@ import Navbar1 from './components/Navbar'
 import Main from './components/Main'
 import VideoShow from './components/Show Pages/VideoShow'
 import ArticleShow from './components/Show Pages/ArticleShow'
+import RecipeShow from './components/Show Pages/RecipeShow'
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
         </Route>
         <Route exact path='/articles/:id'>
           <ArticleShow />
+        </Route>
+        <Route exact path='/recipes/:id'>
+          <RecipeShow />
         </Route>
         <Route exact path="/">
           <Home />

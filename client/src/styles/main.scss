@@ -12,6 +12,12 @@
   height: 80vh;
   background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/trail-running.png');
   background-size: cover;
+  margin-bottom: 2rem;
+}
+.aims {
+  text-align: center;
+  padding: 10rem;
+  
 }
 
 .logo-homepage {
@@ -25,15 +31,44 @@
   transform: translate(-50%, -50%);
 }
 
+.jumbo-article{
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+.jumbo-video{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row-reverse;
+  background-color: white;
+}
+.jumbo-recipe{
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+
+}
+.jumbo-text{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .bring-to-front {
   z-index: 6;
 }
+.jumbotron {
+  background-color: white;
+}
 //Navbar
-
 .logo {
   height: 40px;
-
 }
+
+// #basic-navbar-nav {
+//   display: flex;
+//   justify-content: space-between;
+// }
 
 // Main Page
 .section {
@@ -219,3 +254,26 @@ div.media-body {
   padding: 3%;
   color:rgb(54, 54, 54);
 }
+// Recipe Show 
+
+.RecipeShow {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.Ingredients {
+  padding-right: rem;
+}
+.card-img {
+  size: 100%;
+}
+.R-show-format{
+  display: flex;
+}
+.R-show-format2{
+  display: flex;
+}
+#p-wrap {
+  white-space: pre-line
+}
+
