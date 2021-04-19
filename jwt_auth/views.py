@@ -23,8 +23,6 @@ class RegisterView(APIView):
 
 class LoginView(APIView):
 
-
-
     def post(self, request):
         email = request.data.get('email')
         password = request.data.get('password')
@@ -45,6 +43,13 @@ class LoginView(APIView):
         )
 
         return Response({ 'token': token, 'message': f'Welcome back {user_to_login.first_name}'})
+
+class UserListView(APIView):
+
+    def get(self, _request):
+        users = User.objects.all()
+        serialized_user = UserSerializer(users, many=True)
+        return Response(serialized_user.data, status=status.HTTP_200_OK)
 
 
 class UserDetailView(APIView):
