@@ -6,7 +6,7 @@ import axios from 'axios'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
+
 
 
 const Navbar1 = () => {
@@ -47,7 +47,7 @@ const Navbar1 = () => {
             <Nav.Link href="/main" className="nav-text">Home</Nav.Link>
             <Nav.Link href="/register"className="nav-text">Register</Nav.Link>
             <Nav.Link className="nav-text" onClick={handleShow}>Login</Nav.Link>
-            <Nav.Link href="/profile"className="nav-text">Profile</Nav.Link>
+            <Nav.Link href="/profile/:id"className="nav-text">Profile</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -66,7 +66,7 @@ const Navbar1 = () => {
                   placeholder="Email"
                   name="email"
                   value={formData.email}
-                  onChange={handleChange}
+                  onChange={(event) => handleChange(event)}
                 />
               </div>
             </div>
@@ -79,7 +79,7 @@ const Navbar1 = () => {
                   placeholder="Password"
                   name="password"
                   value={formData.password}
-                  onChange={handleChange}
+                  onChange={(event) => handleChange(event)}
                 />
               </div>
             </div>
@@ -88,11 +88,6 @@ const Navbar1 = () => {
             </button>
           </form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" type="submit" onClick={handleClose}>
-            Login
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   )

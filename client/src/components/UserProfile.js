@@ -1,41 +1,84 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { getPayLoadFromToken, getTokenFromLocalStorage } from '../helpers/Auth'
+import { getPayLoadFromToken } from '../helpers/Auth'
 
 
 const UserProfile = () => {
 
-
-  const [user, getUser] = useState(null)
+  const [user, setUser] = useState(null)
 
   const userID = getPayLoadFromToken().sub
-
+  
   useEffect(() => {
-    const getData = async () => {
-      const response = await axios.get(`/api/auth/${userID}`, {
-        headers: {
-          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
-        },
-      })
-      getUser(response.data)
-      console.log('User>>>', response.data)
+    const getUser = async () => {
+      const { data } = await axios.get(`/api/auth/${userID}`)
+      setUser(data)
     }
-    getData()
+    getUser()
   }, [])
-
+  //prettier-ignore
   if (!user) return null
-  console.log('user',user)
-
+  console.log('userID', userID)
+  const {
+    username,
+    email,
+  
+    profileImage,
+  } = user
+  
   return (
     <>
-      <div className="caption">
-        <p>Welcome Back, {user.username}!</p>
-      </div>
-      <div className="menu-bar">
-        <div className="text-container">
-          <img className="mini-logo" src='/assets/logo_small_icon_only_inverted.png'/>
+      {user && (
+        <div className="profile-container">
+          <div className="columns">
+            <div className="column">
+              {' '}
+              <div className="profile-box">
+                <img
+                  className="profile-image"
+                  alt="user profile image"
+                  src={profileImage}
+                />
+                {/* <Link to={`/profile/${userID}/edit-profile-image`}> */}
+                <div
+                  className="edit-profile-button"
+                  name="edit-profile-image"
+                >
+                      Change Image
+                </div>
+                {/* </Link> */}
+                <hr />
+                <div>
+                  <b>Email</b>
+                </div>
+                <p>{email}</p>
+                <hr />
+  
+                {/* <Link to={`/profile/delete-account/${userID}`}> */}
+                <button
+                  className="delete-account-button button"
+                  name="delete-profile"
+                >
+                      Delete My Account
+                </button>
+                {/* </Link> */}
+              </div>
+            </div>
+  
+            <div className="column">
+              <div className="username">
+                <h2>{`Hi, i'm ${username}`}</h2>
+                {/* <p>{`Joined in ${convertTimestamp(createdAt)} `}</p> */}
+              </div>
+              {/* <Link to={`/profile/${userID}/edit`}>
+                  <div className="edit-profile-button" name="edit-profile">
+                    Edit My Profile
+                  </div>
+                </Link> */}
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </>
   )
 }
