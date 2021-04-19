@@ -290,17 +290,19 @@ div.media-body {
   justify-content: center;
   color: white;
 }
-// .section {
-//   width: 400px;
-//   height: 350px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   box-shadow: 0 0 1px 0 white;
-//   border: solid white 2px;
-//   background: transparentize($color: grey, $amount: 0.7);
-//   font-weight: 600;
-// }
+.register-section {
+  width: 400px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 1px 0 white;
+  border: solid white 2px;
+  background: transparentize($color: grey, $amount: 0.7);
+  font-weight: 600;
+  position: absolute;  
+  top: 50%;
+}
 
 .input {
   width: 100%;
@@ -338,3 +340,23 @@ div.media-body {
   border: solid red 4px;
 }
 
+
+.register-hero-body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/Exercise-weight-loss.jpeg');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3%;
+}
+
+.register-logo-homepage {
+  width: 50%;
+  text-align: center; 
+  margin-top: 10%; 
+  margin: 0 auto;
+  position: absolute;  
+  left: 50%;            
+  top: 28%;             
+  transform: translate(-50%, -50%);
+}
