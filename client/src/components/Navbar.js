@@ -9,11 +9,11 @@ import Nav from 'react-bootstrap/Nav'
 const Navbar1 = () => {
   return (
     <>
-      <Navbar expand="lg" className="bring-to-front">
+      <Navbar expand="lg" className="justify-content-end" activeKey="/home">
         <Navbar.Brand href="/"><img className="logo" src='/assets/logo_small.png'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="justify-content-end" activeKey="/home">
             <Nav.Link href="/main">Home</Nav.Link>
             <Nav.Link href="#link">Register</Nav.Link>
             <Nav.Link href="#link">Login</Nav.Link>
