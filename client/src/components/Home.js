@@ -20,7 +20,7 @@ const Home = () => {
       </div>
       <Jumbotron>
         <div className="jumbo-article">
-          <img className="article-img" src='/assets/fitbox-health.jpeg'/>
+          <img className="article-img" src='/assets/fitbox-health.jpeg'width='50%'/>
           <div className="jumbo-text">
             <h1>Articles</h1>
             <p>Learn ways to improve your health and lifestyle with the many articles and blogs written by our fantastic authors.</p>
@@ -33,7 +33,7 @@ const Home = () => {
       </Jumbotron>
       <Jumbotron>
         <div className="jumbo-video">
-          <img className="video-img" src='/assets/fitbox-workout.jpeg'/>
+          <img className="video-img" src='/assets/fitbox-workout.jpeg'width='50%'/>
           <div className="jumbo-text">
             <h1>Videos</h1>
             <p> In need of a rigorous HIIT session, or maybe a relaxing meditation, or just a good stretch?</p>
@@ -46,7 +46,7 @@ const Home = () => {
       </Jumbotron>
       <Jumbotron>
         <div className="jumbo-recipe">
-          <img className="recipe-img" src='/assets/fitbox-recipe.jpeg'/>
+          <img className="recipe-img" src='/assets/fitbox-recipe.jpeg'width='50%'/>
           <div className="jumbo-text">
             <h1>Recipes</h1>
             <p>Our healthy outside, starts from inside. Eat well, live well, be well.</p>

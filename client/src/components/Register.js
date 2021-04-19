@@ -1,44 +1,43 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-
-
 const Register = () => {
 
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: '',
-    passwordConfirmation: '',
+    password_confirmation: '',
   })
 
   const [errors, setErrors] = useState({
     username: '',
     email: '',
     password: '',
-    passwordConfirmation: '',
+    password_confirmation: '',
   })
 
   const handleChange = (event) => {
     //? set state when user types
-    // console.log('value', event.target.value)
-    // console.log(formData['username'])
+    console.log('value', event.target.value)
+    console.log(formData['username'])
     const newFormData = { ...formData, [event.target.name]: event.target.value }
     setFormData(newFormData)
   }
-  console.log(formData)
+  
 
   const handleSubmit = async event => {
     console.log('handleSubmit is working')
     event.preventDefault()
     try {
       const response = await axios.post('/api/auth/register/', formData)
-      console.log('added user',response.data)
+      console.log('added user',response)
     } catch (err) {
       console.log(err)
       setErrors(err)
     }
   }
+  
   // console.log(errors)
 
   return (
@@ -97,15 +96,15 @@ const Register = () => {
                     <label className="label">Password Confirmation</label>
                     <div className="control">
                       <input
-                        className={`input ${errors.passwordConfirmation ? 'is-danger' : ''}`}
+                        className={`input ${errors.password_confirmation ? 'is-danger' : ''}`}
                         type="password"
                         placeholder="Password Confirmation"
-                        name="passwordConfirmation"
-                        value={formData.passwordConfirmation}
+                        name="password_confirmation"
+                        value={formData.password_confirmation}
                         onChange={handleChange}
                       />
                     </div>
-                    {errors.passwordConfirmation && <p className="help is-danger">{errors.passwordConfirmation}</p>}
+                    {errors.password_confirmation && <p className="help is-danger">{errors.password_confirmation}</p>}
                   </div>
                   <div className="field">
 

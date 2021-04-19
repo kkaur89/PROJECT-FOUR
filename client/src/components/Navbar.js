@@ -32,9 +32,8 @@ const Navbar1 = () => {
     event.preventDefault()
     const response = await axios.post('api/auth/login/', formData)
     window.localStorage.setItem('token', response.data.token)
-    console.log(response.status)
+    console.log('TOKEN>>',response.data.token)
     history.push('/main')
- 
   }
 
 
@@ -47,8 +46,8 @@ const Navbar1 = () => {
           <Nav className="mr-auto">
             <Nav.Link href="/main" className="nav-text">Home</Nav.Link>
             <Nav.Link href="/register"className="nav-text">Register</Nav.Link>
-            <Nav.Link href="#link"className="nav-text" onClick={handleShow}>Login</Nav.Link>
-            <Nav.Link href="#link"className="nav-text">Profile</Nav.Link>
+            <Nav.Link href="#login"className="nav-text" onClick={handleShow}>Login</Nav.Link>
+            <Nav.Link href="#login"className="nav-text">Profile</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -84,6 +83,9 @@ const Navbar1 = () => {
                 />
               </div>
             </div>
+            <button variant="secondary" type="submit">
+            Login
+            </button>
           </form>
         </Modal.Body>
         <Modal.Footer>
