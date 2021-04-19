@@ -25,13 +25,12 @@ const RecipeShow = () => {
   return (
     <div className="RecipeShow">
       <div className="R-show-format">  
-       
         <Card style={{ width: '150vh' }}>
           <div className="R-show-format2"> 
             <div className="Ingredients">
-              <p>Ingredients: </p>
+              <p id ='p_wrap'>Ingredients: </p>
               <br/>
-              <li>{recipe.ingredients}</li>
+              <p id ='p_wrap'>{recipe.ingredients}</p>
             </div>
             <img src={recipe.image} width='1500vh'/>
           </div> 

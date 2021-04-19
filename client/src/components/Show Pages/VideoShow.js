@@ -25,18 +25,20 @@ const VideoShow = () => {
   if (!video) return null
   return (
     <div className="videoShow">
-      <Card style={{ width: '100vh' }}>
+      
+      <Card id="video" style={{ width: '100%' }}>
         <Card.Img variant="top"/> <iframe width='1199' height='584' src={video.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
         <Card.Body>
-          <Card.Title>{video.video_name}</Card.Title>
+          <Card.Title><h2>{video.name}</h2></Card.Title>
           <Card.Text>
-            <h2>Author: {video.author}</h2>
-            <h4>{video.duraration}</h4>
-            <h4>Level: {video.difficulty}</h4>
+            <h4>Author: {video.author}</h4>
+            <h5>{video.duraration} | Level: {video.difficulty}</h5>
+            
           </Card.Text>
           <Button variant="primary">Like{video.like}</Button>
         </Card.Body>
       </Card>
+      
     </div>
   )
 }
