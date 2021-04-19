@@ -1,9 +1,14 @@
-
+// @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 
 @import "~bootstrap/scss/bootstrap";
 
 .body {
   color:rgb(54, 54, 54);
+  font-family: 'Viga', sans-serif;
+}
+
+p {
+  font-family: 'Viga', sans-serif;
 }
 
 // Homepage
@@ -64,12 +69,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(228, 225, 225);
+  background-color: rgb(228, 228, 228);
+  padding-top: 5%;
   
 }
 
 .owner-container {
   padding-bottom: 3%;
+}
+
+.owner-image {
+  border-style: solid;
+  border-color: white;
+  border-width: thick;
 }
 
 //Navbar
@@ -79,6 +91,28 @@
 
 a.nav-link {
   text-align: right;
+}
+
+.login-button {
+  margin-top: 3%;
+  background-color: rgb(13, 62, 209);
+  width: 5.5vw;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Viga', sans-serif;
+}
+
+.label-login {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  color:rgb(192, 137, 150);
+  font-family: 'Viga', sans-serif;
+}
+
+a {
+  font-family: 'Viga', sans-serif;
 }
 
 // #basic-navbar-nav {
@@ -316,6 +350,7 @@ div.media-body {
   font-weight: 600;
   position: absolute;  
   top: 50%;
+  font-family: 'Viga', sans-serif;
 }
 
 .input {
@@ -327,6 +362,7 @@ div.media-body {
   font-size: 20px;
   margin-bottom: 0;
   margin-top: 10px;
+  font-family: 'Viga', sans-serif;
 }
 
 .field {
@@ -373,4 +409,33 @@ div.media-body {
   left: 50%;            
   top: 28%;             
   transform: translate(-50%, -50%);
+}
+
+// PROFILE PAGE
+
+.logo-profilepage {
+  width: 10%;
+  text-align: center; 
+  margin-top: 10%; 
+  margin: 0 auto;
+  position: absolute;  
+  left: 20%;            
+  top: 25%;             
+  transform: translate(-50%, -50%);
+}
+
+.profile-name {
+  width: 60%;
+  position: absolute;  
+  left: 55%;            
+  top: 25%;             
+  transform: translate(-50%, -50%);
+  font-family: 'Viga', sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 70px;
+}
+
+.btn-primary, .btn-secondary, .btn-outline-primary {
+  font-family: 'Viga', sans-serif;
 }

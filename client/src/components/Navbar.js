@@ -6,6 +6,9 @@ import axios from 'axios'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Modal from 'react-bootstrap/Modal'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import FormControl from 'react-bootstrap/FormControl'
 
 
 
@@ -50,16 +53,21 @@ const Navbar1 = () => {
             <Nav.Link href="/profile/:id"className="nav-text">Profile</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <Form inline>
+          <FormControl type="text" placeholder="Search User" className="mr-sm-2" />
+          <Button variant="outline-primary">Search</Button>
+        </Form>
       </Navbar>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
+          <img className="logo" src='/assets/logo_small.png'/>
         </Modal.Header>
         <Modal.Body>
           <form className="column is-half is-offset-one-quarter box"
             onSubmit={handleSubmit}>
             <div className="field">
-              <label className="label">Email</label>
+              <label className="label-login">Email</label>
               <div className="control">
                 <input
                   className="input"
@@ -71,7 +79,7 @@ const Navbar1 = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Password</label>
+              <label className="label-login">Password</label>
               <div className="control">
                 <input
                   className="input"
@@ -83,7 +91,7 @@ const Navbar1 = () => {
                 />
               </div>
             </div>
-            <button variant="secondary" type="submit">
+            <button variant="secondary" type="submit" className="login-button">
             Login
             </button>
           </form>

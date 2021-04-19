@@ -63,8 +63,8 @@ const Home = () => {
           <h4>Meet the Team</h4>
           <p>Founders of FitBox: Harry and Karen</p>
           <div className="owner-container">
-            <Image src="/assets/Screenshot 2021-04-19 at 16.50.11.png" roundedCircle />
-            <Image src="/assets/Screenshot 2021-04-19 at 16.49.58.png" roundedCircle />
+            <Image src="/assets/Screenshot 2021-04-19 at 16.50.11.png" roundedCircle className="owner-image"/>
+            <Image src="/assets/Screenshot 2021-04-19 at 16.49.58.png" roundedCircle className="owner-image"/>
           </div>
         </div>
       </Jumbotron>

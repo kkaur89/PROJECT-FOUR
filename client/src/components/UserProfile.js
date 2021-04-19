@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { getPayLoadFromToken } from '../helpers/Auth'
+import ArticleCard from './Cards/ArticleCard'
+import VideoCard from './Cards/VideoCard'
+import RecipeCard from './Cards/RecipeCard'
+
+
+import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button'
 
 
 const UserProfile = () => {
@@ -19,65 +26,46 @@ const UserProfile = () => {
   //prettier-ignore
   if (!user) return null
   console.log('userID', userID)
-  const {
-    username,
-    email,
-  
-    profileImage,
-  } = user
+  const { username, email, profileImage, bio } = user
   
   return (
     <>
       {user && (
-        <div className="profile-container">
-          <div className="columns">
-            <div className="column">
-              {' '}
-              <div className="profile-box">
-                <img
-                  className="profile-image"
-                  alt="user profile image"
-                  src={profileImage}
-                />
-                {/* <Link to={`/profile/${userID}/edit-profile-image`}> */}
-                <div
-                  className="edit-profile-button"
-                  name="edit-profile-image"
-                >
-                      Change Image
-                </div>
-                {/* </Link> */}
-                <hr />
-                <div>
-                  <b>Email</b>
-                </div>
-                <p>{email}</p>
-                <hr />
-  
-                {/* <Link to={`/profile/delete-account/${userID}`}> */}
-                <button
-                  className="delete-account-button button"
-                  name="delete-profile"
-                >
-                      Delete My Account
-                </button>
-                {/* </Link> */}
-              </div>
+        <>
+          <div className="main-hero">
+            <img className="logo-profilepage" src='/assets/logo_white_large copy.png' />
+            <p className="profile-name">{`Welcome to FitBox ${username}`}</p>
+          </div>
+          <div className="menu-bar">
+            <div className="text-container">
+              <Image src={profileImage} roundedCircle className="profile-image"/>
+              <p>Username: {username}</p>
+              <p>Email: {email}</p>
+              <p>Bio: {bio} </p>
+              <p>Friends</p>
+              <Button variant="primary" >Delete Profile</Button>
             </div>
-  
-            <div className="column">
-              <div className="username">
-                <h2>{`Hi, i'm ${username}`}</h2>
-                {/* <p>{`Joined in ${convertTimestamp(createdAt)} `}</p> */}
-              </div>
-              {/* <Link to={`/profile/${userID}/edit`}>
-                  <div className="edit-profile-button" name="edit-profile">
-                    Edit My Profile
-                  </div>
-                </Link> */}
+
+          </div>
+          <div className="article">
+            <p className="article-header">Health Articles</p>
+            <div className="article-container">
+              <ArticleCard />
             </div>
           </div>
-        </div>
+          <div className="video">
+            <p className="video-header">Workout Videos</p>
+            <div className="video-container" >
+              <VideoCard />   
+            </div>
+          </div>
+          <div className="recipe">
+            <p className="recipe-header">Healthy Recipes</p>
+            <div className="recipe-container" >
+              <RecipeCard />
+            </div>
+          </div>
+        </>
       )}
     </>
   )
