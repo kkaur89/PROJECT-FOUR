@@ -32,9 +32,8 @@ const Navbar1 = () => {
     event.preventDefault()
     const response = await axios.post('api/auth/login/', formData)
     window.localStorage.setItem('token', response.data.token)
-    console.log(response.status)
+    console.log('TOKEN>>',response.data.token)
     history.push('/main')
- 
   }
 
 
@@ -84,6 +83,9 @@ const Navbar1 = () => {
                 />
               </div>
             </div>
+            <button variant="secondary" type="submit">
+            Login
+            </button>
           </form>
         </Modal.Body>
         <Modal.Footer>
