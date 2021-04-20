@@ -7,7 +7,7 @@
   font-family: 'Viga', sans-serif;
 }
 
-p {
+* {
   font-family: 'Viga', sans-serif;
 }
 
@@ -325,10 +325,13 @@ div.media-body {
 }
 .R-show-format2{
   display: flex;
+  text-align: left;
+  white-space: pre-line;
 }
-#p-wrap {
-  white-space: pre-line
-}
+// #p-wrap2 {
+//   white-space: pre-line;
+//   text-align: left;
+// }
 
 // REGISTER PAGE
 
@@ -414,13 +417,15 @@ div.media-body {
 // Video Showpage
 
 #video {
- 
+  // display: flex;
   align-items: center;
   
 }
 .video-text {
+  
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
 }
 
 // PROFILE PAGE
