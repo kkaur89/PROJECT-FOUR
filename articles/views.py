@@ -48,3 +48,11 @@ class ArticleDetailView(APIView):
             updated_article.save()
             return Response(updated_article.data, status=status.HTTP_202_ACCEPTED)
         return Response(updated_article.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+    def patch(self, request, pk):
+        article_to_save = self.get_article(pk)
+        serialized_article = ArticleSerializer(article_to_save, data=request.data, partial=True)
+        if serialized_article.is_valid():
+            serialized_article.save()
+            return Response(serialized_article.data, status=status.HTTP_200_OK)
+        return Response(status=status.HTTP_400_WRONG_PARAMETERS)

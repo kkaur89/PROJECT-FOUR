@@ -50,6 +50,7 @@ const UserProfile = () => {
           <div className="article">
             <p className="article-header">Your Health Articles</p>
             <div className="article-container">
+              <p>{user.article}</p>
               <ArticleCard />
             </div>
           </div>
