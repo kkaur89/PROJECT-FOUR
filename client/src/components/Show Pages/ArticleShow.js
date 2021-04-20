@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import { getPayLoadFromToken } from '../helpers/Auth'
+
 
 
 import Button from 'react-bootstrap/Button'
@@ -12,7 +14,20 @@ const ArticleShow = () => {
   const params = useParams()
 
   const [article, setArticle] = useState(null)
-  // const [user, getUser] = useState(null)
+  const [user, getUser] = useState(null)
+
+  const [saved, setSaved] = useState('Save to Profile')
+
+  const handleClick = async () => {
+    setSaved('Saved to Profile')
+    try {
+      await axios.put(`/api/auth/${user.id}/`, article.id)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
 
   useEffect(() => {
     const getData = async () => {
@@ -23,14 +38,16 @@ const ArticleShow = () => {
     getData()
   }, [])
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const response = await axios.get(`/api/auth/${params.id}`)
-  //     getUser(response.data)
-  //     console.log('User>>>', response.data)
-  //   }
-  //   getData()
-  // }, [])
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get(`/api/auth/${getPayLoadFromToken().sub}`)
+      getUser(response.data)
+      console.log('User>>>', response.data)
+    }
+    getData()
+  }, [])
+
+ 
 
   // const handleClick = event => {
   //   console.log(event)
@@ -39,8 +56,10 @@ const ArticleShow = () => {
   // }
 
   if (!article) return null
-  // if (!user) return null
+  if (!user) return null
   // if (!article.comments.owner) return article.id
+
+
 
   return (
     <>
@@ -153,13 +172,15 @@ const ArticleShow = () => {
             <Container fluid> 
               <p id="p_wrap">
           Comments: 
-                <hr />
+              </p>
+              <hr />
+              <p>
                 {/* {article.comments[0].owner.username} - {article.comments[0].text} */}
               </p>
-              <p>
+              <>
                 <Button variant="primary" >Like {article.like.length}</Button>
-                <Button variant="secondary" >Save to Profile</Button>
-              </p>
+                <Button type="button" variant="secondary" onClick={handleClick}>{saved}</Button>
+              </>
             </Container>
           </Media.Body>
         </Media>
@@ -169,6 +190,6 @@ const ArticleShow = () => {
 
 
 
-}
+} 
 
 export default ArticleShow

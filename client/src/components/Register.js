@@ -1,20 +1,28 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
+import Form from 'react-bootstrap/Form'
+
 const Register = () => {
 
   const [formData, setFormData] = useState({
     username: '',
+    first_name: '',
+    last_name: '',
     email: '',
     password: '',
     password_confirmation: '',
+    profile_picture: '',
   })
 
   const [errors, setErrors] = useState({
     username: '',
+    first_name: '',
+    last_name: '',
     email: '',
     password: '',
     password_confirmation: '',
+    profile_picture: '',
   })
 
   const handleChange = (event) => {
@@ -67,6 +75,32 @@ const Register = () => {
                     {errors.username && <p className="help is-danger">{errors.username}</p>}
                   </div>
                   <div className="field">
+                    <label className="label">First Name</label>
+                    <div className="control">
+                      <input
+                        className={`input ${errors.first_name ? 'is-danger' : ''}`}
+                        placeholder="First Name"
+                        name="first_name"
+                        value={formData.first_name}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    {errors.first_name && <p className="help is-danger">{errors.first_name}</p>}
+                  </div>
+                  <div className="field">
+                    <label className="label">Last Name</label>
+                    <div className="control">
+                      <input
+                        className={`input ${errors.last_name ? 'is-danger' : ''}`}
+                        placeholder="Last Name"
+                        name="last_name"
+                        value={formData.last_name}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    {errors.last_name && <p className="help is-danger">{errors.last_name}</p>}
+                  </div>
+                  <div className="field">
                     <label className="label">Email</label>
                     <div className="control">
                       <input
@@ -106,6 +140,16 @@ const Register = () => {
                       />
                     </div>
                     {errors.password_confirmation && <p className="help is-danger">{errors.password_confirmation}</p>}
+                  </div>
+                  <div className="field">
+                    <label className="label">Profile Picture Upload</label>
+                    <div className="control">
+                      <Form>
+                        <Form.Group>
+                          <Form.File id="exampleFormControlFile1" />
+                        </Form.Group>
+                      </Form>
+                    </div>
                   </div>
                   <div className="field">
 
