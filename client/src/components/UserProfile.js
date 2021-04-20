@@ -26,7 +26,7 @@ const UserProfile = () => {
   //prettier-ignore
   if (!user) return null
   console.log('userID', userID)
-  const { username, email, profileImage, bio } = user
+  const { username, email, bio } = user
   
   return (
     <>
@@ -38,7 +38,7 @@ const UserProfile = () => {
           </div>
           <div className="menu-bar">
             <div className="text-container">
-              <Image src={profileImage} roundedCircle className="profile-image"/>
+              <Image src={user.profile_image} roundedCircle className="profile-image"/>
               <p>Username: {username}</p>
               <p>Email: {email}</p>
               <p>Bio: {bio} </p>
@@ -48,19 +48,19 @@ const UserProfile = () => {
 
           </div>
           <div className="article">
-            <p className="article-header">Health Articles</p>
+            <p className="article-header">Your Health Articles</p>
             <div className="article-container">
               <ArticleCard />
             </div>
           </div>
           <div className="video">
-            <p className="video-header">Workout Videos</p>
+            <p className="video-header">Your Workout Videos</p>
             <div className="video-container" >
               <VideoCard />   
             </div>
           </div>
           <div className="recipe">
-            <p className="recipe-header">Healthy Recipes</p>
+            <p className="recipe-header">Your Healthy Recipes</p>
             <div className="recipe-container" >
               <RecipeCard />
             </div>

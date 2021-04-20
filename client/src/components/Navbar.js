@@ -13,17 +13,32 @@ import FormControl from 'react-bootstrap/FormControl'
 
 
 const Navbar1 = () => {
-  
+
+  const history = useHistory()
+
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
+  const [userProfile, setUserProfile] = useState(null)
+
+  const handleUserChange = event => {
+    setUserProfile(event.target.value)
+    console.log('UserProfile', userProfile)
+  }
+  console.log('UserProfile', userProfile)
+
+  const handleUserSubmit = event => {
+    console.log(event)
+    history.push({  pathname: '/profile', state: { userProfile } })
+  }
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   })
-  const history = useHistory()
+
 
   const handleChange = event => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
@@ -54,8 +69,8 @@ const Navbar1 = () => {
           </Nav>
         </Navbar.Collapse>
         <Form inline>
-          <FormControl type="text" placeholder="Search User" className="mr-sm-2" />
-          <Button variant="outline-primary">Search</Button>
+          <FormControl type="text" placeholder="Search User" className="mr-sm-2" onChange={handleUserChange}/>
+          <Button variant="outline-primary" onClick={handleUserSubmit}>Search</Button>
         </Form>
       </Navbar>
 

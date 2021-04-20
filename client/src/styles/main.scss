@@ -439,3 +439,18 @@ div.media-body {
 .btn-primary, .btn-secondary, .btn-outline-primary {
   font-family: 'Viga', sans-serif;
 }
+
+// PROFILE SHOW PAGE
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  position: absolute;  
+  left: 30%;            
+  top: 45%;             
+}
+
+.profile-container {
+  flex-direction: row;
+}

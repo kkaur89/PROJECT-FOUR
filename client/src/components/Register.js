@@ -43,7 +43,8 @@ const Register = () => {
   return (
     <>
       <div className="register-hero-body">
-        <img className="register-logo-homepage" src='/assets/logo_white_large.png' />
+        <img className="logo-profilepage" src='/assets/logo_white_large copy.png' />
+        <p className="profile-name">Register to FitBox</p>
    
         <div className="register">
           <section className="register-section">
