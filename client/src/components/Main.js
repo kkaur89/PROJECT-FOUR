@@ -13,12 +13,20 @@ const Main = () => {
   const [video, setVideo] = useState(null)
   const [recipe, setRecipe] = useState(null)
 
+  const [value, setValue] = useState('')
+
+  const handleSelect = event => {
+    console.log(event)
+    setValue(event)
+  }
+
+  console.log('value>>>>>', value)
 
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get('/api/articles')
       setArticle(response.data)
-      console.log('DATA>>>', response.data)
+      console.log('ARTICLES>>>', response.data)
     }
     getData()
   }, [])
@@ -27,29 +35,73 @@ const Main = () => {
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get('/api/videos')
-      setVideo(response.data)
+      const hiitVideos = response.data.filter(item => {
+        return (item.category === 'Hiit')
+      })
+      const yogaVideos = response.data.filter(item => {
+        return (item.category === 'Yoga')
+      })
+      const absVideos = response.data.filter(item => {
+        return (item.category === 'Abs')
+      })
+      const medVideos = response.data.filter(item => {
+        return (item.category === 'Meditation')
+      })
+      if (value === 'Hitt') {
+        setVideo(hiitVideos) 
+      } else if (value === 'Yoga') {
+        setVideo(yogaVideos)
+      } else if (value === 'Abs') {
+        setVideo(absVideos)
+      } else if (value === 'Meditation') {
+        setVideo(medVideos)
+      } else {
+        setVideo(response.data)
+      }
+
       console.log('VIDEO>>>', response.data)
     }
     getData()
-  }, [])
+  }, [value])
 
 
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get('/api/recipes')
-      setRecipe(response.data)
-      console.log('DATA>>>', response.data)
+      const lowCarbs = response.data.filter(item => {
+        return (item.category === 'Low Carbs')
+      })
+      const highProtein = response.data.filter(item => {
+        return (item.category === 'High Protein')
+      })
+      const vegRecipe = response.data.filter(item => {
+        return (item.category === 'Vegetarian')
+      })
+      const vegan = response.data.filter(item => {
+        return (item.category === 'Vegan')
+      })
+      if (value === 'Low Carbs') {
+        setRecipe(lowCarbs) 
+      } else if (value === 'High Protein') {
+        setRecipe(highProtein)
+      } else if (value === 'Vegetarian') {
+        setRecipe(vegRecipe)
+      } else if (value === 'Vegan') {
+        setRecipe(vegan)
+      } else {
+        setRecipe(response.data)
+        console.log('RECIPES>>>', response.data)
+      }
     }
     getData()
-  }, [])
+  }, [value])
 
-  const handleSelect = event => {
-    console.log(event)
-  }
+
 
   if (!article) return null
   if (!video) return null
   if (!recipe) return null
+
 
   return (
 
@@ -68,38 +120,38 @@ const Main = () => {
           </Nav>
           <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
             <NavDropdown title="Workout Videos" id="nav-dropdown" >
-              <NavDropdown.Item eventKey="4.1">Yoga</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.2">Hiit</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.3">Cardio</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.4">Abs</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.5">Weights</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.6">Meditation</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.7">Stretches</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Yoga">Yoga</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Hiit">Hiit</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Cardio">Cardio</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Abs">Abs</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Weights">Weights</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Meditiation">Meditation</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Stretches">Stretches</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
             <NavDropdown title="Healthy Recipes" id="nav-dropdown" bg="light">
-              <NavDropdown.Item eventKey="4.1">High Protein</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.2">Low Carbs</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.3">Vegan</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.4">Vegetarian</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.5">Breakfast</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.6">Snacks</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.7">Dessert</NavDropdown.Item>
+              <NavDropdown.Item eventKey="High Protein">High Protein</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Low Carb">Low Carbs</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Vegan">Vegan</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Vegetarian">Vegetarian</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Breakfast">Breakfast</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Snacks">Snacks</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Dessert">Dessert</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
             <NavDropdown title="Recently Visited" id="nav-dropdown" bg="light">
-              <NavDropdown.Item eventKey="4.1">Articles</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.2">Videos</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.2">Recipes</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Articles">Articles</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Videos">Videos</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Recipes">Recipes</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
             <NavDropdown title="Saved" id="nav-dropdown" bg="light">
-              <NavDropdown.Item eventKey="4.1">Articles</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.2">Videos</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.2">Recipes</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Articles">Articles</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Videos">Videos</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Recipes">Recipes</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </div>

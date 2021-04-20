@@ -30,7 +30,7 @@ const RecipeShow = () => {
             <div className="Ingredients">
               <p id ='p_wrap'>Ingredients: </p>
               <br/>
-              <p id ='p_wrap'>{recipe.ingredients}</p>
+              <p id ="p_wrap">{recipe.ingredients}</p>
             </div>
             <img src={recipe.image} width='1500vh'/>
           </div> 
@@ -38,7 +38,7 @@ const RecipeShow = () => {
             <Card.Title>{recipe.name} | {recipe.time} | <Button variant="primary">Like{recipe.like}</Button></Card.Title>
             <hr />
             <Card.Text>
-              <p id ='p_wrap'>{recipe.text}</p>
+              <p id ="p_wrap">{recipe.text}</p>
             </Card.Text>
           </Card.Body>
           
