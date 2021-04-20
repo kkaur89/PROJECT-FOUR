@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { getPayLoadFromToken } from '../helpers/Auth'
+import { getPayLoadFromToken } from './helpers/Auth'
 import ArticleCard from './Cards/ArticleCard'
 import VideoCard from './Cards/VideoCard'
 import RecipeCard from './Cards/RecipeCard'
@@ -50,7 +50,6 @@ const UserProfile = () => {
           <div className="article">
             <p className="article-header">Your Health Articles</p>
             <div className="article-container">
-              <p>{user.article}</p>
               <ArticleCard />
             </div>
           </div>

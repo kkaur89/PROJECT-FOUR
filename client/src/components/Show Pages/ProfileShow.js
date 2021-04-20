@@ -29,7 +29,7 @@ const ProfileShow = () => {
     <>
       <div className="main-hero">
         <img className="logo-profilepage" src='/assets/logo_white_large copy.png' />
-        <p className="profile-name">Find your friends on FitBox</p>
+        <p className="profilesearch-name">Find your friends on FitBox</p>
       </div>
       <div className="menu-bar">
         <div className="text-container">
@@ -42,13 +42,13 @@ const ProfileShow = () => {
           <div className="profile-container" >
             {user.map(item => (
               
-              <Card style={{ width: '30vw' }} className="card" key={item._id}>
+              <Card style={{ width: '15vw' }} className="mr-10" key={item._id}>
                 <Card.Body>
                   <Card.Text>
                     {item.first_name} {item.last_name}
                   </Card.Text> 
-                  <Card.Img variant="top" src={item.profile_image} roundedCircle className="profile-image"/>
-                  <Card.Text>
+                  <Card.Img variant="top" src={item.profile_image} roundedCircle className="profileshow-image"/>
+                  <Card.Text className="email-text">
                     {item.email}
                   </Card.Text> 
                 </Card.Body>

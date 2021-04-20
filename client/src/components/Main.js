@@ -25,11 +25,29 @@ const Main = () => {
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get('/api/articles')
-      setArticle(response.data)
+      const health = response.data.filter(item => {
+        return (item.category === 'Health')
+      })
+      const fitness = response.data.filter(item => {
+        return (item.category === 'Fitness')
+      })
+      const food = response.data.filter(item => {
+        return (item.category === 'Food')
+      })
+      if (value === 'Health') {
+        setArticle(health) 
+      } else if (value === 'Fitness') {
+        setArticle(fitness)
+      } else if (value === 'Food') {
+        setArticle(food)
+      } else {
+        setArticle(response.data)
+      }
+      
       console.log('ARTICLES>>>', response.data)
     }
     getData()
-  }, [])
+  }, [value])
 
 
   useEffect(() => {
@@ -114,8 +132,9 @@ const Main = () => {
           <img className="mini-logo" src='/assets/logo_small_icon_only_inverted.png'/>
           <Nav variant="pills" activeKey="1" onSelect={handleSelect} >
             <NavDropdown title="Articles" id="nav-dropdown" >
-              <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Health">Health</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Fitness">Fitness</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Food">Food</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
