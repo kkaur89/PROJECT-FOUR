@@ -2,12 +2,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status 
 from rest_framework.exceptions import NotFound
+# from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 
 from .models import Video
 from .serializers.common import VideoSerializer
 from .serializers.populated import PopulatedVideoSerializer
 
 class VideoListView(APIView):
+    # permission_classes = (IsAuthenticatedOrReadOnly)
 
     def get(self, _request):
         videos = Video.objects.all()
