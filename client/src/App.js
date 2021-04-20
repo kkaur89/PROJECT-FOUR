@@ -32,7 +32,7 @@ const App = () => {
         <Route exact path="/profile/:id">
           <UserProfile />
         </Route>
-        <Route exact path="/profile">
+        <Route exact path="/profiles">
           <ProfileShow />
         </Route>
         <Route exact path="/">

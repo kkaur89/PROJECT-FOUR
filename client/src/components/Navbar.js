@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useHistory, useLocation } from 'react-router-dom'
 import axios from 'axios'
+import { userIsAuthenticated } from '../helpers/Auth'
 
 // Boostrap
 import Navbar from 'react-bootstrap/Navbar'
@@ -31,7 +32,7 @@ const Navbar1 = () => {
 
   const handleUserSubmit = event => {
     console.log(event)
-    history.push({  pathname: '/profile', state: { userProfile } })
+    history.push({  pathname: '/profiles', state: { userProfile } })
   }
 
   const [formData, setFormData] = useState({
@@ -51,9 +52,18 @@ const Navbar1 = () => {
     const response = await axios.post('api/auth/login/', formData)
     window.localStorage.setItem('token', response.data.token)
     console.log('TOKEN>>',response.data.token)
-    history.push('/profile')
+    history.push('/profile/:id')
   }
 
+  const handleLogOut = () => {
+    window.localStorage.removeItem('token')
+    history.push('/')
+  }
+  const location = useLocation()
+
+  useEffect(() => {
+
+  },[location.pathname])
 
   return (
     <>
@@ -63,9 +73,18 @@ const Navbar1 = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/main" className="nav-text">Home</Nav.Link>
-            <Nav.Link href="/register"className="nav-text">Register</Nav.Link>
-            <Nav.Link className="nav-text" onClick={handleShow}>Login</Nav.Link>
-            <Nav.Link href="/profile/:id"className="nav-text">Profile</Nav.Link>
+            {userIsAuthenticated() && 
+            <>
+              <Nav.Link href="/profile/:id"className="nav-text">Profile</Nav.Link>
+              <Nav.Link className="nav-text" onClick={handleLogOut}>Log Out</Nav.Link>
+            </>
+            }
+            {!userIsAuthenticated() && 
+            <>
+              <Nav.Link href="/register"className="nav-text">Register</Nav.Link>
+              <Nav.Link className="nav-text" onClick={handleShow}>Login</Nav.Link>
+            </>
+            }
           </Nav>
         </Navbar.Collapse>
         <Form inline>
