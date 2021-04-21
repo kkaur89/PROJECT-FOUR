@@ -18,7 +18,8 @@ const ArticleShow = () => {
   // console.log('USER>>>', user)
   const [saved, setSaved] = useState('Save to Profile')
 
-  const handleClick = async () => {
+  const handleClick = async (event) => {
+    console.log('click>>>>',event.target.value)
     setSaved('Saved to Profile')
     const token = window.localStorage.getItem('token')
     await axios.put(`/api/auth/${article.id}/savedplaces/`, {
@@ -26,7 +27,7 @@ const ArticleShow = () => {
         Authorization: `Bearer ${token}`,
       },
     })
-    console.log('YAY! I SAVED A PLACE AND NOW I CANNOT FIND IT!')
+    console.log('Article Saved!!')
   }
       
  
@@ -182,7 +183,7 @@ const ArticleShow = () => {
               </p>
               <>
                 <Button variant="primary" >Like {article.like.length}</Button>
-                <Button type="button" variant="secondary" onClick={handleClick}>{saved}</Button>
+                <Button type="button" variant="secondary" value={article.id} onClick={handleClick}>{saved}</Button>
               </>
             </Container>
           </Media.Body>
