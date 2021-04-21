@@ -23,7 +23,14 @@ const ProfileShow = () => {
     getData()
   }, [])
 
+  // const filterName = user.filter(item => {
+  //   return (item.first_name.includes(profileHome))
+  // })
+  // getUser(filterName)
+
   if (!user) return null
+
+
 
   return (
     <>

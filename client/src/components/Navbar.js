@@ -31,10 +31,8 @@ const Navbar1 = () => {
   console.log('UserProfile', userProfile)
 
   const handleUserSubmit = event => {
-    show(false)
     console.log(event)
     history.push({  pathname: '/profiles', state: { userProfile } })
-    
   }
 
   const [formData, setFormData] = useState({
@@ -55,6 +53,7 @@ const Navbar1 = () => {
     window.localStorage.setItem('token', response.data.token)
     console.log('TOKEN>>',response.data.token)
     history.push('/profile/:id')
+    handleClose()
   }
 
   const handleLogOut = () => {
