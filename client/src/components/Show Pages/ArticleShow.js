@@ -28,6 +28,7 @@ const ArticleShow = () => {
       },
     })
     console.log('Article Liked')
+    window.location.reload()
   }
 
   const handleClick = async (event) => {

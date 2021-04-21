@@ -18,7 +18,10 @@
     "bio": "",
     "groups": [],
     "user_permissions": [],
-    "friends": []
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
   }
 },
 {
@@ -40,7 +43,14 @@
     "bio": "",
     "groups": [],
     "user_permissions": [],
-    "friends": []
+    "friends": [],
+    "article": [
+      4
+    ],
+    "videos": [
+      3
+    ],
+    "recipes": []
   }
 },
 {
@@ -62,7 +72,346 @@
     "bio": "",
     "groups": [],
     "user_permissions": [],
-    "friends": []
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$z5XjQQEHwTmoxbgjvuKLfT$leIK6ZLszZ2fJqXegdrDMjezULPmAUJ5gYioPRh1gLo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tom",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-19T10:28:25.357Z",
+    "email": "",
+    "first_name": "",
+    "last_name": "",
+    "profile_image": "",
+    "slug": "tom",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$BwGb1MxtH4kBLTPQGZcoof$8EShHeoiTIEoJesMPCC1muC0BP8+cdOg0Kl3uNjYwg8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jess",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-19T11:18:34Z",
+    "email": "jess@email.com",
+    "first_name": "Jess",
+    "last_name": "Simpson",
+    "profile_image": "https://i.imgur.com/lEMBKSV.jpg",
+    "slug": "jess",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$fyhpREuHceFjcgDxKhlVxu$eJjfsDkcrSc1u+5YbBMKFevwoi0bcnMFojSDPsw/rY4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mike",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-19T11:43:08Z",
+    "email": "mike@email.com",
+    "first_name": "Mike",
+    "last_name": "Edwards",
+    "profile_image": "https://i.imgur.com/qbVLnHR.png",
+    "slug": "mike",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$ZXGsFAEHQyJPT9hC1Q5jY2$WyTHLZs7bbKZbT9kSWpkGFQ9+EnRSHnd0/hq3bvqO2Y=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "karenk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-20T10:23:32Z",
+    "email": "karenkaur@email.com",
+    "first_name": "Karen",
+    "last_name": "Kaur",
+    "profile_image": "https://i.imgur.com/OLAe3ab.png",
+    "slug": "karenk",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [
+      5,
+      2,
+      4,
+      7,
+      3,
+      8
+    ],
+    "videos": [
+      4
+    ],
+    "recipes": [
+      3
+    ]
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "password123!",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Hamster",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-20T18:52:25Z",
+    "email": "hamster@email.com",
+    "first_name": "Hamza",
+    "last_name": "Butt",
+    "profile_image": "https://i.imgur.com/52JgoPB.png",
+    "slug": "hamster",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "password123!",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Paddy",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-20T18:53:17Z",
+    "email": "paddy@email.com",
+    "first_name": "Paddy",
+    "last_name": "Johnson",
+    "profile_image": "https://i.imgur.com/uQzPrQ9.png",
+    "slug": "paddy",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 10,
+  "fields": {
+    "password": "password123!",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jos",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-20T19:18:42Z",
+    "email": "jos@email.com",
+    "first_name": "Jos",
+    "last_name": "Bogan",
+    "profile_image": "https://i.imgur.com/5qEBRWd.png",
+    "slug": "jos",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "password123!",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Noa",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-20T19:22:07Z",
+    "email": "noa@email.com",
+    "first_name": "Noa",
+    "last_name": "Filosof",
+    "profile_image": "https://i.imgur.com/B3s1dXW.png",
+    "slug": "noa",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "password123!",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Char",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-20T19:22:53Z",
+    "email": "char@email.com",
+    "first_name": "Charlotte",
+    "last_name": "Morgan",
+    "profile_image": "https://i.imgur.com/808SKb5.png",
+    "slug": "char",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 13,
+  "fields": {
+    "password": "password123!",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Aida",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-20T19:25:54Z",
+    "email": "aida@email.com",
+    "first_name": "Aida",
+    "last_name": "Bourdis",
+    "profile_image": "https://i.imgur.com/cgaXDt7.png",
+    "slug": "aida",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 14,
+  "fields": {
+    "password": "password123!",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mike",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-20T19:29:23Z",
+    "email": "mikeh@email.com",
+    "first_name": "Michael",
+    "last_name": "Henderson",
+    "profile_image": "https://i.imgur.com/USsUxhp.png",
+    "slug": "mike",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 15,
+  "fields": {
+    "password": "password123!",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jahnvi",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-20T19:30:20Z",
+    "email": "jahnvi@email.com",
+    "first_name": "Jahnvi",
+    "last_name": "Patel",
+    "profile_image": "https://i.imgur.com/bDaYrUl.png",
+    "slug": "jahnvi",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 16,
+  "fields": {
+    "password": "password123!",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "olivia",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-20T19:33:44Z",
+    "email": "olivia@email.com",
+    "first_name": "Olivia",
+    "last_name": "Flynn",
+    "profile_image": "https://i.imgur.com/NSfH0TV.png",
+    "slug": "olivia",
+    "bio": "",
+    "groups": [],
+    "user_permissions": [],
+    "friends": [],
+    "article": [],
+    "videos": [],
+    "recipes": []
   }
 }
 ]
