@@ -56,6 +56,11 @@ const UserProfile = () => {
   if (!user) return null
   // if (!articles) return null 
   // if (!savedArticle)
+
+  if (!user.article) return null
+  if (!user.videos) return null
+  if (!user.recipes) return null
+
   console.log('userID', user)
   const { username, email } = user
   
@@ -75,72 +80,84 @@ const UserProfile = () => {
               <p>Friends</p>
               <Button variant="primary" >Delete Profile</Button>
             </div>
-
-          </div>
-          <div className="article">
-            <p className="article-header">Your Health Articles</p>
-            <div className="article-container">
-              <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-                <Card.Img variant="top" src={user.article[0].image} />
-                <Card.Body>
-                  <Card.Text>
-                    {user.article[0].name}
-                  </Card.Text>
-                </Card.Body>
-              </Card> 
-            </div>
-            <div className="article-container">
-              <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-                <Card.Img variant="top" src={user.article[1].image[0]} />
-                <Card.Body>
-                  <Card.Text>
-                    {user.article[1].name}
-                  </Card.Text>
-                </Card.Body>
-              </Card> 
-            </div> 
-            <div className="article-container">
-              <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-                <Card.Img variant="top" src={user.article[2].image[0]} />
-                <Card.Body>
-                  <Card.Text>
-                    {user.article[2].name}
-                  </Card.Text>
-                </Card.Body>
-              </Card> 
-            </div> 
-          
-          </div>
-          <div className="video">
-            <p className="video-header">Your Workout Videos</p>
-            <div className="video-container" >
-              <Card style={{ width: '50vh' }} className="mr-10" id = "minicard">
-
-                <iframe width='100%' height='284' src={user.video[1].video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
-
-                <Card.Body>
-                  <Card.Text>
-                    {user.video[1].name}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-          <div className="recipe">
-            <p className="recipe-header">Your Healthy Recipes</p>
-            <div className="recipe-container" >
-              <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-                <Card.Img variant="top" src={user.recipes[0].image} className="recipe-image"/>
-                <Card.Body>
-                  <Card.Text>
-                    {user.recipes[0].name}
-                  </Card.Text>
-                </Card.Body>
-              </Card> 
-            </div>
           </div>
         </>
       )}
+     
+      <div className="article">
+        <p className="article-header">Your Health Articles</p>
+        <div className="article-container">
+          <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
+            <Card.Img variant="top" src={user.article[0].image} />
+            <Card.Body>
+              <Card.Text>
+                {user.article[0].name}
+              </Card.Text>
+            </Card.Body>
+          </Card> 
+        </div>
+        <div className="article-container">
+          <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
+            <Card.Img variant="top" src={user.article[1].image[0]} />
+            <Card.Body>
+              <Card.Text>
+                {user.article[1].name}
+              </Card.Text>
+            </Card.Body>
+          </Card> 
+        </div> 
+        <div className="article-container">
+          <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
+            <Card.Img variant="top" src={user.article[2].image[0]} />
+            <Card.Body>
+              <Card.Text>
+                {user.article[2].name}
+              </Card.Text>
+            </Card.Body>
+          </Card> 
+        </div> 
+          
+      </div>
+      <div className="video">
+        <p className="video-header">Your Workout Videos</p>
+        <div className="video-container" >
+          <Card style={{ width: '50vh' }} className="mr-10" id = "minicard">
+
+            <iframe width='100%' height='284' src={user.videos.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
+
+            <Card.Body>
+              <Card.Text>
+                {user.videos.name}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
+      <div className="recipe">
+        <p className="recipe-header">Your Healthy Recipes</p>
+        <div className="recipe-container" >
+          <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
+            {/* <Card.Img variant="top" src={user.recipes[0].image} className="recipe-image"/> */}
+            <Card.Body>
+              <Card.Text>
+                {/* {user.recipes[0].name} */}
+              </Card.Text>
+            </Card.Body>
+          </Card> 
+        </div> 
+        <div className="recipe-container" >
+          <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
+            {/* <Card.Img variant="top" src={user.recipes[1].image} className="recipe-image"/> */}
+            <Card.Body>
+              <Card.Text>
+                {/* {user.recipes[1].name} */}
+              </Card.Text>
+            </Card.Body>
+          </Card> 
+        </div>
+      </div>
+
+    
     </>
   )
 }

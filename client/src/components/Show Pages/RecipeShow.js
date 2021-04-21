@@ -32,6 +32,7 @@ const RecipeShow = () => {
       },
     })
     console.log('Recipe Liked')
+    window.location.reload()
   }
 
   useEffect(() => {

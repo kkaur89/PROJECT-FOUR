@@ -42,12 +42,13 @@ const VideoShow = () => {
     console.log(event)
     const token = window.localStorage.getItem('token')
     console.log('token>>>>>', token)
-    await axios.put(`/api/auth/${video.id}/savedplaces/`, null, {
+    await axios.put(`/api/auth/${video.id}/savedvideo/`, null, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
     console.log('Article Saved!!')
+    window.location.reload()
   }
 
 
@@ -87,10 +88,10 @@ const VideoShow = () => {
               <Card style={{ width: '100%' }}>
                 <h4>Comments: </h4><br /> 
                 <h5>
-                  {video.comments[1].text} - {video.comments[1].owner.username} <br /><br />
+                  {/* {video.comments[1].text} - {video.comments[1].owner.username} <br /><br />
                   {video.comments[0].text} - {video.comments[0].owner.username} <br /><br />
                   {video.comments[3].text} - {video.comments[3].owner.username} <br /><br />
-                  {video.comments[2].text} - {video.comments[2].owner.username}
+                  {video.comments[2].text} - {video.comments[2].owner.username} */}
                 </h5>
               </Card>
             
