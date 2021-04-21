@@ -14,20 +14,34 @@ const ArticleShow = () => {
   const params = useParams()
 
   const [article, setArticle] = useState(null)
+  const [user, getUser] = useState(null) 
 
-  // console.log('USER>>>', user)
   const [saved, setSaved] = useState('Save to Profile')
 
-  const handleClick = async (event) => {
-    setSaved('Saved to Profile')
+  const handleLikeClick = async (event) => {
     console.log(event)
     const token = window.localStorage.getItem('token')
-    await axios.put(`/api/auth/${article.id}/savedplaces/`, {
+    console.log('token>>>>>', token)
+    await axios.put(`/api/articles/${user.id}/likearticle/`, null, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
-    console.log('YAY! I SAVED A PLACE AND NOW I CANNOT FIND IT!')
+    console.log('Article Liked')
+  }
+
+  const handleClick = async (event) => {
+    console.log('click>>>>',event.target.value)
+    setSaved('Saved to Profile')
+    console.log(event)
+    const token = window.localStorage.getItem('token')
+    console.log('token>>>>>', token)
+    await axios.put(`/api/auth/${article.id}/savedplaces/`, null, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    console.log('Article Saved!!')
   }
   useEffect(() => {
     const getData = async () => {
@@ -38,14 +52,16 @@ const ArticleShow = () => {
     getData()
   }, [])
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const response = await axios.get(`/api/auth/${getPayLoadFromToken().sub}`)
-  //     getUser(response.data)
-  //     // console.log('User>>>', response.data)
-  //   }
-  //   getData()
-  // }, [])
+  console.log('like worked!>>>', article)
+
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get(`/api/auth/${params.id}`)
+      getUser(response.data)
+      // console.log('User>>>', response.data)
+    }
+    getData()
+  }, [])
 
  
 
@@ -56,6 +72,7 @@ const ArticleShow = () => {
   // }
 
   if (!article) return null
+  if (!user) return null
 
   // if (!article.comments.owner) return article.id
 
@@ -178,8 +195,8 @@ const ArticleShow = () => {
                 {/* {article.comments[0].owner.username} - {article.comments[0].text} */}
               </p>
               <>
-                <Button variant="primary" >Like {article.like.length}</Button>
-                <Button type="button" variant="secondary" onClick={handleClick}>{saved}</Button>
+                <Button variant="primary" onClick={handleLikeClick}>Like {article.like.length}</Button>
+                <Button type="button" variant="secondary" value={article.id} onClick={handleClick}>{saved}</Button>
               </>
             </Container>
           </Media.Body>

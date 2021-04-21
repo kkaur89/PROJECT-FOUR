@@ -8,4 +8,5 @@ class PopulatedUserSerializer(UserSerializer):
 
     recipes = PopulatedRecipeSerializer(many=True)
     articles = PopulatedArticleSerializer(many=True)
-    videos = PopulatedVideoSerializer
+    videos = PopulatedVideoSerializer(many=True)
+    article = PopulatedArticleSerializer(many=True)
