@@ -11,6 +11,7 @@ from .models import User
 from .serializers.common import UserSerializer
 from .serializers.populated import PopulatedUserSerializer
 from articles.models import Article
+# from articles.serializers.populated import PopulatedArticleSerializer
 from videos.models import Video
 from recipes.models import Recipe
 
@@ -72,6 +73,14 @@ class UserDetailView(APIView):
         serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data, status=status.HTTP_200_OK)
 
+    def put(self, request, pk):
+        user_to_edit = self.get_user(pk=request.user.id)
+        friend_to_add = User.objects.get(pk=pk)
+        user_to_edit.friends.add(friend_to_add)
+        user_to_edit.save()
+        serializer_user = PopulatedUserSerializer(user_to_edit)
+        return Response(serializer_user.data, status=status.HTTP_200_OK)
+
 class UserSaveView(APIView):
     permissions_classes = (IsAuthenticated,)
 
@@ -82,13 +91,12 @@ class UserSaveView(APIView):
             raise NotFound(detail="Cannot find that article")
 
     def put(self, request, pk):
-        user_to_edit = self.get_user(pk=request.user.id)
-        artice_to_add = Article.objects.get(pk=pk)
-        user_to_edit.article.add(artice_to_add)
-        user_to_edit.save()
-        serializer_user = PopulatedUserSerializer(user_to_edit)
+        user = self.get_user(pk=request.user.id)
+        article_to_add = Article.objects.get(pk=pk)
+        user.article.add(article_to_add)
+        user.save()
+        serializer_user = PopulatedUserSerializer(user)
         return Response(serializer_user.data, status=status.HTTP_200_OK)
-
     
     def put_video(self, request, pk):
         user_to_edit = self.get_user(pk=request.user.id)

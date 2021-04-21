@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { getPayLoadFromToken } from './helpers/Auth'
+// import { useParams } from 'react-router-dom'
 
 
 import Card from 'react-bootstrap/Card'
@@ -13,33 +14,47 @@ import Button from 'react-bootstrap/Button'
 
 const UserProfile = () => {
 
+  // const params = useParams()
+
   const [user, setUser] = useState(null)
 
-  // const [userData, setUserData] = useState(null)
+  // const [articles, setArticles] = useState(null)
+
+  // const [savedArticle, setSavedArticle] = useState(null)
 
   const userID = getPayLoadFromToken().sub
+
+  // const id = user.article.ParsInt([])  // as the id in the user.article is just an array of numbers this is converting them to an id 
+  // console.log('id>>>', id)
   
+
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const response = await axios.get(`/api/articles/${params.id}`)
+  //     setArticles(response.data)
+
+  //   }
+  //   getData()
+  // }, [])
+
+
   useEffect(() => {
     const getUser = async () => {
       const { data } = await axios.get(`/api/auth/${userID}`)
       setUser(data)
+     
+     
     }
     getUser()
   }, [])
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const response = await axios.get(`api/auth/${userID}/savedplaces/`)
-  //     setUserData(response.data)
-  //   }
-  //   getData()
-  // }, [])
-  // console.log('userData>>>',userData)
+  // if (id === article.id) {
+  //   setSavedArticle(article.data)    // here we are tring to get the id of the article vs id of the numbers in the user.article array to match 
+  // }
 
-
-  //prettier-ignore
   if (!user) return null
-  // if (!userData)
+  // if (!articles) return null 
+  // if (!savedArticle)
   console.log('userID', user)
   const { username, email, bio } = user
   
@@ -83,17 +98,17 @@ const UserProfile = () => {
                   </Card.Text>
                 </Card.Body>
               </Card> 
-            </div>
-            <div className="article-container">
-              <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-                <Card.Img variant="top" src={user.articles[1].image} />
-                <Card.Body>
-                  <Card.Text>
-                    {user.articles[1].name}
-                  </Card.Text>
-                </Card.Body>
-              </Card> 
             </div> */}
+            {/* // <div className="article-container">
+            //   <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
+            //     <Card.Img variant="top" src={user.articles[1].image} />
+            //     <Card.Body>
+            //       <Card.Text>
+            //         {user.articles[1].name}
+            //       </Card.Text>
+            //     </Card.Body>
+            //   </Card> 
+            // </div> */}
           
           </div>
           <div className="video">
