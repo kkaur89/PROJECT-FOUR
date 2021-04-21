@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { getPayLoadFromToken } from './helpers/Auth'
-import ArticleCard from './Cards/ArticleCard'
+// import ArticleCard from './Cards/ArticleCard'
 import VideoCard from './Cards/VideoCard'
 import RecipeCard from './Cards/RecipeCard'
+import Card from 'react-bootstrap/Card'
 
 
 import Image from 'react-bootstrap/Image'
@@ -14,6 +15,8 @@ const UserProfile = () => {
 
   const [user, setUser] = useState(null)
 
+  const [userData, setUserData] = useState(null)
+
   const userID = getPayLoadFromToken().sub
   
   useEffect(() => {
@@ -23,9 +26,21 @@ const UserProfile = () => {
     }
     getUser()
   }, [])
+
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get(`api/auth/${userID}/savedplaces/`)
+      setUserData(response.data)
+    }
+    getData()
+  }, [])
+  console.log('userData>>>',userData)
+
+
   //prettier-ignore
   if (!user) return null
-  console.log('userID', userID)
+  if (!userData)
+    console.log('userID', userID)
   const { username, email, bio } = user
   
   return (
@@ -50,7 +65,14 @@ const UserProfile = () => {
           <div className="article">
             <p className="article-header">Your Health Articles</p>
             <div className="article-container">
-              <ArticleCard />
+              <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
+                <Card.Img variant="top" src='' />
+                <Card.Body>
+                  <Card.Text>
+                    <p>Hello</p>
+                  </Card.Text>
+                </Card.Body>
+              </Card> 
             </div>
           </div>
           <div className="video">
