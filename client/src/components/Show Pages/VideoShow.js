@@ -26,7 +26,8 @@ const VideoShow = () => {
   return (
     <div className="videoShow">
       
-      <Card id="video" style={{ width: '100%' }}>
+      {/* <Card id="video" style={{ width: '100%' }}> */}
+      <div className id="video">
         <Card.Img variant="top"/> <iframe width='1199' height='584' src={video.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
         <Card.Body>
           <div className="video-text">
@@ -36,10 +37,13 @@ const VideoShow = () => {
               <h5>{video.duraration} | Level: {video.difficulty}</h5>
             
             </Card.Text>
-            <Button variant="primary">Like{video.like}</Button>
+            <Button variant="primary" >Like {video.like.length} </Button> 
+            <Button variant="secondary" >Save to Profile</Button>
           </div>
         </Card.Body>
-      </Card>
+      </div>
+      {video.comments}
+      {/* </Card> */}
       
     </div>
   )
