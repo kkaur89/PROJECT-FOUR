@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { useHistory } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
 
 const Register = () => {
+
+  const history = useHistory()
+
+  const [register, setRegister] = useState('Click to Register')
 
   const [formData, setFormData] = useState({
     username: '',
@@ -36,6 +41,7 @@ const Register = () => {
 
   const handleSubmit = async event => {
     console.log('handleSubmit is working')
+    setRegister('Successfully Registered')
     event.preventDefault()
     try {
       const response = await axios.post('/api/auth/register/', formData)
@@ -44,6 +50,7 @@ const Register = () => {
       console.log(err)
       setErrors(err)
     }
+    history.push('/')
   }
   
   // console.log(errors)
@@ -153,7 +160,7 @@ const Register = () => {
                   </div>
                   <div className="field">
 
-                    <button type="submit" className="button register-button">Click to Register</button>
+                    <button type="submit" className="button register-button">{register}</button>
 
                   </div>
                 </form>

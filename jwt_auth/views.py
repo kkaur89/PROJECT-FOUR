@@ -97,6 +97,15 @@ class UserSaveView(APIView):
         user.save()
         serializer_user = PopulatedUserSerializer(user)
         return Response(serializer_user.data, status=status.HTTP_200_OK)
+  
+class UserSaveVideoView(APIView):
+    permissions_classes = (IsAuthenticated,)
+
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            raise NotFound(detail="Cannot find that user")
     
     def put_video(self, request, pk):
         user_to_edit = self.get_user(pk=request.user.id)
@@ -105,6 +114,16 @@ class UserSaveView(APIView):
         user_to_edit.save()
         serializer_user = PopulatedUserSerializer(user_to_edit)
         return Response(serializer_user.data, status=status.HTTP_200_OK)
+
+
+class UserSaveRecipeView(APIView):
+    permissions_classes = (IsAuthenticated,)
+
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            raise NotFound(detail="Cannot find that user")      
 
     def put_recipe(self, request, pk):
         user_to_edit = self.get_user(pk=request.user.id)

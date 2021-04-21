@@ -52,7 +52,7 @@ const Navbar1 = () => {
     const response = await axios.post('api/auth/login/', formData)
     window.localStorage.setItem('token', response.data.token)
     console.log('TOKEN>>',response.data.token)
-    history.push('/profile/:id')
+    history.push('/main')
     handleClose()
   }
 
@@ -73,11 +73,12 @@ const Navbar1 = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/main" className="nav-text">Home</Nav.Link>
+  
             {userIsAuthenticated() && 
             <>
               <Nav.Link href="/profile/:id"className="nav-text">Profile</Nav.Link>
               <Nav.Link className="nav-text" onClick={handleLogOut}>Log Out</Nav.Link>
+              <Nav.Link href="/main" className="nav-text">Home</Nav.Link>
             </>
             }
             {!userIsAuthenticated() && 

@@ -10,3 +10,4 @@ class PopulatedUserSerializer(UserSerializer):
     articles = PopulatedArticleSerializer(many=True)
     videos = PopulatedVideoSerializer(many=True)
     article = PopulatedArticleSerializer(many=True)
+
