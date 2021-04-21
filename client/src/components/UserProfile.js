@@ -116,11 +116,11 @@ const UserProfile = () => {
             <div className="video-container" >
               <Card style={{ width: '50vh' }} className="mr-10" id = "minicard">
 
-                <iframe width='100%' height='284' src={user.videos[0].video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
+                <iframe width='100%' height='284' src={user.video[1].video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
 
                 <Card.Body>
                   <Card.Text>
-                    {user.videos[0].name}
+                    {user.video[1].name}
                   </Card.Text>
                 </Card.Body>
               </Card>

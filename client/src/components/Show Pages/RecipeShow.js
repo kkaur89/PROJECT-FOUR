@@ -10,6 +10,8 @@ import Button from 'react-bootstrap/Button'
 const RecipeShow = () => {
   const params = useParams()
   const [recipe, setRecipe] = useState(null)
+  const [user, getUser] = useState(null) 
+  const [saved, setSaved] = useState('Save to Profile')
 
   useEffect(() => {
     const getData = async () => {
@@ -19,6 +21,41 @@ const RecipeShow = () => {
     getData()
   }, [])
   console.log('RECIPE>>>>', recipe)
+
+  const handleLikeClick = async (event) => {
+    console.log(event)
+    const token = window.localStorage.getItem('token')
+    console.log('token>>>>>', token)
+    await axios.put(`/api/recipes/${user.id}/likerecipe/`, null, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    console.log('Recipe Liked')
+  }
+
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get(`/api/auth/${params.id}`)
+      getUser(response.data)
+      // console.log('User>>>', response.data)
+    }
+    getData()
+  }, [])
+
+  const handleClick = async (event) => {
+    console.log('click>>>>',event.target.value)
+    setSaved('Saved to Profile')
+    console.log(event)
+    const token = window.localStorage.getItem('token')
+    console.log('token>>>>>', token)
+    await axios.put(`/api/auth/${recipe.id}/savedplaces/`, null, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    console.log('Recipe Saved!!')
+  }
 
   if (!recipe) return null
 
@@ -44,8 +81,8 @@ const RecipeShow = () => {
               <Card.Title><h3>{recipe.name}</h3> {recipe.time}    
                 <br />
                 <br />
-                <Button variant="primary" >Like {recipe.like.length}</Button> 
-                <Button variant="secondary" >Save to Profile</Button>
+                <Button variant="primary" onClick={handleLikeClick}>Like {recipe.like.length}</Button>
+                <Button type="button" variant="secondary" value={recipe.id} onClick={handleClick}>{saved}</Button>
               </Card.Title>
               
               <Card.Text>

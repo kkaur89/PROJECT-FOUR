@@ -2,11 +2,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status 
 from rest_framework.exceptions import NotFound
-# from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 
 from .models import Video
 from .serializers.common import VideoSerializer
 from .serializers.populated import PopulatedVideoSerializer
+from jwt_auth.models import User
 
 class VideoListView(APIView):
     # permission_classes = (IsAuthenticatedOrReadOnly)
@@ -49,3 +50,20 @@ class VideoDetailView(APIView):
             updated_video.save()
             return Response(updated_video.data, status=status.HTTP_202_ACCEPTED)
         return Response(updated_video.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+class VideoLikedView(APIView): 
+    permissions_classes = (IsAuthenticated,)
+
+    def get_video(self, pk):
+        try:
+            return Video.objects.get(pk=pk)
+        except Video.DoesNotExist:
+            raise NotFound(detail="Cannot find that video")
+
+    def put(self, request, pk):
+        video = self.get_video(pk=pk)
+        user_to_add = User.objects.get(pk=request.user.id)
+        video.like.add(user_to_add)
+        video.save()
+        serializer_video = PopulatedVideoSerializer(video)
+        return Response(serializer_video.data, status=status.HTTP_200_OK)

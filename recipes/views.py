@@ -2,11 +2,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import NotFound
-# from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 
 from .models import Recipe
 from .serializers.common import RecipeSerializer
 from .serializers.populated import PopulatedRecipeSerializer
+from jwt_auth.models import User
 
 # Create your views here.
 
@@ -52,3 +53,20 @@ class RecipeDetailView(APIView):
             updated_recipe.save()
             return Response(updated_recipe.data, status=status.HTTP_202_ACCEPTED)
         return Response(updated_recipe.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITIY)
+
+class RecipeLikedView(APIView): 
+    permissions_classes = (IsAuthenticated,)
+
+    def get_recipe(self, pk):
+        try:
+            return Recipe.objects.get(pk=pk)
+        except Recipe.DoesNotExist:
+            raise NotFound(detail="Cannot find that recipe")
+
+    def put(self, request, pk):
+        recipe = self.get_recipe(pk=pk)
+        user_to_add = User.objects.get(pk=request.user.id)
+        recipe.like.add(user_to_add)
+        recipe.save()
+        serializer_recipe = PopulatedRecipeSerializer(recipe)
+        return Response(serializer_recipe.data, status=status.HTTP_200_OK)

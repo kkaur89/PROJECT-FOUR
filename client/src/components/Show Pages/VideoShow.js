@@ -10,6 +10,9 @@ import Button from 'react-bootstrap/Button'
 const VideoShow = () => {
   const params = useParams()
   const [video, setVideo] = useState(null)
+  const [user, getUser] = useState(null) 
+
+  const [saved, setSaved] = useState('Save to Profile')
 
   useEffect(() => {
     const getData = async () => {
@@ -18,6 +21,41 @@ const VideoShow = () => {
       setVideo(response.data)
       
       
+    }
+    getData()
+  }, [])
+  const handleLikeClick = async (event) => {
+    console.log(event)
+    const token = window.localStorage.getItem('token')
+    console.log('token>>>>>', token)
+    await axios.put(`/api/videos/${user.id}/likevideo/`, null, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    console.log('Video Liked')
+  }
+
+  const handleClick = async (event) => {
+    console.log('click>>>>',event.target.value)
+    setSaved('Saved to Profile')
+    console.log(event)
+    const token = window.localStorage.getItem('token')
+    console.log('token>>>>>', token)
+    await axios.put(`/api/auth/${video.id}/savedplaces/`, null, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    console.log('Article Saved!!')
+  }
+
+
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get(`/api/auth/${params.id}`)
+      getUser(response.data)
+      // console.log('User>>>', response.data)
     }
     getData()
   }, [])
@@ -40,8 +78,8 @@ const VideoShow = () => {
             
               </Card.Text>
               <div className="video-like">
-                <Button variant="primary" >Like {video.like.length} </Button> 
-                <Button variant="secondary" >Save to Profile</Button>
+                <Button variant="primary" onClick={handleLikeClick}>Like {video.like.length}</Button>
+                <Button type="button" variant="secondary" value={video.id} onClick={handleClick}>{saved}</Button>
               </div>
               <br />
             </div>
