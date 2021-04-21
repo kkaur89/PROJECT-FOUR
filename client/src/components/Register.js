@@ -51,8 +51,8 @@ const Register = () => {
   return (
     <>
       <div className="register-hero-body">
-        <img className="logo-profilepage" src='/assets/logo_white_large copy.png' />
-        <p className="profile-name">Register to FitBox</p>
+        <img className="logo-registerpage" src='/assets/logo_white_large copy.png' />
+        <p className="register-name">Register to FitBox</p>
    
         <div className="register">
           <section className="register-section">
@@ -62,7 +62,7 @@ const Register = () => {
                   onSubmit={handleSubmit}
                 >
                   <div className="field">
-                    <label className="label">Username</label>
+                    <label className="label">Username<span className="required"> *</span></label>
                     <div className="control">
                       <input
                         className={`input ${errors.username ? 'is-danger' : ''}`}
@@ -101,7 +101,7 @@ const Register = () => {
                     {errors.last_name && <p className="help is-danger">{errors.last_name}</p>}
                   </div>
                   <div className="field">
-                    <label className="label">Email</label>
+                    <label className="label">Email<span className="required"> *</span></label>
                     <div className="control">
                       <input
                         className={`input ${errors.email ? 'is-danger' : ''}`}
@@ -114,7 +114,7 @@ const Register = () => {
                     {errors.email && <p className="help is-danger">{errors.email}</p>}
                   </div>
                   <div className="field">
-                    <label className="label">Password</label>
+                    <label className="label">Password<span className="required"> *</span></label>
                     <div className="control">
                       <input
                         className={`input ${errors.password ? 'is-danger' : ''}`}
@@ -128,7 +128,7 @@ const Register = () => {
                     {errors.password && <p className="help is-danger">{errors.password}</p>}
                   </div>
                   <div className="field">
-                    <label className="label">Password Confirmation</label>
+                    <label className="label">Password Confirmation<span className="required"> *</span></label>
                     <div className="control">
                       <input
                         className={`input ${errors.password_confirmation ? 'is-danger' : ''}`}

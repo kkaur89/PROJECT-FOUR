@@ -6,6 +6,8 @@ from rest_framework.exceptions import NotFound
 from .models import Article
 from .serializers.common import ArticleSerializer
 from .serializers.populated import PopulatedArticleSerializer
+from jwt_auth.models import User
+from rest_framework.permissions import IsAuthenticated
 
 class ArticleListView(APIView):
 
@@ -48,6 +50,23 @@ class ArticleDetailView(APIView):
             updated_article.save()
             return Response(updated_article.data, status=status.HTTP_202_ACCEPTED)
         return Response(updated_article.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+class ArticleLikedView(APIView): 
+    permissions_classes = (IsAuthenticated,)
+
+    def get_article(self, pk):
+        try:
+            return Article.objects.get(pk=pk)
+        except Article.DoesNotExist:
+            raise NotFound(detail="Cannot find that article")
+
+    def put(self, request, pk):
+        article = self.get_article(pk=pk)
+        user_to_add = User.objects.get(pk=request.user.id)
+        article.like.add(user_to_add)
+        article.save()
+        serializer_article = PopulatedArticleSerializer(article)
+        return Response(serializer_article.data, status=status.HTTP_200_OK)
 
     # def patch(self, request, pk):
     #     article_to_save = self.get_article(pk)
