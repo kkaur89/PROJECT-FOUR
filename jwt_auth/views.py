@@ -88,7 +88,7 @@ class UserSaveView(APIView):
         try:
             return User.objects.get(pk=pk)
         except User.DoesNotExist:
-            raise NotFound(detail="Cannot find that article")
+            raise NotFound(detail="Cannot find that user")
 
     def put(self, request, pk):
         user = self.get_user(pk=request.user.id)

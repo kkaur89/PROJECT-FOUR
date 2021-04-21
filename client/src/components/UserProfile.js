@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { getPayLoadFromToken } from './helpers/Auth'
@@ -56,7 +57,7 @@ const UserProfile = () => {
   // if (!articles) return null 
   // if (!savedArticle)
   console.log('userID', user)
-  const { username, email, bio } = user
+  const { username, email } = user
   
   return (
     <>
@@ -71,7 +72,6 @@ const UserProfile = () => {
               <Image src={user.profile_image} roundedCircle className="profile-image"/>
               <p>Username: {username}</p>
               <p>Email: {email}</p>
-              <p>Bio: {bio} </p>
               <p>Friends</p>
               <Button variant="primary" >Delete Profile</Button>
             </div>
@@ -81,34 +81,34 @@ const UserProfile = () => {
             <p className="article-header">Your Health Articles</p>
             <div className="article-container">
               <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-                <Card.Img variant="top" src={user.articles[0].image} />
+                <Card.Img variant="top" src={user.article[0].image} />
                 <Card.Body>
                   <Card.Text>
-                    {user.articles[0].name}
+                    {user.article[0].name}
                   </Card.Text>
                 </Card.Body>
               </Card> 
             </div>
-            {/* <div className="article-container">
+            <div className="article-container">
               <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-                <Card.Img variant="top" src={user.articles[1].image} />
+                <Card.Img variant="top" src={user.article[1].image[0]} />
                 <Card.Body>
                   <Card.Text>
-                    {user.articles[1].name}
+                    {user.article[1].name}
                   </Card.Text>
                 </Card.Body>
               </Card> 
-            </div> */}
-            {/* // <div className="article-container">
-            //   <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-            //     <Card.Img variant="top" src={user.articles[1].image} />
-            //     <Card.Body>
-            //       <Card.Text>
-            //         {user.articles[1].name}
-            //       </Card.Text>
-            //     </Card.Body>
-            //   </Card> 
-            // </div> */}
+            </div> 
+            <div className="article-container">
+              <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
+                <Card.Img variant="top" src={user.article[2].image[0]} />
+                <Card.Body>
+                  <Card.Text>
+                    {user.article[2].name}
+                  </Card.Text>
+                </Card.Body>
+              </Card> 
+            </div> 
           
           </div>
           <div className="video">
