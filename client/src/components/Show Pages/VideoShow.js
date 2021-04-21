@@ -25,26 +25,41 @@ const VideoShow = () => {
   if (!video) return null
   return (
     <div className="videoShow">
-      
-      {/* <Card id="video" style={{ width: '100%' }}> */}
-      <div className id="video">
-        <Card.Img variant="top"/> <iframe width='1199' height='584' src={video.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
-        <Card.Body>
-          <div className="video-text">
-            <Card.Title><h2>{video.name}</h2></Card.Title>
-            <Card.Text>
-              <h4>Author: {video.author}</h4>
-              <h5>{video.duraration} | Level: {video.difficulty}</h5>
+      <div className="sidebyside">
+        
+        <h4 id="video">
+          
+          <Card.Img variant="top"/> <iframe width='1199' height='584' src={video.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
+          
+          <Card.Body>
+            <div className="video-text">
+              <Card.Title><h2>{video.name}</h2></Card.Title>
+              <Card.Text>
+                <h4>Author: {video.author}</h4>
+                <h5>{video.duraration} | Level: {video.difficulty}</h5>
             
-            </Card.Text>
-            <Button variant="primary" >Like {video.like.length} </Button> 
-            <Button variant="secondary" >Save to Profile</Button>
-          </div>
-        </Card.Body>
+              </Card.Text>
+              <div className="video-like">
+                <Button variant="primary" >Like {video.like.length} </Button> 
+                <Button variant="secondary" >Save to Profile</Button>
+              </div>
+              <br />
+            </div>
+            <div className="video-com">
+              <Card style={{ width: '100%' }}>
+                <h4>Comments: </h4><br /> 
+                <h5>
+                  {video.comments[1].text} - {video.comments[1].owner.username} <br /><br />
+                  {video.comments[0].text} - {video.comments[0].owner.username} <br /><br />
+                  {video.comments[3].text} - {video.comments[3].owner.username} <br /><br />
+                  {video.comments[2].text} - {video.comments[2].owner.username}
+                </h5>
+              </Card>
+            
+            </div>
+          </Card.Body>
+        </h4>
       </div>
-      {video.comments}
-      {/* </Card> */}
-      
     </div>
   )
 }

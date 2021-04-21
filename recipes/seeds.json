@@ -103,5 +103,50 @@
     "owner": 1,
     "like": []
   }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 8,
+  "fields": {
+    "name": "Pesto Chicken Salad",
+    "text": "Method:\r\n\r\nSTEP 1\r\nPut the couscous in a large heatproof bowl and cover with 100ml boiling water. Stir in 1 tbsp pesto. Cover and leave for 8 mins. \r\n\r\nSTEP 2\r\nFluff the couscous with a fork, then stir in the rest of the pesto, the yogurt and some seasoning. Toss in the chicken, basil, cucumber and tomatoes.\r\n\r\nSTEP 3\r\nSpoon the couscous mix into the lettuce leaves and eat with your fingers, or serve over the lettuce like a salad. Scatter over the pine nuts and more basil before serving.",
+    "ingredients": "50g couscous\r\n2 tbsp pesto\r\n2 tbsp fat-free yogurt\r\n2 cooked skinless chicken breasts , shredded, or 200g leftover roast chicken, shredded\r\n½ small bunch of basil , leaves picked and torn, plus a few small leaves to serve\r\n½ cucumber , chopped\r\n2 sundried tomatoes in oil, drained and sliced\r\n2 Little Gem lettuces , leaves separated\r\n2 tsp toasted pine nuts",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/pesto-chicken-salad-a752309.jpg?quality=90&webp=true&resize=300,272",
+    "category": "Low Carbs",
+    "time": "Less than 20 mins",
+    "created_at": "2021-04-20T20:08:53.409Z",
+    "owner": 1,
+    "like": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 9,
+  "fields": {
+    "name": "Spicy Peanut Pies",
+    "text": "Method:\r\n\r\nSTEP 1\r\nHeat oven to 200C, 180C fan, gas 6. Steam the potatoes for the mash for 20 mins until tender, adding the cauliflower to the steamer after 10 mins. Heat the oil for the filling in a non-stick pan, add the ginger and chilli and stir around the pan until starting to soften. Stir in the dried spices then add the leeks and peppers and cook, stirring frequently, until they are softening. \r\n\r\nSTEP 2\r\nTip in the tomatoes and tomato purée with the cauliflower and 150ml water, and the bouillon. Cover and simmer for 10 mins. \r\n\r\nSTEP 3\r\nStir the peanut butter with 100ml water to loosen the consistency, then stir into stew and cook 5 mins more. Spoon equally into 25cm by 18cm pie dishes.\r\n\r\nSTEP 4\r\nFor the mash, tip the beans into a bowl, add the coriander and chilli powder and mash well. Add the potatoes and roughly mash into the beans so it still has a little texture. Pile on top of the filling in the pie dishes and carefully spread over the filling to enclose it.\r\n\r\nSTEP 5\r\nBake one for 35 mins and chill the other for another day. It will keep for 3 days. Reheat the remaining pie as above, adding an extra 15 mins as you're cooking it from cold.",
+    "ingredients": "For the mash:\r\n\r\n500g potatoes , peeled and chopped\r\n2 x 400g cans cannellini beans , drained\r\n3 tbsp chopped fresh coriander\r\n1 tsp chilli powder\r\n\r\nFor the filling:\r\n\r\n320g cauliflower , cut into small florets\r\n2 tsp rapeseed oil\r\n2 tbsp finely chopped ginger\r\n1 red chilli , seeded unless you like it very spicy\r\n2 tbsp cumin seeds\r\n2 tbsp ground coriander\r\n1 tsp chilli powder\r\n400g leeks , thickly sliced\r\n1 red pepper , deseeded and diced\r\n1 green pepper , deseeded and diced\r\n400g can chopped tomatoes\r\n2 tbsp tomato purée\r\n2 tsp vegetable bouillon\r\n85g chunky peanut butter (with no sugar or palm oil)",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/spicy-peanut-pies-cropped-in-2172ddb.jpg?quality=90&webp=true&resize=300,272",
+    "category": "Vegetarian",
+    "time": "Up to an hour",
+    "created_at": "2021-04-20T20:11:39.809Z",
+    "owner": 1,
+    "like": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 10,
+  "fields": {
+    "name": "Satay Tofu Skewers with Garlic & Ginger Pak Choi",
+    "text": "Method:\r\n\r\nSTEP 1\r\nMix the peanut butter, soy, chilli and lime juice together with 50ml water. Pour half into a roasting tin, add the chunks of tofu and stir to coat. Leave to marinate for 30 mins if you have time, then thread onto four skewers and put on a baking tray.\r\n\r\nSTEP 2\r\nHeat the grill to its highest setting. Grill the tofu for 4 mins on each side until nicely browned and crisp. Meanwhile, heat the oil in a frying pan or wok. Add the garlic and ginger and sizzle for 1 min or so, then tip in the pak choi and cook for about 3 mins until wilted.\r\n\r\nSTEP 3\r\nDivide the pak choi and skewers between plates. Sprinkle over the peanuts, drizzle over the remaining sauce and serve with lime wedges for squeezing over.",
+    "ingredients": "3 tbsp smooth peanut butter\r\n1 tsp light soy sauce\r\npinch of chilli flakes\r\n1 lime , ½ juiced, ½ cut into wedges\r\n200g firm tofu (see tip, below), cut into chunks\r\n1 tbsp rapeseed oil\r\n1 garlic clove , sliced\r\nsmall piece of ginger , sliced\r\n200g pak choi , leaves separated\r\n1 tbsp roasted peanuts\r\n\r\nYou will need:\r\n\r\n4 skewers (soak in cold water for 20 mins if they’re wooden)",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/satay-tofu-skewers-with-garlic-ginger-pak-choi-a047e9c.jpg?quality=90&webp=true&resize=300,272",
+    "category": "Vegan",
+    "time": "Less than 20 mins",
+    "created_at": "2021-04-20T20:13:56.970Z",
+    "owner": 1,
+    "like": []
+  }
 }
 ]

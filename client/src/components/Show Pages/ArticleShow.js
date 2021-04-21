@@ -34,6 +34,7 @@ const ArticleShow = () => {
   const handleClick = async (event) => {
     console.log('click>>>>',event.target.value)
     setSaved('Saved to Profile')
+    console.log(event)
     const token = window.localStorage.getItem('token')
     console.log('token>>>>>', token)
     await axios.put(`/api/auth/${article.id}/savedplaces/`, null, {
@@ -43,10 +44,6 @@ const ArticleShow = () => {
     })
     console.log('Article Saved!!')
   }
-      
- 
-  
-
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get(`/api/articles/${params.id}`)

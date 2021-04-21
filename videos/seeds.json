@@ -3,70 +3,165 @@
   "model": "videos.video",
   "pk": 3,
   "fields": {
-    "video_name": "30-Minute HIIT Cardio Workout with Warm Up - No Equipment at Home",
+    "name": "30-Minute HIIT Cardio Workout with Warm Up - No Equipment at Home",
     "author": "Self",
     "video": "https://www.youtube.com/embed/ml6cT4AZdqI",
     "category": "Hiit",
     "duraration": "30 minute",
     "difficulty": "Pro",
     "created_at": "2021-04-15T16:10:45.554Z",
-    "owner": 1
+    "owner": 1,
+    "like": []
   }
 },
 {
   "model": "videos.video",
   "pk": 4,
   "fields": {
-    "video_name": "Yoga For Beginners - 40 Minute Home Yoga Workout",
+    "name": "Yoga For Beginners - 40 Minute Home Yoga Workout",
     "author": "yogawithadriene",
     "video": "https://www.youtube.com/embed/OQ6NfFIr2jw",
     "category": "Yoga",
     "duraration": "40 minutes",
     "difficulty": "Beginner",
     "created_at": "2021-04-15T16:12:47.682Z",
-    "owner": 1
+    "owner": 1,
+    "like": []
   }
 },
 {
   "model": "videos.video",
   "pk": 5,
   "fields": {
-    "video_name": "10 Min INTENSE LOWER ABS Workout | Total Core",
+    "name": "10 Min INTENSE LOWER ABS Workout | Total Core",
     "author": "MadFit",
     "video": "https://www.youtube.com/embed/IRHcJ8W9S6Y",
     "category": "Abs",
     "duraration": "10 minutes",
     "difficulty": "Intermediate",
     "created_at": "2021-04-15T16:14:06.880Z",
-    "owner": 1
+    "owner": 1,
+    "like": []
   }
 },
 {
   "model": "videos.video",
   "pk": 6,
   "fields": {
-    "video_name": "Guided Meditation for Positive Energy, Relaxation, Peace",
+    "name": "Guided Meditation for Positive Energy, Relaxation, Peace",
     "author": "Lavendaire",
     "video": "https://www.youtube.com/embed/86m4RC_ADEY?list=RDCMUC-ga3onzHSJFAGsIebtVeBg",
     "category": "Meditation",
     "duraration": "20 minutes",
     "difficulty": "Beginner",
     "created_at": "2021-04-15T16:15:31.212Z",
-    "owner": 1
+    "owner": 1,
+    "like": []
   }
 },
 {
   "model": "videos.video",
   "pk": 7,
   "fields": {
-    "video_name": "15 Min. Full Body Stretch | Daily Routine for Flexibility, Mobility & Relaxation",
+    "name": "15 Min. Full Body Stretch | Daily Routine for Flexibility, Mobility & Relaxation",
     "author": "Mady Morrison",
     "video": "https://www.youtube.com/embed/g_tea8ZNk5A",
     "category": "Streches",
     "duraration": "15 minutes",
     "difficulty": "Beginner",
     "created_at": "2021-04-15T16:16:14.864Z",
-    "owner": 1
+    "owner": 1,
+    "like": []
+  }
+},
+{
+  "model": "videos.video",
+  "pk": 16,
+  "fields": {
+    "name": "Replace Treadmill With This 10 Min HIIT/CARDIO Workout",
+    "author": "THENX",
+    "video": "https://www.youtube.com/embed/edIK5SZYMZo\"",
+    "category": "Hiit",
+    "duraration": "10 minutes",
+    "difficulty": "Pro",
+    "created_at": "2021-04-20T10:33:07.825Z",
+    "owner": 1,
+    "like": []
+  }
+},
+{
+  "model": "videos.video",
+  "pk": 18,
+  "fields": {
+    "name": "15 Minute Beginner Flexibility Routine!",
+    "author": "Tom Merrick",
+    "video": "https://www.youtube.com/embed/L_xrDAtykMI",
+    "category": "Cardio",
+    "duraration": "15 minutes",
+    "difficulty": "Beginner",
+    "created_at": "2021-04-20T20:15:44.499Z",
+    "owner": 1,
+    "like": []
+  }
+},
+{
+  "model": "videos.video",
+  "pk": 19,
+  "fields": {
+    "name": "6 Stretches You Should Do Everyday To Improve Flexibility And Function",
+    "author": "Tone and Tighten",
+    "video": "https://www.youtube.com/embed/TWtaSxV_2IQ",
+    "category": "Cardio",
+    "duraration": "15 minutes",
+    "difficulty": "Beginner",
+    "created_at": "2021-04-20T20:17:07.487Z",
+    "owner": 1,
+    "like": []
+  }
+},
+{
+  "model": "videos.video",
+  "pk": 20,
+  "fields": {
+    "name": "BURN 500 CALORIES with this 30-Minute Cardio Workout!",
+    "author": "Rachel Gulotta Fitness",
+    "video": "https://www.youtube.com/embed/LueYlLt1l9M",
+    "category": "Cardio",
+    "duraration": "30 minute",
+    "difficulty": "Intermediate",
+    "created_at": "2021-04-20T20:18:25.774Z",
+    "owner": 1,
+    "like": []
+  }
+},
+{
+  "model": "videos.video",
+  "pk": 21,
+  "fields": {
+    "name": "Full UPPER BODY Workout (Tone & Sculpt) - 15 min At Home",
+    "author": "MadFit",
+    "video": "https://www.youtube.com/embed/0zhvUV1bAVQ\"",
+    "category": "Cardio",
+    "duraration": "15 minutes",
+    "difficulty": "Intermediate",
+    "created_at": "2021-04-20T20:19:58.195Z",
+    "owner": 1,
+    "like": []
+  }
+},
+{
+  "model": "videos.video",
+  "pk": 22,
+  "fields": {
+    "name": "5-Minute Meditation You Can Do Anywhere",
+    "author": "Goodful",
+    "video": "https://www.youtube.com/embed/inpok4MKVLM",
+    "category": "Meditation",
+    "duraration": "5 minutes",
+    "difficulty": "Beginner",
+    "created_at": "2021-04-20T20:22:01.024Z",
+    "owner": 1,
+    "like": []
   }
 }
 ]
