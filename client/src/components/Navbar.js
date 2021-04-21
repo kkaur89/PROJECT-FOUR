@@ -31,8 +31,10 @@ const Navbar1 = () => {
   console.log('UserProfile', userProfile)
 
   const handleUserSubmit = event => {
+    show(false)
     console.log(event)
     history.push({  pathname: '/profiles', state: { userProfile } })
+    
   }
 
   const [formData, setFormData] = useState({

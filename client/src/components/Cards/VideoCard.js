@@ -9,7 +9,7 @@ const VideoCard = ({ id, name, video }) => {
   return (
     <div className="videoShow">
       <Link to={`/videos/${id}`} style={{ color: '#333333' }}>
-        <Card style={{ width: '50vh' }} className="card" id = "minicard">
+        <Card style={{ width: '50vh' }} className="mr-10" id = "minicard">
 
           <iframe width='100%' height='284' src={video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
   

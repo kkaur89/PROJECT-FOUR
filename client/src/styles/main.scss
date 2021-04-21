@@ -84,6 +84,20 @@
   border-width: thick;
 }
 
+.carousel {
+  width:50vw;
+  height:45vh;
+}
+
+#fix-size {
+  height: 60vh;
+}
+
+.home-button {
+  width: 10vw;
+  align-self: center;
+}
+
 //Navbar
 .logo {
   height: 40px;
@@ -204,7 +218,7 @@ a {
 }
 
 img.recipe-image {
-  height: 40vh;
+  height: 35vh;
 }
 
 
@@ -451,13 +465,21 @@ div.media-body {
   font-family: 'Viga', sans-serif;
   color: white;
   font-weight: bold;
-  font-size: 70px;
+  font-size: 60px;
 }
 
 .btn-primary, .btn-secondary, .btn-outline-primary {
   font-family: 'Viga', sans-serif;
 }
 
+.profile-image {
+  width: 80%;
+  height: 13%;
+  // margin-left: %;
+  padding-bottom: 10%;
+  margin-bottom: 15%;
+
+}
 // PROFILE SHOW PAGE
 
 .profile{
@@ -470,5 +492,28 @@ div.media-body {
 }
 
 .profile-container {
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 100%;
+}
+
+.mr-10 {
+  margin-right: 0.25rem !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.profilesearch-name {
+  width: 60%;
+  position: absolute;  
+  left: 55%;            
+  top: 25%;             
+  transform: translate(-50%, -50%);
+  font-family: 'Viga', sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.email-text {
+  font-size: 14px;
 }

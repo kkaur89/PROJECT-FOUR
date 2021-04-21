@@ -2,14 +2,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status 
 from rest_framework.exceptions import NotFound
-# from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 
 from .models import Article
 from .serializers.common import ArticleSerializer
 from .serializers.populated import PopulatedArticleSerializer
 
 class ArticleListView(APIView):
-    # permission_classes = (IsAuthenticatedOrReadOnly)
 
     def get(self, _request):
         articles = Article.objects.all()
@@ -51,10 +49,10 @@ class ArticleDetailView(APIView):
             return Response(updated_article.data, status=status.HTTP_202_ACCEPTED)
         return Response(updated_article.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
-    def patch(self, request, pk):
-        article_to_save = self.get_article(pk)
-        serialized_article = ArticleSerializer(article_to_save, data=request.data, partial=True)
-        if serialized_article.is_valid():
-            serialized_article.save()
-            return Response(serialized_article.data, status=status.HTTP_200_OK)
-        return Response(status=status.HTTP_400_WRONG_PARAMETERS)
+    # def patch(self, request, pk):
+    #     article_to_save = self.get_article(pk)
+    #     serialized_article = ArticleSerializer(article_to_save, data=request.data, partial=True)
+    #     if serialized_article.is_valid():
+    #         serialized_article.save()
+    #         return Response(serialized_article.data, status=status.HTTP_200_OK)
+    #     return Response(status=status.HTTP_400_WRONG_PARAMETERS)
