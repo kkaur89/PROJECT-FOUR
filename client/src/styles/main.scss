@@ -71,7 +71,6 @@
   align-items: center;
   background-color: rgb(228, 228, 228);
   padding-top: 5%;
-  
 }
 
 .owner-container {
@@ -85,7 +84,7 @@
 }
 
 .carousel {
-  width:50vw;
+  width:45vw;
   height:45vh;
 }
 
@@ -97,7 +96,6 @@
   width: 10vw;
   align-self: center;
 }
-
 //Navbar
 .logo {
   height: 40px;
@@ -342,6 +340,19 @@ div.media-body {
   display: flex;
   text-align: left;
   white-space: pre-line;
+  justify-content: space-evenly;
+}
+.recipe-text {
+  padding-left: 20%;
+  padding-right: 20%;
+  
+}
+.recipe-center {
+  display: flex;
+  flex-direction: column;
+}
+.recipe-img {
+  padding: 20px;
 }
 // #p-wrap2 {
 //   white-space: pre-line;
@@ -461,6 +472,7 @@ div.media-body {
   display: flex;
   justify-content:center;
 }
+
 
 // PROFILE PAGE
 

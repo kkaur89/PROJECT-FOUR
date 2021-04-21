@@ -27,26 +27,35 @@ const RecipeShow = () => {
       <div className="R-show-format">  
         <Card style={{ width: '150vh' }}>
           <div className="R-show-format2"> 
-  
-            <img src={recipe.image} width='1500vh'/>
+            <div className="Ingredients">
+              <br />
+              <h3 id ="p_wrap">Ingredients: </h3>
+              <br/>
+              <p id ="p_wrap">{recipe.ingredients}</p>
+            </div>
+            <div className="recipe-img">
+              <img src={recipe.image} width='500vh'/>
+            </div>
           </div> 
           <Card.Body>
-            <Card.Title>{recipe.name} | {recipe.time}    
-              <br />
-              <Button variant="primary" >Like {recipe.like.length} </Button> 
-              <Button variant="secondary" >Save to Profile</Button>
-            </Card.Title>
             <hr />
-   
-            <Card.Text>
-              <div className="Ingredients">
-                <p id ="p_wrap">Ingredients: </p>
-                <br/>
-                <p id ="p_wrap">{recipe.ingredients}</p>
-              </div>
-              <br/>
-              <p id ="p_wrap">{recipe.text}</p>
-            </Card.Text>
+            <br />
+            <div className="recipe-center">
+              <Card.Title><h3>{recipe.name}</h3> {recipe.time}    
+                <br />
+                <br />
+                <Button variant="primary" >Like {recipe.like.length}</Button> 
+                <Button variant="secondary" >Save to Profile</Button>
+              </Card.Title>
+              
+              <Card.Text>
+                <div className="recipe-text">
+                  <br/>
+                  <p id ="p_wrap">{recipe.text}</p>
+                </div>
+              
+              </Card.Text>
+            </div>
           </Card.Body>
           
         </Card>

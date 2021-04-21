@@ -34,6 +34,7 @@ const Home = () => {
         <p>Our aim is to help people to discover new ways to help imporve their day-to-day life.</p>
         <p>Find out how you can improve your life in the links below.</p>
       </div>
+      
       <Jumbotron>
         <div className="jumbo-article">
           <Carousel>
@@ -133,7 +134,8 @@ const Home = () => {
           <div className="jumbo-text">
             <h1>Recipes</h1>
             <p>Our healthy outside, starts from inside. Eat well, live well, be well.</p>
-            <p>Build your culinary skills with the hundreds of healthy recipes. Ranging from high in protein or low in carbs, vegan or vegitarian, breakfast or dinner</p>
+            <p>Build your culinary skills with the hundreds of healthy recipes.</p>
+            <p>Ranging from high in protein or low in carbs, vegan or vegitarian, breakfast or dinner</p>
             <OverlayTrigger trigger="click" placement="bottom" overlay={popover}>
               <Button variant="primary" className="home-button">Learn more</Button>
             </OverlayTrigger>

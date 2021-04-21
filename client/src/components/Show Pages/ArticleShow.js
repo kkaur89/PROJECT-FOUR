@@ -18,8 +18,9 @@ const ArticleShow = () => {
   // console.log('USER>>>', user)
   const [saved, setSaved] = useState('Save to Profile')
 
-  const handleClick = async () => {
+  const handleClick = async (event) => {
     setSaved('Saved to Profile')
+    console.log(event)
     const token = window.localStorage.getItem('token')
     await axios.put(`/api/auth/${article.id}/savedplaces/`, {
       headers: {
@@ -28,10 +29,6 @@ const ArticleShow = () => {
     })
     console.log('YAY! I SAVED A PLACE AND NOW I CANNOT FIND IT!')
   }
-      
- 
-  
-
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get(`/api/articles/${params.id}`)
