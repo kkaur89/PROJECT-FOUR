@@ -358,16 +358,15 @@ div.media-body {
 }
 .register-section {
   width: 50vw;
-  height: 50vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 1px 0 white;
-  border: solid white 2px;
   background: transparentize($color: grey, $amount: 0.7);
   font-weight: 600;
   position: absolute;  
-  top: 50%;
+  top: 45%;
   font-family: 'Viga', sans-serif;
 }
 
@@ -390,8 +389,8 @@ div.media-body {
 
 .button {
   align-self: center;
-  background-color: rgb(189, 202, 199);
-  color: rgb(63, 61, 61);
+  background-color: rgb(15, 6, 138);
+  color: white;
 }
 
 .register-button {
@@ -411,22 +410,38 @@ div.media-body {
 
 .register-hero-body {
   width: 100vw;
-  height: 100vh;
+  height: 130vh;
   background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/Exercise-weight-loss.jpeg');
   background-size: cover;
   background-position: center;
   margin-bottom: 3%;
 }
 
-.register-logo-homepage {
-  width: 50%;
+.logo-registerpage {
+  width: 13%;
   text-align: center; 
   margin-top: 10%; 
   margin: 0 auto;
   position: absolute;  
-  left: 50%;            
+  left: 30%;            
   top: 28%;             
   transform: translate(-50%, -50%);
+}
+
+.register-name {
+  width: 60%;
+  position: absolute;  
+  left: 65%;            
+  top: 28%;             
+  transform: translate(-50%, -50%);
+  font-family: 'Viga', sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.required {
+  color: rgb(187, 141, 182);
 }
 
 // Video Showpage

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import { getPayLoadFromToken } from '../helpers/Auth' 
+
 
 
 
@@ -14,19 +14,23 @@ const ArticleShow = () => {
   const params = useParams()
 
   const [article, setArticle] = useState(null)
-  const [user, getUser] = useState(null)
+
   // console.log('USER>>>', user)
   const [saved, setSaved] = useState('Save to Profile')
 
   const handleClick = async () => {
     setSaved('Saved to Profile')
-    try {
-      await axios.put(`/api/auth/${user._id}/`, article.id)
-      
-    } catch (error) {
-      console.log(error)
-    }
+    const token = window.localStorage.getItem('token')
+    await axios.put(`/api/auth/${article.id}/savedplaces/`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    console.log('YAY! I SAVED A PLACE AND NOW I CANNOT FIND IT!')
   }
+      
+ 
+  
 
   useEffect(() => {
     const getData = async () => {
@@ -37,14 +41,14 @@ const ArticleShow = () => {
     getData()
   }, [])
 
-  useEffect(() => {
-    const getData = async () => {
-      const response = await axios.get(`/api/auth/${getPayLoadFromToken().sub}`)
-      getUser(response.data)
-      // console.log('User>>>', response.data)
-    }
-    getData()
-  }, [])
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const response = await axios.get(`/api/auth/${getPayLoadFromToken().sub}`)
+  //     getUser(response.data)
+  //     // console.log('User>>>', response.data)
+  //   }
+  //   getData()
+  // }, [])
 
  
 
@@ -55,7 +59,7 @@ const ArticleShow = () => {
   // }
 
   if (!article) return null
-  if (!user) return null
+
   // if (!article.comments.owner) return article.id
 
 

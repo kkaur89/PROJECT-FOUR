@@ -14,6 +14,7 @@ from .serializers.populated import PopulatedUserSerializer
 # from articles.views import ArticleDetailView
 from articles.models import Article
 # from articles.serializers.populated import PopulatedArticleSerializer
+from rest_framework.permissions import IsAuthenticated
 
 User = get_user_model()
 
@@ -71,15 +72,27 @@ class UserDetailView(APIView):
         serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data, status=status.HTTP_200_OK)
 
+class UserSaveView(APIView):
+    permissions_classes = (IsAuthenticated,)
+
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            raise NotFound(detail="Cannot find that article")
+
     def put(self, request, pk):
         user_to_edit = self.get_user(pk=request.user.id)
-        artice_to_add = Article.object.get(pk=pk)
-        user_to_edit.add(artice_to_add)
-        updated_user = PopulatedUserSerializer(user_to_edit, data=request.data)
-        if updated_user.is_valid():
-            updated_user.save()
-            return Response(updated_user.data, status=status.HTTP_202_ACCEPTED)
-        return Response(updated_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+        artice_to_add = Article.objects.get(pk=pk)
+        user_to_edit.article.add(artice_to_add)
+        user_to_edit.save()
+        serializer_user = PopulatedUserSerializer(user_to_edit)
+        return Response(serializer_user.data, status=status.HTTP_200_OK)
+        # updated_user = PopulatedUserSerializer(user_to_edit, data=request.data)
+        # if updated_user.is_valid():
+        #     updated_user.save()
+        #     return Response(updated_user.data, status=status.HTTP_202_ACCEPTED)
+        # return Response(updated_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 
 # # Get requests for article by ID so we can save to the user model
