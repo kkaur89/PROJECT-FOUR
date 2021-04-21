@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-<<<<<<< HEAD
-import { getPayLoadFromToken } from '../components/helpers/Auth'
-=======
 import { getPayLoadFromToken } from './helpers/Auth'
->>>>>>> development
 import ArticleCard from './Cards/ArticleCard'
 import VideoCard from './Cards/VideoCard'
 import RecipeCard from './Cards/RecipeCard'
