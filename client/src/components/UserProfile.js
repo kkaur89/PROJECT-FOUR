@@ -116,11 +116,11 @@ const UserProfile = () => {
             <div className="video-container" >
               <Card style={{ width: '50vh' }} className="mr-10" id = "minicard">
 
-                <iframe width='100%' height='284' src={user.video[1].video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
+                <iframe width='100%' height='284' src={user.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
 
                 <Card.Body>
                   <Card.Text>
-                    {user.video[1].name}
+                    {user.name}
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -130,10 +130,10 @@ const UserProfile = () => {
             <p className="recipe-header">Your Healthy Recipes</p>
             <div className="recipe-container" >
               <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-                <Card.Img variant="top" src={user.recipes[0].image} className="recipe-image"/>
+                <Card.Img variant="top" src={user.recipes.image} className="recipe-image"/>
                 <Card.Body>
                   <Card.Text>
-                    {user.recipes[0].name}
+                    {user.recipes.name}
                   </Card.Text>
                 </Card.Body>
               </Card> 
