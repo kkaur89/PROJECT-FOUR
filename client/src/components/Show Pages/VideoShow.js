@@ -88,10 +88,10 @@ const VideoShow = () => {
               <Card style={{ width: '100%' }}>
                 <h4>Comments: </h4><br /> 
                 <h5>
-                  {/* {video.comments[1].text} - {video.comments[1].owner.username} <br /><br />
-                  {video.comments[0].text} - {video.comments[0].owner.username} <br /><br />
-                  {video.comments[3].text} - {video.comments[3].owner.username} <br /><br />
-                  {video.comments[2].text} - {video.comments[2].owner.username} */}
+                  {video.comments[0].text} - {video.comments[0].username} <br /><br />
+                  {video.comments[1].text} - {video.comments.username} <br /><br />
+                  {video.comments[2].text} - {video.comments.username} <br /><br />
+                  {video.comments[3].text} - {video.comments.username}
                 </h5>
               </Card>
             
