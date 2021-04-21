@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import { getPayLoadFromToken } from '../helpers/Auth'
+import { getPayLoadFromToken } from '../helpers/Auth' 
 
 
 
@@ -15,25 +15,24 @@ const ArticleShow = () => {
 
   const [article, setArticle] = useState(null)
   const [user, getUser] = useState(null)
-
+  // console.log('USER>>>', user)
   const [saved, setSaved] = useState('Save to Profile')
 
   const handleClick = async () => {
     setSaved('Saved to Profile')
     try {
-      await axios.put(`/api/auth/${user.id}/`, article.id)
+      await axios.put(`/api/auth/${user._id}/`, article.id)
+      
     } catch (error) {
       console.log(error)
     }
   }
 
-
-
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get(`/api/articles/${params.id}`)
       setArticle(response.data)
-      console.log('Article Data>>>', response.data)
+      // console.log('Article Data>>>', response.data)
     }
     getData()
   }, [])
@@ -42,7 +41,7 @@ const ArticleShow = () => {
     const getData = async () => {
       const response = await axios.get(`/api/auth/${getPayLoadFromToken().sub}`)
       getUser(response.data)
-      console.log('User>>>', response.data)
+      // console.log('User>>>', response.data)
     }
     getData()
   }, [])
