@@ -50,7 +50,7 @@ const RecipeShow = () => {
     console.log(event)
     const token = window.localStorage.getItem('token')
     console.log('token>>>>>', token)
-    await axios.put(`/api/auth/${recipe.id}/savedplaces/`, null, {
+    await axios.put(`/api/auth/${recipe.id}/savedrecipe/`, null, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -62,8 +62,11 @@ const RecipeShow = () => {
 
   return (
     <div className="RecipeShow">
+      <div className="recipe-hero-body">
+        <img className="recipe-logo-homepage" src='/assets/logo_white_large.png' />
+      </div>
       <div className="R-show-format">  
-        <Card style={{ width: '150vh' }}>
+        <Card style={{ width: '150vh' }} id = "recipeshow-card">
           <div className="R-show-format2"> 
             <div className="Ingredients">
               <br />
@@ -83,7 +86,7 @@ const RecipeShow = () => {
                 <br />
                 <br />
                 <Button variant="primary" onClick={handleLikeClick}>Like {recipe.like.length}</Button>
-                <Button type="button" variant="secondary" value={recipe.id} onClick={handleClick}>{saved}</Button>
+                <Button type="button" variant="secondary" className="save-button" value={recipe.id} onClick={handleClick}>{saved}</Button>
               </Card.Title>
               
               <Card.Text>

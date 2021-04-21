@@ -76,8 +76,8 @@ const Home = () => {
             <Carousel.Item >
               <img
                 className="d-block w-100"
-                id = "fix-size"
-                src='/assets/fitbox-workout.jpeg'
+                // id = "fix-size"
+                src='/assets/photo-1522898467493-49726bf28798.webp'
                 alt="First slide"
               />
             </Carousel.Item>

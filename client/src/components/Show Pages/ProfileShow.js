@@ -38,11 +38,6 @@ const ProfileShow = () => {
         <img className="logo-profilepage" src='/assets/logo_white_large copy.png' />
         <p className="profilesearch-name">Find your friends on FitBox</p>
       </div>
-      <div className="menu-bar">
-        <div className="text-container">
-     
-        </div>
-      </div>
       <div className="profile">
         <p className="profile-header">FitBox Users</p>
         {user &&

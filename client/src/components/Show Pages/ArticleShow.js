@@ -114,7 +114,7 @@ const ArticleShow = () => {
                 src={article.image[1]}
                 alt="Generic placeholder"
               />
-              <p id="p_wrap">
+              <p id="p_wrap" className="article-text">
                 {article.text_two}
               </p>
             </Container>
@@ -130,7 +130,7 @@ const ArticleShow = () => {
                 src={article.image[2]}
                 alt="Generic placeholder"
               />
-              <p id="p_wrap">
+              <p id="p_wrap" className="article-text">
                 {article.text_three}
               </p>
             </Container>
@@ -146,7 +146,7 @@ const ArticleShow = () => {
                 src={article.image[3]}
                 alt="Generic placeholder"
               />
-              <p id="p_wrap">
+              <p id="p_wrap" className="article-text">
                 {article.text_four}
               </p>
             </Container>
@@ -162,7 +162,7 @@ const ArticleShow = () => {
                 src={article.image[4]}
                 alt="Generic placeholder"
               />
-              <p id="p_wrap">
+              <p id="p_wrap" className="article-text">
                 {article.text_five}
               </p>
             </Container>
@@ -193,11 +193,11 @@ const ArticleShow = () => {
               </p>
               <hr />
               <p>
-                {/* {article.comments[0].owner.username} - {article.comments[0].text} */}
+                {article.comments[0].owner.username} - {article.comments[0].text}
               </p>
               <>
-                <Button variant="primary" onClick={handleLikeClick}>Like {article.like.length}</Button>
-                <Button type="button" variant="secondary" value={article.id} onClick={handleClick}>{saved}</Button>
+                <Button variant="primary" className="like-button" onClick={handleLikeClick}>Like {article.like.length}</Button>
+                <Button type="button" variant="secondary"className="save-button" value={article.id} onClick={handleClick}>{saved}</Button>
               </>
             </Container>
           </Media.Body>

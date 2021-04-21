@@ -57,6 +57,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 45vw;
 }
 
 .bring-to-front {
@@ -231,9 +232,9 @@ img.recipe-image {
 .main-hero {
   width: 100vw;
   height: 30vh;
-  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../images/about-iv-therapy-header-img-5e8f550203b03.jpg');
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../images/b98b9d9c-13b5-4a75-ad93-eb0df075b546-ManageWeight_Desktop.png.jpeg');
   background-size: cover;
-  background-position: center bottom;
+  background-position: center;
 
 }
 
@@ -273,21 +274,21 @@ img.recipe-image {
 
 .article-hero-body {
   width: 100vw;
-  height: 50vh;
-  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/20170710193708-GettyImages-499778755.jpeg');
+  height: 35vh;
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/photo-1505578475278-c54f1cb8beff.webp');
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   margin-bottom: 3%;
 }
 
 .article-logo-homepage {
-  width: 50%;
+  width: 40%;
   text-align: center; 
   margin-top: 10%; 
   margin: 0 auto;
   position: absolute;  
-  left: 50%;            
-  top: 33%;             
+  left: 47%;            
+  top: 25%;             
   transform: translate(-50%, -50%);
 }
 
@@ -296,7 +297,7 @@ img.recipe-image {
 // }
 
 img.float-left-mr-2-mb-1 {
-  margin-right: 10%;
+  margin-right: 0.25rem !important;
 }
 
 // .article-jt-one {
@@ -312,6 +313,11 @@ img.float-left-mr-2-mb-1 {
   white-space: pre-line;
 }
 
+.article-text {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
 div.media-body {
   margin-left: 10%;
   margin-right: 10%;
@@ -320,7 +326,42 @@ div.media-body {
   padding: 3%;
   color:rgb(54, 54, 54);
 }
+
+.article-text-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.save-button {
+  margin-left: 2%;
+}
+
 // Recipe Show 
+
+.recipe-hero-body {
+  width: 100vw;
+  height: 35vh;
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/fitbox-recipe.jpeg');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3%;
+}
+
+.recipe-logo-homepage {
+  width: 40%;
+  text-align: center; 
+  margin-top: 10%; 
+  margin: 0 auto;
+  position: absolute;  
+  left: 47%;            
+  top: 25%;             
+  transform: translate(-50%, -50%);
+}
+
+// #recipeshow-card{
+//   position: absolute;
+//   top: 40%;
+// }
 
 .RecipeShow {
   text-align: center;
@@ -334,7 +375,10 @@ div.media-body {
   size: 100%;
 }
 .R-show-format{
-  display: flex;
+  display: flex;   
+  position: absolute;
+  top: 50%;
+
 }
 .R-show-format2{
   display: flex;
@@ -421,7 +465,7 @@ div.media-body {
 
 .register-hero-body {
   width: 100vw;
-  height: 130vh;
+  height: 150vh;
   background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/Exercise-weight-loss.jpeg');
   background-size: cover;
   background-position: center;
@@ -518,7 +562,7 @@ div.media-body {
   flex-direction: column;
   width: 60%;
   position: absolute;  
-  left: 30%;            
+  left: 20%;            
   top: 45%;             
 }
 
