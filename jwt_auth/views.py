@@ -73,6 +73,15 @@ class UserDetailView(APIView):
         serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data, status=status.HTTP_200_OK)
 
+class UserFriendsView(APIView):
+    permissions_classes = (IsAuthenticated,)
+
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            raise NotFound(detail="Cannot find that user")
+
     def put(self, request, pk):
         user_to_edit = self.get_user(pk=request.user.id)
         friend_to_add = User.objects.get(pk=pk)

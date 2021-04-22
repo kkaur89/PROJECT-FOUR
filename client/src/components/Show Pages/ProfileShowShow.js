@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { getPayLoadFromToken } from './helpers/Auth'
-// import { useParams, Link } from 'react-router-dom'
+// import { getPayLoadFromToken } from './helpers/Auth'
+import { useParams } from 'react-router-dom'
 
 
 import Card from 'react-bootstrap/Card'
@@ -15,7 +15,7 @@ import Button from 'react-bootstrap/Button'
 
 const UserProfile = () => {
 
-  // const params = useParams()
+  const params = useParams()
 
   const [user, setUser] = useState(null)
 
@@ -23,7 +23,7 @@ const UserProfile = () => {
 
   // const [savedArticle, setSavedArticle] = useState(null)
 
-  const userID = getPayLoadFromToken().sub
+
 
   // const id = user.article.ParsInt([])  // as the id in the user.article is just an array of numbers this is converting them to an id 
   // console.log('id>>>', id)
@@ -41,7 +41,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     const getUser = async () => {
-      const { data } = await axios.get(`/api/auth/${userID}`)
+      const { data } = await axios.get(`/api/auth/${params.id}`)
       setUser(data)
      
      
@@ -62,7 +62,7 @@ const UserProfile = () => {
   // if (!user.recipes) return null
 
   console.log('userID', user)
-  const { username, email, friends } = user
+  const { username, email } = user
 
   
   return (
@@ -78,7 +78,7 @@ const UserProfile = () => {
               <Image src={user.profile_image} roundedCircle className="profile-image"/>
               <p>Username: {username}</p>
               <p>Email: {email}</p>
-              <p >Friends: {friends.length}</p>
+              <p>Friends</p>
               <Button variant="primary" >Delete Profile</Button>
             </div>
           </div>
@@ -233,7 +233,7 @@ const UserProfile = () => {
           </div> 
         </div>
       }
-      
+
     </>
   )
 }
