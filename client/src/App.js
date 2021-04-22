@@ -11,6 +11,7 @@ import RecipeShow from './components/Show Pages/RecipeShow'
 import Register from './components/Register'
 import UserProfile from './components/UserProfile'
 import ProfileShow from './components/Show Pages/ProfileShow'
+import ProfileShowShow from './components/Show Pages/ProfileShowShow'
 
 const App = () => {
   return (
@@ -31,6 +32,9 @@ const App = () => {
         </Route>
         <Route exact path="/profile/:id">
           <UserProfile />
+        </Route>
+        <Route exact path="/profiles/:id">
+          <ProfileShowShow />
         </Route>
         <Route exact path="/profiles">
           <ProfileShow />
