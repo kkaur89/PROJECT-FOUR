@@ -91,7 +91,7 @@ const Navbar1 = () => {
         </Navbar.Collapse>
         <Form inline>
           <FormControl type="text" placeholder="Search User" className="mr-sm-2" onChange={handleUserChange}/>
-          <Button variant="outline-primary" onClick={handleUserSubmit}>Search</Button>
+          <Button className="btn" onClick={handleUserSubmit}>Search</Button>
         </Form>
       </Navbar>
 

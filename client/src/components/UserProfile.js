@@ -79,7 +79,7 @@ const UserProfile = () => {
               <p>Username: {username}</p>
               <p>Email: {email}</p>
               <p >Friends: {friends.length}</p>
-              <Button variant="primary" >Delete Profile</Button>
+              <Button className="btn" >Delete Profile</Button>
             </div>
           </div>
         </>
@@ -106,7 +106,7 @@ const UserProfile = () => {
           <div className="article-container">
             <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
     
-              <Card.Img variant="top" src={user.article[0].image} />
+              <Card.Img variant="top" src={user.article[0].image[0]} />
               <Card.Body>
                 <Card.Text>
                   {user.article[0].name}
@@ -127,11 +127,11 @@ const UserProfile = () => {
           <div className="video-container" >
             <Card style={{ width: '50vh' }} className="mr-10" id = "minicard">
 
-              {/* <iframe width='100%' height='284' src={user.videos.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe> */}
+              <iframe width='100%' height='284' src={user.videos.video} title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
 
               <Card.Body>
                 <Card.Text>
-                  {/* {user.videos.name} */}
+                  {user.videos.name}
                 </Card.Text>
               </Card.Body>
             </Card>

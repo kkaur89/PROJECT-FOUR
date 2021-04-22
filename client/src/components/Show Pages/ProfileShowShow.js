@@ -79,7 +79,7 @@ const UserProfile = () => {
               <p>Username: {username}</p>
               <p>Email: {email}</p>
               <p>Friends</p>
-              <Button variant="primary" >Delete Profile</Button>
+              <Button className="btn">Delete Profile</Button>
             </div>
           </div>
         </>

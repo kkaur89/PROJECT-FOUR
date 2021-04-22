@@ -79,7 +79,7 @@ const VideoShow = () => {
             
               </Card.Text>
               <div className="video-like">
-                <Button variant="primary" onClick={handleLikeClick}>Like {video.like.length}</Button>
+                <Button className="btn" onClick={handleLikeClick}>Like {video.like.length}</Button>
                 <Button type="button" variant="secondary" value={video.id} onClick={handleClick}>{saved}</Button>
               </div>
               <br />

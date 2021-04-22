@@ -10,7 +10,7 @@ const ArticleCard = ({ id, name, image }) => {
     <>
       <Link to={`/articles/${id}`} style={{ color: '#333333' }}>
         <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-          <Card.Img variant="top" src={image} />
+          <Card.Img variant="top" src={image[0]} />
           <Card.Body>
             <Card.Text>
               {name}

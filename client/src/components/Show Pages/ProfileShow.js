@@ -55,7 +55,8 @@ const ProfileShow = () => {
         <p className="profilesearch-name">Find your friends on FitBox</p>
       </div>
       <div className="profile">
-        <p className="profile-header">FitBox Users</p>
+        <h3 className="profile-header">FitBox Users</h3>
+        <br />
         {users &&
         <>
         

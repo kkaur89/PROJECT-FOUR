@@ -196,7 +196,7 @@ const ArticleShow = () => {
                 {article.comments[0].owner.username} - {article.comments[0].text}
               </p>
               <>
-                <Button variant="primary" className="like-button" onClick={handleLikeClick}>Like {article.like.length}</Button>
+                <Button className="like-button" onClick={handleLikeClick}>Like {article.like.length}</Button>
                 <Button type="button" variant="secondary"className="save-button" value={article.id} onClick={handleClick}>{saved}</Button>
               </>
             </Container>

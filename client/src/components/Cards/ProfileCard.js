@@ -39,7 +39,7 @@ const ProfileCard = ({ id, first_name, last_name, profile_image, email }) => {
             </Card.Text> 
           </Link>
         </Card.Body>
-        <Button variant="primary" value={id} onClick={handleClick}>{saved}</Button>
+        <Button className="btn" value={id} onClick={handleClick}>{saved}</Button>
       </Card> 
      
     </>

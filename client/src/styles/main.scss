@@ -96,6 +96,7 @@
 .home-button {
   width: 10vw;
   align-self: center;
+  color: #182bc2;
 }
 //Navbar
 .logo {
@@ -108,7 +109,7 @@ a.nav-link {
 
 .login-button {
   margin-top: 3%;
-  background-color: rgb(13, 62, 209);
+  background-color: #182bc2;
   width: 5.5vw;
   color: white;
   border-radius: 5px;
@@ -120,7 +121,7 @@ a.nav-link {
   font-size: 20px;
   margin-bottom: 0;
   margin-top: 10px;
-  color:rgb(192, 137, 150);
+  color:#d29494;
   font-family: 'Viga', sans-serif;
 }
 
@@ -591,4 +592,9 @@ div.media-body {
 
 .email-text {
   font-size: 14px;
+}
+
+.btn {
+  background-color: #182bc2;
+  color: white;
 }

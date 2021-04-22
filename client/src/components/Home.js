@@ -65,7 +65,7 @@ const Home = () => {
             <p>Learn ways to improve your health and lifestyle with the many articles and blogs written by our fantastic authors.</p>
             <p>Exercise your mind</p>
             <OverlayTrigger trigger="click" placement="bottom" overlay={popover}>
-              <Button variant="primary" className="home-button">Learn more</Button>
+              <Button className="home-button">Learn more</Button>
             </OverlayTrigger>
           </div>
         </div>
@@ -101,7 +101,7 @@ const Home = () => {
             <p> In need of a rigorous HIIT session, or maybe a relaxing meditation, or just a good stretch?</p>
             <p> Discover the variety of videos we have, for all your needs.</p>
             <OverlayTrigger trigger="click" placement="bottom" overlay={popover}>
-              <Button variant="primary" className="home-button">Learn more</Button>
+              <Button className="home-button">Learn more</Button>
             </OverlayTrigger>
           </div>
         </div>
@@ -137,7 +137,7 @@ const Home = () => {
             <p>Build your culinary skills with the hundreds of healthy recipes.</p>
             <p>Ranging from high in protein or low in carbs, vegan or vegitarian, breakfast or dinner</p>
             <OverlayTrigger trigger="click" placement="bottom" overlay={popover}>
-              <Button variant="primary" className="home-button">Learn more</Button>
+              <Button className="home-button">Learn more</Button>
             </OverlayTrigger>
           </div>
         </div>

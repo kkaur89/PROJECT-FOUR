@@ -85,7 +85,7 @@ const RecipeShow = () => {
               <Card.Title><h3>{recipe.name}</h3> {recipe.time}    
                 <br />
                 <br />
-                <Button variant="primary" onClick={handleLikeClick}>Like {recipe.like.length}</Button>
+                <Button className="btn" onClick={handleLikeClick}>Like {recipe.like.length}</Button>
                 <Button type="button" variant="secondary" className="save-button" value={recipe.id} onClick={handleClick}>{saved}</Button>
               </Card.Title>
               
