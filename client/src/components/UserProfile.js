@@ -88,30 +88,30 @@ const UserProfile = () => {
         <p className="article-header">Your Health Articles</p>
         <div className="article-container">
           <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-            <Card.Img variant="top" src={user.article[0].image} />
+            {/* <Card.Img variant="top" src={user.article[0].image} /> */}
             <Card.Body>
               <Card.Text>
-                {user.article[0].name}
+                {/* {user.article[0].name} */}
               </Card.Text>
             </Card.Body>
           </Card> 
         </div>
         <div className="article-container">
           <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-            <Card.Img variant="top" src={user.article[1].image[0]} />
+            {/* <Card.Img variant="top" src={user.article[1].image[0]} /> */}
             <Card.Body>
               <Card.Text>
-                {user.article[1].name}
+                {/* {user.article[1].name} */}
               </Card.Text>
             </Card.Body>
           </Card> 
         </div> 
         <div className="article-container">
           <Card style={{ width: '25vw' }} className="mr-10" id = "minicard">
-            <Card.Img variant="top" src={user.article[2].image[0]} />
+            {/* <Card.Img variant="top" src={user.article[2].image[0]} /> */}
             <Card.Body>
               <Card.Text>
-                {user.article[2].name}
+                {/* {user.article[2].name} */}
               </Card.Text>
             </Card.Body>
           </Card> 

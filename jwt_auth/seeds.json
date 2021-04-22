@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$260000$JhlZJG2BCmDv7BFGFtgWrb$rSefPkFCwF1oZrcxgbNCVjUApSAyXr2jWTMK4OafLJg=",
-    "last_login": "2021-04-15T15:56:24.540Z",
+    "last_login": "2021-04-22T09:12:39.178Z",
     "is_superuser": true,
     "username": "admin",
     "is_staff": true,
@@ -174,11 +174,11 @@
     "user_permissions": [],
     "friends": [],
     "article": [
-      5,
       2,
-      4,
-      7,
       3,
+      4,
+      5,
+      7,
       8
     ],
     "videos": [
