@@ -2,11 +2,11 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status 
 from rest_framework.exceptions import NotFound
-
+from jwt_auth.models import User
 from .models import Article
 from .serializers.common import ArticleSerializer
 from .serializers.populated import PopulatedArticleSerializer
-from jwt_auth.models import User
+
 from rest_framework.permissions import IsAuthenticated
 
 class ArticleListView(APIView):
