@@ -16,6 +16,7 @@ By default, the proxy server is set up to point at port 8000, if you need to do 
 
 `yarn build` to create a build directory
 
+Created by Harry and Karen
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
