@@ -1,4 +1,17 @@
 import React from 'react'
+import logo from '../assets/logo_white_large.png'
+import image1 from '../assets/fitbox-health.jpeg'
+import image2 from '../assets/f97c5316-7104-4232-a865-f10b97a9ea2b-GetFit_Desktop.png.jpeg'
+import image3 from '../assets/getty-24a00a1feb1f490180df0789dbc35b64.jpg.webp'
+import image4 from '../assets/photo-1522898467493-49726bf28798.webp'
+import image5 from '../assets/0d4afd6fc61c47d2b7cfe3bbece0d730.jpg.webp'
+import image6 from '../assets/46900896-321f-44da-a810-6b6d37c22c41.jpg.webp'
+import image7 from '../assets/fitbox-recipe.jpeg'
+import image8 from '../assets/f47cf2d8-4d47-4b7d-8da7-d55508115504.jpg'
+import image9 from '../assets/9fa265036a114efda39200600227d8bb.webp'
+import harryimage from '../assets/Screenshot 2021-04-19 at 16.50.11.png'
+import karenimage from '../assets/Screenshot 2021-04-19 at 16.49.58.png'
+
 
 // Bootstrap
 import Jumbotron from 'react-bootstrap/Jumbotron'
@@ -25,13 +38,13 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-body">
-        <img className="logo-homepage" src='/assets/logo_white_large.png' />
+        <img className="logo-homepage" src={logo} />
       </div>
       <div className="aims">
         <h2>The groundwork for all happiness is good health</h2>
         <br/>
         <p>It is important to look after yourself, physically and mentally, health is the greatest wealth.</p>
-        <p>Our aim is to help people to discover new ways to help imporve their day-to-day life.</p>
+        <p>Our aim is to help people to discover new ways to help improve their day-to-day life.</p>
         <p>Find out how you can improve your life in the links below.</p>
       </div>
       
@@ -41,21 +54,21 @@ const Home = () => {
             <Carousel.Item >
               <img
                 className="d-block w-100"
-                src='/assets/fitbox-health.jpeg'
+                src={image1}
                 alt="First slide"
               />
             </Carousel.Item>
             <Carousel.Item >
               <img
                 className="d-block w-100"
-                src='/assets/f97c5316-7104-4232-a865-f10b97a9ea2b-GetFit_Desktop.png.jpeg' 
+                src={image2} 
                 alt="Second slide"
               />
             </Carousel.Item>
             <Carousel.Item >
               <img
                 className="d-block w-100"
-                src='/assets/getty-24a00a1feb1f490180df0789dbc35b64.jpg.webp'
+                src={image3}
                 alt="Third slide"
               />
             </Carousel.Item>
@@ -77,21 +90,21 @@ const Home = () => {
               <img
                 className="d-block w-100"
                 // id = "fix-size"
-                src='/assets/photo-1522898467493-49726bf28798.webp'
+                src={image4}
                 alt="First slide"
               />
             </Carousel.Item>
             <Carousel.Item >
               <img
                 className="d-block w-100"
-                src='/assets/0d4afd6fc61c47d2b7cfe3bbece0d730.jpg.webp'
+                src={image5}
                 alt="Second slide"
               />
             </Carousel.Item>
             <Carousel.Item >
               <img
                 className="d-block w-100"
-                src='/assets/46900896-321f-44da-a810-6b6d37c22c41.jpg.webp'
+                src={image6}
                 alt="Third slide"
               />
             </Carousel.Item>
@@ -112,21 +125,21 @@ const Home = () => {
             <Carousel.Item >
               <img
                 className="d-block w-100"
-                src='/assets/fitbox-recipe.jpeg'
+                src={image7}
                 alt="First slide"
               />
             </Carousel.Item>
             <Carousel.Item >
               <img
                 className="d-block w-100"
-                src='/assets/f47cf2d8-4d47-4b7d-8da7-d55508115504.jpg'
+                src={image8}
                 alt="Second slide"
               />
             </Carousel.Item>
             <Carousel.Item >
               <img
                 className="d-block w-100"
-                src='/assets/9fa265036a114efda39200600227d8bb.webp'
+                src={image9}
                 alt="Third slide"
               />
             </Carousel.Item>
@@ -147,8 +160,8 @@ const Home = () => {
           <h4>Meet the Team</h4>
           <p>Founders of FitBox: Harry and Karen</p>
           <div className="owner-container">
-            <Image src="/assets/Screenshot 2021-04-19 at 16.50.11.png" roundedCircle className="owner-image"/>
-            <Image src="/assets/Screenshot 2021-04-19 at 16.49.58.png" roundedCircle className="owner-image"/>
+            <Image src={harryimage} roundedCircle className="owner-image"/>
+            <Image src={karenimage} roundedCircle className="owner-image"/>
           </div>
         </div>
       </Jumbotron>

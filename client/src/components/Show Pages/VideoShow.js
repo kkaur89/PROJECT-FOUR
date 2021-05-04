@@ -16,7 +16,7 @@ const VideoShow = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`/api/videos/${params.id}`)
+      const response = await axios.get(`/api/videos/${params.id}/`)
       console.log('VIDEO PK>>>>', response.data)
       setVideo(response.data)
       
@@ -55,7 +55,7 @@ const VideoShow = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`/api/auth/${params.id}`)
+      const response = await axios.get(`/api/auth/${params.id}/`)
       getUser(response.data)
       // console.log('User>>>', response.data)
     }

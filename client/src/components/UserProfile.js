@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { getPayLoadFromToken } from './helpers/Auth'
 // import { useParams, Link } from 'react-router-dom'
+import logo from '../assets/logo_white_large copy.png'
 
 
 import Card from 'react-bootstrap/Card'
@@ -41,7 +42,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     const getUser = async () => {
-      const { data } = await axios.get(`/api/auth/${userID}`)
+      const { data } = await axios.get(`/api/auth/${userID}/`)
       setUser(data)
      
      
@@ -70,7 +71,7 @@ const UserProfile = () => {
       {user && (
         <>
           <div className="main-hero">
-            <img className="logo-profilepage" src='/assets/logo_white_large copy.png' />
+            <img className="logo-profilepage" src={logo} />
             <p className="profile-name">{`Welcome to FitBox ${username}`}</p>
           </div>
           <div className="menu-bar">

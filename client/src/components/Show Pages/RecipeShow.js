@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import logo from '../../assets/logo_white_large.png'
 
 // Bootstrap
 import Card from 'react-bootstrap/Card'
@@ -15,7 +16,7 @@ const RecipeShow = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`/api/recipes/${params.id}`)
+      const response = await axios.get(`/api/recipes/${params.id}/`)
       setRecipe(response.data)
     }
     getData()
@@ -37,7 +38,7 @@ const RecipeShow = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`/api/auth/${params.id}`)
+      const response = await axios.get(`/api/auth/${params.id}/`)
       getUser(response.data)
       // console.log('User>>>', response.data)
     }
@@ -63,7 +64,7 @@ const RecipeShow = () => {
   return (
     <div className="RecipeShow">
       <div className="recipe-hero-body">
-        <img className="recipe-logo-homepage" src='/assets/logo_white_large.png' />
+        <img className="recipe-logo-homepage" src={logo} />
       </div>
       <div className="R-show-format">  
         <Card style={{ width: '150vh' }} id = "recipeshow-card">

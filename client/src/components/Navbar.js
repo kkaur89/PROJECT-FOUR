@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import axios from 'axios'
 import { userIsAuthenticated } from './helpers/Auth'
+import logo from '../assets/logo_small.png'
 
 // Boostrap
 import Navbar from 'react-bootstrap/Navbar'
@@ -69,7 +70,7 @@ const Navbar1 = () => {
   return (
     <>
       <Navbar expand="lg" className="bring-to-front" >
-        <Navbar.Brand href="/"><img className="logo" src='/assets/logo_small.png'/></Navbar.Brand>
+        <Navbar.Brand href="/"><img className="logo" src={logo}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -97,7 +98,7 @@ const Navbar1 = () => {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <img className="logo" src='/assets/logo_small.png'/>
+          <img className="logo" src={logo}/>
         </Modal.Header>
         <Modal.Body>
           <form className="column is-half is-offset-one-quarter box"

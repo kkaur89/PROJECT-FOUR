@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import ArticleCard from './Cards/ArticleCard'
-import VideoCard from './Cards/VideoCard'
-import RecipeCard from './Cards/RecipeCard'
+import ArticleCard from './cards/ArticleCard'
+import VideoCard from './cards/VideoCard'
+import RecipeCard from './cards/RecipeCard'
+import minilogo from '../assets/logo_small_icon_only_inverted.png'
+import logo from '../assets/logo_white_large.png'
+
 
 
 import Nav from 'react-bootstrap/Nav'
@@ -24,7 +27,7 @@ const Main = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get('/api/articles')
+      const response = await axios.get('/api/articles/')
       const health = response.data.filter(item => {
         return (item.category === 'Health')
       })
@@ -52,7 +55,7 @@ const Main = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get('/api/videos')
+      const response = await axios.get('/api/videos/')
       const hiitVideos = response.data.filter(item => {
         return (item.category === 'Hiit')
       })
@@ -85,7 +88,7 @@ const Main = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get('/api/recipes')
+      const response = await axios.get('/api/recipes/')
       const lowCarbs = response.data.filter(item => {
         return (item.category === 'Low Carbs')
       })
@@ -125,11 +128,11 @@ const Main = () => {
 
     <div className="section">
       <div className="main-hero">
-        <img className="logo-mainpage" src='/assets/logo_white_large.png' />
+        <img className="logo-mainpage" src={logo} />
       </div>
       <div className="menu-bar">
         <div className="text-container">
-          <img className="mini-logo" src='/assets/logo_small_icon_only_inverted.png'/>
+          <img className="mini-logo" src={minilogo}/>
           <Nav variant="pills" activeKey="1" onSelect={handleSelect} >
             <NavDropdown title="Articles" id="nav-dropdown" >
               <NavDropdown.Item eventKey="Health">Health</NavDropdown.Item>

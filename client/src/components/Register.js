@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
+import logo from '../assets/logo_white_large copy.png'
 
 import Form from 'react-bootstrap/Form'
 
@@ -58,7 +59,7 @@ const Register = () => {
   return (
     <>
       <div className="register-hero-body">
-        <img className="logo-registerpage" src='/assets/logo_white_large copy.png' />
+        <img className="logo-registerpage" src={logo} />
         <p className="register-name">Register to FitBox</p>
    
         <div className="register">

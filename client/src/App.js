@@ -5,13 +5,13 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
 import Navbar1 from './components/Navbar'
 import Main from './components/Main'
-import VideoShow from './components/Show Pages/VideoShow'
-import ArticleShow from './components/Show Pages/ArticleShow'
-import RecipeShow from './components/Show Pages/RecipeShow'
+import VideoShow from './components/show pages/VideoShow'
+import ArticleShow from './components/show pages/ArticleShow'
+import RecipeShow from './components/show pages/RecipeShow'
 import Register from './components/Register'
 import UserProfile from './components/UserProfile'
-import ProfileShow from './components/Show Pages/ProfileShow'
-import ProfileShowShow from './components/Show Pages/ProfileShowShow'
+import ProfileShow from './components/show pages/ProfileShow'
+import ProfileShowShow from './components/show pages/ProfileShowShow'
 
 const App = () => {
   return (

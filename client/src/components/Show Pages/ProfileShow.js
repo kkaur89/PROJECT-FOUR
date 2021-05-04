@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useLocation } from 'react-router-dom'
-import ProfileCard from '../Cards/ProfileCard'
+import ProfileCard from '../cards/ProfileCard'
+import logo from '../../assets/logo_white_large copy.png'
 
 
 
@@ -20,7 +21,7 @@ const ProfileShow = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`/api/auth/${profileHome}`)
+      const response = await axios.get(`/api/auth/${profileHome}/`)
       getUser(response.data)
       console.log('User>>>', response.data)
     }
@@ -51,7 +52,7 @@ const ProfileShow = () => {
   return (
     <>
       <div className="main-hero">
-        <img className="logo-profilepage" src='/assets/logo_white_large copy.png' />
+        <img className="logo-profilepage" src={logo} />
         <p className="profilesearch-name">Find your friends on FitBox</p>
       </div>
       <div className="profile">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import logo from '../../assets/logo_white_large.png'
 
 
 
@@ -46,7 +47,7 @@ const ArticleShow = () => {
   }
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`/api/articles/${params.id}`)
+      const response = await axios.get(`/api/articles/${params.id}/`)
       setArticle(response.data)
       // console.log('Article Data>>>', response.data)
     }
@@ -57,7 +58,7 @@ const ArticleShow = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`/api/auth/${params.id}`)
+      const response = await axios.get(`/api/auth/${params.id}/`)
       getUser(response.data)
       // console.log('User>>>', response.data)
     }
@@ -83,7 +84,7 @@ const ArticleShow = () => {
     <>
       <div className="article-section">
         <div className="article-hero-body">
-          <img className="article-logo-homepage" src='/assets/logo_white_large.png' />
+          <img className="article-logo-homepage" src={logo} />
         </div>
         <Media>
           <Media.Body>

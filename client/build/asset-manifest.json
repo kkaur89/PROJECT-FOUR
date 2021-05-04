@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.72e03378.chunk.css",
+    "main.js": "/static/js/main.a758bf57.chunk.js",
+    "main.js.map": "/static/js/main.a758bf57.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.900dd88b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.900dd88b.js.map",
+    "static/js/2.f7b8f979.chunk.js": "/static/js/2.f7b8f979.chunk.js",
+    "static/js/2.f7b8f979.chunk.js.map": "/static/js/2.f7b8f979.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.72e03378.chunk.css.map": "/static/css/main.72e03378.chunk.css.map",
+    "static/js/2.f7b8f979.chunk.js.LICENSE.txt": "/static/js/2.f7b8f979.chunk.js.LICENSE.txt",
+    "static/media/0d4afd6fc61c47d2b7cfe3bbece0d730.jpg.714016c5.webp": "/static/media/0d4afd6fc61c47d2b7cfe3bbece0d730.jpg.714016c5.webp",
+    "static/media/46900896-321f-44da-a810-6b6d37c22c41.jpg.2faf8424.webp": "/static/media/46900896-321f-44da-a810-6b6d37c22c41.jpg.2faf8424.webp",
+    "static/media/9fa265036a114efda39200600227d8bb.40b7b87c.webp": "/static/media/9fa265036a114efda39200600227d8bb.40b7b87c.webp",
+    "static/media/main.scss": "/static/media/trail-running.fb4015ef.png",
+    "static/media/Screenshot 2021-04-19 at 16.49.58.bd79d322.png": "/static/media/Screenshot 2021-04-19 at 16.49.58.bd79d322.png",
+    "static/media/Screenshot 2021-04-19 at 16.50.11.ede75535.png": "/static/media/Screenshot 2021-04-19 at 16.50.11.ede75535.png",
+    "static/media/f47cf2d8-4d47-4b7d-8da7-d55508115504.09b663cd.jpg": "/static/media/f47cf2d8-4d47-4b7d-8da7-d55508115504.09b663cd.jpg",
+    "static/media/f97c5316-7104-4232-a865-f10b97a9ea2b-GetFit_Desktop.png.8e751ef7.jpeg": "/static/media/f97c5316-7104-4232-a865-f10b97a9ea2b-GetFit_Desktop.png.8e751ef7.jpeg",
+    "static/media/fitbox-health.a78204b3.jpeg": "/static/media/fitbox-health.a78204b3.jpeg",
+    "static/media/getty-24a00a1feb1f490180df0789dbc35b64.jpg.b44af8cd.webp": "/static/media/getty-24a00a1feb1f490180df0789dbc35b64.jpg.b44af8cd.webp",
+    "static/media/logo_small.49bc2528.png": "/static/media/logo_small.49bc2528.png",
+    "static/media/logo_small_icon_only_inverted.d0a172fd.png": "/static/media/logo_small_icon_only_inverted.d0a172fd.png",
+    "static/media/logo_white_large copy.49cca390.png": "/static/media/logo_white_large copy.49cca390.png",
+    "static/media/logo_white_large.da783795.png": "/static/media/logo_white_large.da783795.png",
+    "static/media/photo-1522898467493-49726bf28798.2d275880.webp": "/static/media/photo-1522898467493-49726bf28798.2d275880.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.900dd88b.js",
+    "static/js/2.f7b8f979.chunk.js",
+    "static/css/main.72e03378.chunk.css",
+    "static/js/main.a758bf57.chunk.js"
+  ]
+}
