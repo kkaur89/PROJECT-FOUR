@@ -78,7 +78,7 @@ const UserProfile = () => {
               <Image src={user.profile_image} roundedCircle className="profile-image"/>
               <p>Username: {username}</p>
               <p>Email: {email}</p>
-              <p >Friends: {friends.length}</p>
+              <p >Following: {friends.length} users</p>
               <Button className="btn" >Delete Profile</Button>
             </div>
           </div>

@@ -34,6 +34,7 @@ const VideoShow = () => {
       },
     })
     console.log('Video Liked')
+    window.location.reload()
   }
 
   const handleClick = async (event) => {
