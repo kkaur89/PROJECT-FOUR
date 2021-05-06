@@ -98,8 +98,12 @@ As per all the other projects, the first day was spent writing pseudo code, crea
 
 The next two days were spent creating our models and serializers in the back end. As the User Model was going to be the one that everything was based around, we created the jwt_auth app first. We added in the model, followed by the authentication file that would act like a piece of middleware to check to see if the user has a token to access parts of the site. In our views.py file we then added the function for register and login, as well as password confirmation functionality as part of the common.py serializer.
 
-We tested these routes in Insomnia by registering and then logging in the users. Once we knew these routes we working, we moved onto creating the models, serializers and CRUD requests for the articles, videos, recipes and comments.
+We tested these routes in Insomnia by registering and then logging in the users. Once we knew these routes were working, we moved onto creating the models, serializers and CRUD requests for the articles, videos, recipes and comments.
 
 ![Screenshot 2021-05-06 at 16 59 01](https://user-images.githubusercontent.com/77445688/117329329-736b5300-ae8c-11eb-9df5-7b433e0cc648.png)
+
+We managed to create all the basics of our backend and seed some data within two days, so before the weekend we decided to create the front end together and ensure that the API requests were rendering in the components. 
+
+We created the front end by running ```npx create-react-app client --template cra-template-ga-ldn-projects``` in the terminal as well as adding ```yarn add http-proxy-middleware``` for the middleware.
 
 
