@@ -67,7 +67,7 @@ Development tools:
 
 ### Day One - Planning
 
-As per all the other projects, the first day was spent writing pseudo code, creating a plan for MVP and post MVP feautres. We also spent this day wireframing, then splitting out tasks on a trello board and finally creating a entity relationship diagram for the database.
+As per all the other projects, the first day was spent writing pseudo code, creating a plan for MVP and post MVP features. We also spent this day wireframing, then splitting out tasks on a trello board and finally creating an entity relationship diagram for the database.
 
 **Wireframe:**
 
