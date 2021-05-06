@@ -1,4 +1,4 @@
-# Fitbox : SEI Project Four
+# FitBox : SEI Project Four
 
 ## Contents
 
