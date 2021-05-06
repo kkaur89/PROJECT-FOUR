@@ -35,4 +35,28 @@ https://user-images.githubusercontent.com/77445688/117290512-cbdb2a00-ae65-11eb-
 - **Consume your API with a separate front-end** built with React
 - **Be a complete product** which most likely means multiple relationships and CRUD functionality for at least a couple of models
 
+## Technologies Used
 
+Back-end:
+
+- Python
+- Django
+- PostgreSQL
+- TablePlus
+
+
+Frontend:
+
+- React
+- Axios
+- Bootstrap
+- SCSS
+
+Development tools:
+
+- Insomnia
+- GitHub
+- Heroku (deployment)
+- Trello Board (planning and timeline)
+- Excalidraw (wireframing)
+- drawSQL (ERD)
