@@ -86,14 +86,14 @@ As per all the other projects, the first day was spent writing pseudo code, crea
 
 - Create new repo in GitHub
 - Open up the repo in Terminal
-- ```pipenv install django``` inside the folder
-- open up the file in VS code and ```pipenv shell``` inside the project terminal
-- ```django-admin startproject project .```
-- ```pipenv install pylint```
-- ```touch .pylintrc```
+- Install ```pipenv install django``` inside the folder
+- Open up the file in VS code and ```pipenv shell``` inside the project terminal
+- Run ```django-admin startproject project .```
+- Install ```pipenv install pylint```
+- Run ```touch .pylintrc```
 - Add the correct config to the above file
 - Update settings inside project folder the name of the database and to refer to postgreSQL instead of the default of SQL
 - Install ```pipenv install psycopg2-binary```
 
-The next two days were spent creating our models and serialziers in the back end
+The next two days were spent creating our models and serializers in the back end, seeding data in django 
 
