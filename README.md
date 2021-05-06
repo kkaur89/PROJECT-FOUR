@@ -22,7 +22,7 @@ for my final project, I decided I wanted to work in a pair. I wanted the balance
 - User is able to filter recipes based on the category, read the recipes and like them.
 - User can follow other users and they have their own profile page
 
-Please see full deployed version **[here](https://fitbox1.herokuapp.com)**. Login details are required to access full version, feel free ot use the below:
+Please see full deployed version **[here](https://fitbox1.herokuapp.com)**. Login details are required to access the full version, feel free to use the below:
 
 - email: 
 - password: 
