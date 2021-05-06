@@ -44,6 +44,7 @@ Back-end:
 - Django REST Framework
 - PostgreSQL
 - TablePlus
+- PYjwt
 
 
 Frontend:
@@ -84,9 +85,9 @@ As per all the other projects, the first day was spent writing pseudo code, crea
 
 **Getting Started:**
 
-- Create new repo in GitHub
+- Create a new repo in GitHub
 - Open up the repo in Terminal
-- Install ```pipenv install django``` inside the folder
+- Install ```pipenv install django``` inside the repo folder
 - Open up the file in VS code and ```pipenv shell``` inside the project terminal
 - Run ```django-admin startproject project .```
 - Install ```pipenv install pylint```
@@ -95,5 +96,10 @@ As per all the other projects, the first day was spent writing pseudo code, crea
 - Update settings inside project folder the name of the database and to refer to postgreSQL instead of the default of SQL
 - Install ```pipenv install psycopg2-binary```
 
-The next two days were spent creating our models and serializers in the back end, seeding data in django 
+The next two days were spent creating our models and serializers in the back end. As the User Model was going to be the one that everything was based around, we created the jwt_auth app first. We added in the model, followed by the authentication file that would act like a piece of middleware to check to see if the user has a token to access parts of the site. In our views.py file we then added the function for register and login, as well as password confirmation functionality as part of the common.py serializer.
+
+We tested these routes in Insomnia by registering and then logging in the users. Once we knew these routes we working, we moved onto creating the models, serializers and CRUD requests for the articles, videos, recipes and comments.
+
+![Screenshot 2021-05-06 at 16 59 01](https://user-images.githubusercontent.com/77445688/117329329-736b5300-ae8c-11eb-9df5-7b433e0cc648.png)
+
 
