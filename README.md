@@ -60,3 +60,22 @@ Development tools:
 - Trello Board (planning and timeline)
 - Excalidraw (wireframing)
 - drawSQL (ERD)
+
+## Project Timeline - 9 Days
+
+### Day One - Planning
+
+As per all the other projects, the first day was spent writing pseudo code, creating a plan for MVP and post MVP feautres. We also spent this day wireframing, then splitting out tasks on a trello board and finally creating a entity relationship diagram for the database.
+
+**Wireframe:**
+
+![Screenshot 2021-05-06 at 14 58 46](https://user-images.githubusercontent.com/77445688/117310883-9e00e000-ae7b-11eb-8988-8cc76243707d.png)
+
+**Trello:**
+
+![Screenshot 2021-05-06 at 15 00 06](https://user-images.githubusercontent.com/77445688/117311081-cb4d8e00-ae7b-11eb-809c-ac091f4f73ee.png)
+
+**Entity Relationship Diagram:**
+
+![drawSQL-export-2021-05-06_12_02](https://user-images.githubusercontent.com/77445688/117311552-3008e880-ae7c-11eb-9f7f-39792a35e316.png)
+
