@@ -23,3 +23,7 @@ for my final project, I decided I wanted to work in a pair. I wanted the balance
 - User can follow other users and they have their own profile page
 
 Please see full deployed version **[here](https://fitbox1.herokuapp.com)**.
+
+https://user-images.githubusercontent.com/77445688/117290512-cbdb2a00-ae65-11eb-9d74-e04c3dce7afc.mov
+
+
