@@ -13,7 +13,7 @@
 
 ## Project Overview
 
-For my final project, I decided I wanted to work in a pair. I wanted the balance of gaining more experience in coding alongside someone else, but also have more autonomy and responsibility to create a working app vs working in a group. Based on mine and my coding partner's interest in health and fitness, we decided to create a Full stack app that was based around all things related to these topics. We would have articles, workout videos and food recipes that all centered around general well being. This app was created using python, django and postgreSQL in the backend.
+For my final project, I decided I wanted to work in a pair. I wanted the balance of gaining more experience in coding alongside someone else, but also have more autonomy and responsibility to create a working app vs working in a group. Based on mine and my coding partner's interest in health and fitness, we decided to create a Full stack app that was based around all things related to these topics. We would have articles, workout videos and food recipes that all centered around health and well-being. This app was created using python, django and postgreSQL in the backend.
 
 **Functionality:**
 - Users are able to register and login.
