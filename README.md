@@ -18,8 +18,8 @@ for my final project, I decided I wanted to work in a pair. I wanted the balance
 **Functionality:**
 - User is able to register and login.
 - User is able to filter articles based on category, read the articles, like them and save them to their profile.
-- User is able to  videos based on the category, watch the videos and like them.
-- User is able to recipes based on the category, read the recipes and like them.
+- User is able to filter videos based on the category, watch the videos and like them.
+- User is able to filter recipes based on the category, read the recipes and like them.
 - User can follow other users and they have their own profile page
 
 Please see full deployed version **[here](https://fitbox1.herokuapp.com)**.
