@@ -29,4 +29,10 @@ Please see full deployed version **[here](https://fitbox1.herokuapp.com)**. Logi
 
 https://user-images.githubusercontent.com/77445688/117290512-cbdb2a00-ae65-11eb-9d74-e04c3dce7afc.mov
 
+## Project Brief 
+- **Build a full-stack application** by making your own backend and your own front-end
+- **Use a Python Django API** using Django REST Framework to serve your data from a Postgres database
+- **Consume your API with a separate front-end** built with React
+- **Be a complete product** which most likely means multiple relationships and CRUD functionality for at least a couple of models
+
 
