@@ -20,7 +20,7 @@ For my final project, I decided I wanted to work in a pair. I wanted the balance
 - Users are able to filter articles based on category, read the articles, like them and save them to their profile.
 - Users are able to filter videos based on the category, watch the videos and like them.
 - Users are able to filter recipes based on the category, read the recipes and like them.
-- User can follow other users and they have their own profile page
+- User can follow other users and also have thier own profile page to see the content they have saved.
 
 Please see full deployed version **[here](https://fitbox1.herokuapp.com)**. Login details are required to access the full version, feel free to use the below:
 
