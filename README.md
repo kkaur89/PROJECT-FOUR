@@ -66,19 +66,6 @@ Development tools:
 
 ### Day One - Planning
 
-**Getting Started:**
-
-- Create new repo in GitHub
-- Open up the repo in Terminal
-- ```pipenv install django``` inside the folder
-- open up the file in VS code and ```pipenv shell``` inside the project terminal
-- ```django-admin startproject project .```
-- ```pipenv install pylint```
-- ```touch .pylintrc```
-- Add the correct config to the above file
-- Update settings inside project folder the name of the database and to refer to postgreSQL instead of the default of SQL
-- Install ```pipenv install psycopg2-binary```
-
 As per all the other projects, the first day was spent writing pseudo code, creating a plan for MVP and post MVP feautres. We also spent this day wireframing, then splitting out tasks on a trello board and finally creating a entity relationship diagram for the database.
 
 **Wireframe:**
@@ -94,6 +81,19 @@ As per all the other projects, the first day was spent writing pseudo code, crea
 ![drawSQL-export-2021-05-06_12_02](https://user-images.githubusercontent.com/77445688/117311552-3008e880-ae7c-11eb-9f7f-39792a35e316.png)
 
 ### Day Two and Three - Backend
+
+**Getting Started:**
+
+- Create new repo in GitHub
+- Open up the repo in Terminal
+- ```pipenv install django``` inside the folder
+- open up the file in VS code and ```pipenv shell``` inside the project terminal
+- ```django-admin startproject project .```
+- ```pipenv install pylint```
+- ```touch .pylintrc```
+- Add the correct config to the above file
+- Update settings inside project folder the name of the database and to refer to postgreSQL instead of the default of SQL
+- Install ```pipenv install psycopg2-binary```
 
 The next two days were spent creating our models and serialziers in the back end
 
