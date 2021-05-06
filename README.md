@@ -41,6 +41,7 @@ Back-end:
 
 - Python
 - Django
+- Django REST Framework
 - PostgreSQL
 - TablePlus
 
