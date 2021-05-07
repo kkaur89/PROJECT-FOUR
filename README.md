@@ -104,6 +104,12 @@ We tested these routes in Insomnia by registering and then logging in the users.
 
 We managed to create all the basics of our backend and seed some data within two days, this allowed us to create the front end together and ensure that the API requests were rendering in the components.
 
-We created the front end by running ```npx create-react-app client --template cra-template-ga-ldn-projects``` in the terminal as well as adding ```yarn add http-proxy-middleware``` for the middleware.
+We created the front end by running ```npx create-react-app client --template cra-template-ga-ldn-projects``` in the terminal as well as adding ```yarn add http-proxy-middleware``` for the middleware. Once we could see that the axios requests were working on the front end, we divided the front end components to complete individually. I took the main page and the artcile page.
+
+### Day Four and Five - Frontend
+
+I first started by creating a component for the main page, which would render an index of all the media material available for the user to read/watch.
+
+
 
 
