@@ -116,9 +116,8 @@ We tested these routes in Insomnia by registering and then logging in the users.
         
 **Recipe Model:**
 
-from django.db import models
+    from django.db import models
 
-# Create your models here.
 
     class Recipe(models.Model):
         HIGH_PROTEIN = 'High Protein'
