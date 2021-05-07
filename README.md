@@ -100,6 +100,74 @@ The next two days were spent creating our models and serializers in the back end
 
 We tested these routes in Insomnia by registering and then logging in the users. Once we knew these routes were working, we moved onto creating the models, serializers and CRUD requests for the articles, videos, recipes and comments.
 
+**User Model:**
+
+    class User(AbstractUser):
+        email = models.CharField(max_length=50, unique=True)
+        first_name = models.CharField(max_length=50, blank=True)
+        last_name = models.CharField(max_length=50, blank=True)
+        profile_image = models.CharField(max_length=300, blank=True)
+        slug = AutoSlugField(populate_from='username')
+        bio = models.CharField(max_length=255, blank=True)
+        friends = models.ManyToManyField('jwt_auth.User', related_name="jwt_auth", blank=True)
+        article = models.ManyToManyField('articles.Article', related_name="articles", blank=True)
+        videos = models.ManyToManyField('videos.Video', related_name="videos", blank=True)
+        recipes = models.ManyToManyField('recipes.Recipe', related_name="recipes", blank=True)
+        
+**Recipe Model:**
+
+from django.db import models
+
+# Create your models here.
+
+    class Recipe(models.Model):
+        HIGH_PROTEIN = 'High Protein'
+        LOW_CARBS = 'Low Carbs'
+        VEGAN = 'Vegan'
+        VEGETARIAN = 'Vegetarian'
+        BREAKFAST = 'Breakfast'
+        LUNCH = 'Lunch'
+        SNACKS = 'Snacks'
+        DINNER = 'Dinner'
+        DESSERTS = 'Desserts'
+        CATEGORY_CHOICES = [
+            (HIGH_PROTEIN, 'High Protein'),
+            (LOW_CARBS, 'Low Carbs'),
+            (VEGAN, 'Vegan'),
+            (VEGETARIAN, 'Vegetarian'),
+            (BREAKFAST, 'Breakfast'),
+            (LUNCH, 'Lunch'),
+            (SNACKS, 'Snacks'),
+            (DINNER, 'Dinner'),
+            (DESSERTS, 'Desserts')
+        ]
+        LESS_THAN_20_MINS = 'Less than 20 mins'
+        LESS_THAN_40_MINS = 'Less than 40 mins'
+        UP_TO_AN_HOUR = 'Up to an hour'
+        TIME_CHOICES = [
+          (LESS_THAN_20_MINS, 'Less than 20 mins'),
+          (LESS_THAN_40_MINS, 'Less than 40 mins'),
+          (UP_TO_AN_HOUR, 'Up to an hour')
+        ]
+
+
+        name = models.CharField(max_length=100)
+        text = models.TextField(max_length=10000)
+        ingredients = models.TextField(max_length=1000)
+        image = models.CharField(max_length=500)
+        category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default=VEGAN)
+        time = models.CharField(max_length=50, choices=TIME_CHOICES, default=LESS_THAN_20_MINS)
+        created_at = models.DateTimeField(auto_now_add=True)
+        owner = models.ForeignKey(
+          "jwt_auth.User",
+          related_name ='recipe',
+          on_delete= models.CASCADE
+        )
+        like = models.ManyToManyField('jwt_auth.User', related_name="liked_recipe", blank=True)
+
+        def __str__(self):
+            return f"{self.name}, {self.category}, {self.time}"
+
 ![Screenshot 2021-05-06 at 16 59 01](https://user-images.githubusercontent.com/77445688/117329329-736b5300-ae8c-11eb-9df5-7b433e0cc648.png)
 
 We managed to create all the basics of our backend and seed some data within two days, this allowed us to create the front end together and ensure that the API requests were rendering in the components.
@@ -110,7 +178,7 @@ We created the front end by running ```npx create-react-app client --template cr
 
 I first started by creating a component for the main page, which would render an index of all the media material available for the user to read/watch. This meant creating axious requests for all three media types and mapping around the useState within the JSX section.
 
-A seperate card component was created to format each of the articles, videos and recipes in index view and then passed into the main page. Bootstrap dropdown filter options were implemented and added functionality to them by adding filter methods to each array for the axios request in the main component.
+A seperate card component was created to format each of the articles, videos and recipes in the index view and then passed into the main page. Bootstrap dropdown filter options were implemented and I added functionality to them by using filter methods to each array for the axios request in the main component.
 
 <img width="1437" alt="Screenshot 2021-05-07 at 14 27 19" src="https://user-images.githubusercontent.com/77445688/117456691-614aec80-af40-11eb-8264-b33147ebb489.png">
 
