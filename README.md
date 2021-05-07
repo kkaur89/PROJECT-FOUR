@@ -233,4 +233,4 @@ I then started on the Article Show page. I used the Bootstrap 'Jumbotron' compon
         text_six = models.TextField(max_length=8000, null=True, blank=True)
         category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default=HEALTH)
 
-By adding five additional text fields, I was able to split my main article into chunks where I could then render the correct images alongside.
+By adding five additional text fields, I was able to split my main article into chunks where I could then render the relevant images alongside.
