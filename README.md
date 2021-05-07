@@ -182,3 +182,31 @@ A seperate card component was created to format each of the articles, videos and
 <img width="1437" alt="Screenshot 2021-05-07 at 14 27 19" src="https://user-images.githubusercontent.com/77445688/117456691-614aec80-af40-11eb-8264-b33147ebb489.png">
 
 
+    const Main = () => {
+
+      const [article, setArticle] = useState(null)
+
+      const [value, setValue] = useState('')
+
+        useEffect(() => {
+        const getData = async () => {
+          const response = await axios.get('/api/articles/')
+          const health = response.data.filter(item => {
+            return (item.category === 'Health')
+          })
+          const fitness = response.data.filter(item => {
+            return (item.category === 'Fitness')
+          })
+          const food = response.data.filter(item => {
+            return (item.category === 'Food')
+          })
+          if (value === 'Health') {
+            setArticle(health) 
+          } else if (value === 'Fitness') {
+            setArticle(fitness)
+          } else if (value === 'Food') {
+            setArticle(food)
+          } else {
+            setArticle(response.data)
+          }
+
