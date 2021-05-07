@@ -175,7 +175,7 @@ We created the front end by running ```npx create-react-app client --template cr
 
 ### Day Four and Five - Frontend
 
-I first started by creating a component for the main page, which would render an index of all the media material available for the user to read/watch. This meant creating axious requests for all three media types and mapping around the useState within the JSX section.
+I first started by creating a component for the main page, which would render an index of all the media material available for the user to read/watch. This meant creating axios requests for all three media types and mapping around the useState within the JSX section.
 
 A seperate card component was created to format each of the articles, videos and recipes in the index view and then passed into the main page. Bootstrap dropdown filter options were implemented and I added functionality to them by using filter methods to each array for the axios request in the main component.
 
@@ -210,7 +210,7 @@ A seperate card component was created to format each of the articles, videos and
             setArticle(response.data)
           }
 
-The card componenet also had a link to each article/video/recipe. So when you click anywhere on the card, you will be taken to a seperate page where you can see a pull page view of the full content.
+The card component also had a link to each article/video/recipe. So when you click anywhere on the card, you will be taken to a seperate page where you can see a pull page view of the full content.
 
 I then started on the Article Show page. I used the Bootstrap 'Jumbotron' component to render each section of the article. I soon realised that based on the way I had created the article model, the format on the front end was not user friendly as all of the text was rendered in one field. If I had subsections to my article they were not displaying in a structured way as intended. I then had to modify my article model to look like the below:
 
@@ -233,4 +233,4 @@ I then started on the Article Show page. I used the Bootstrap 'Jumbotron' compon
         text_six = models.TextField(max_length=8000, null=True, blank=True)
         category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default=HEALTH)
 
-By adding five additonal text fields, I was able to split my main artilce into chunks where I could then render the correct images alongside.
+By adding five additional text fields, I was able to split my main article into chunks where I could then render the correct images alongside.
