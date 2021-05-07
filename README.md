@@ -108,8 +108,10 @@ We created the front end by running ```npx create-react-app client --template cr
 
 ### Day Four and Five - Frontend
 
-I first started by creating a component for the main page, which would render an index of all the media material available for the user to read/watch.
+I first started by creating a component for the main page, which would render an index of all the media material available for the user to read/watch. This meant creating axious requests for all three media types and mapping around the useState within the JSX section.
 
+A seperate card component was created to format each of the articles, videos and recipes in index view and then passed into the main page. Bootstrap dropdown filter options were implemented and added functionality to them by adding filter methods to each array for the axios request in the main component.
 
+<img width="1437" alt="Screenshot 2021-05-07 at 14 27 19" src="https://user-images.githubusercontent.com/77445688/117456691-614aec80-af40-11eb-8264-b33147ebb489.png">
 
 
