@@ -102,7 +102,7 @@ We tested these routes in Insomnia by registering and then logging in the users.
 
 ![Screenshot 2021-05-06 at 16 59 01](https://user-images.githubusercontent.com/77445688/117329329-736b5300-ae8c-11eb-9df5-7b433e0cc648.png)
 
-We managed to create all the basics of our backend and seed some data within two days, so before the weekend we decided to create the front end together and ensure that the API requests were rendering in the components. 
+We managed to create all the basics of our backend and seed some data within two days, this allowed us to create the front end together and ensure that the API requests were rendering in the components.
 
 We created the front end by running ```npx create-react-app client --template cra-template-ga-ldn-projects``` in the terminal as well as adding ```yarn add http-proxy-middleware``` for the middleware.
 
