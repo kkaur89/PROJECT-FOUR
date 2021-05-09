@@ -338,7 +338,7 @@ https://user-images.githubusercontent.com/77445688/117583535-876abb00-b0ff-11eb-
 
 
 ## Bugs
-- The save to profile feature for video and recipes are not pushing the id of that post to the correct array. I thought this might be down to the naming convention, so I changes the name of the model field as well as in the PopulatedUserSerialzier, however this did not fix the bug. 
+- The save to profile feature for video and recipes are not pushing the id of that post to the correct array. I thought this might be down to the naming convention, so I changes the name of the model field as well as in the PopulatedUserSerialzier, however this did not fix the bug.  This means that user can click on the button however it will not save thier profile.
 - Currently you can only show one saved article based on the conditional render that has been coded.
 - The search for a user function allows an input but does not render the name of the search, there is more refining to do on the code. 
 - The image upload on the registration page takes the upload but the functionality for the saving it to the profile is yet to be added.
