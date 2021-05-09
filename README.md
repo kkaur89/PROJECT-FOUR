@@ -329,11 +329,20 @@ On the front end we then went to the ArticleShow page and created an axios PUT r
       
 ### Day Eight and Nine
 
-The final few days were spent smartening up the styling of the site, and attempting additional features. Our intention was for this app to have a social feed, however due to time constraints it was looking very unlikely, however we had a workaround, I created the a page where all the users in the database are shown, and you can click to the follow them, then when you go back to your profile, it will show how many people you are following. 
+The final few days were spent smartening up the styling of the site, and attempting a few last features. Our intention was for this app to have a social feed, however due to time constraints it was looking very unlikely. The feature we settled on as a workaround was to created the a page where all the users in the database are shown. The user can then click to the follow them and when you go back to your profile, it will show how many people you are following. 
 
 By doing this, we at least have the foundation to create the feed in the future as we have the like and friends fields that we can render. The only issue was that the user id was being passed into the friends array rather than the user content, which was why we had to settle for only displaying the amount of people rather than the actual users which is what we would have preferred. 
 
 
-https://user-images.githubusercontent.com/77445688/117583455-280cab00-b0ff-11eb-8c5e-99a7a9128a09.mov
+https://user-images.githubusercontent.com/77445688/117583535-876abb00-b0ff-11eb-93ee-d157d0cd5d5c.mov
 
 
+## Bugs
+- The save to profile feature for video and recipes are not pushing the id of that post to the correct array. I thought this might be down to the naming convention, so I changes the name of the model field as well as in the PopulatedUserSerialzier, however this did not fix the bug. 
+- Currently you can only show one saved article based on the conditional render that has been coded.
+- The search for a user function allows an input but does not render the name of the search, there is more refining to do on the code. 
+- The image upload on the registration page takes the upload but the functionality for the saving it to the profile is yet to be added.
+
+## Challenges
+
+The save to user profile feauture was the biggest challenge, it took me and coding partner a whole day and a half to crack, and in the end we had to ask for help as we had exhausted all the recources we could find. I the win from this was that my code initially and my logic was not far off the solution which gave me confidence that I was on the right track.
