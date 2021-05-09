@@ -276,4 +276,37 @@ Now that we had all the functionality needed, we imported ```import { getPayLoad
 
 <img width="1439" alt="Screenshot 2021-05-09 at 17 48 22" src="https://user-images.githubusercontent.com/77445688/117580204-c6444500-b0ee-11eb-963d-0cd38f07c414.png">
 
-The next stage was to add the functionality for the user to save their posts. This required us to add more functionality to the use model. 
+The next stage was to add the functionality for the user to save their posts. This required us to add more functionality to the use model, currently all we had was a post request for login, register, get request for user id. We needed to add a put request in the backend under views.py for the User model. I started coding this request, not really knowing as much arounf put requests. My instinct was that it was too long, I did search the internet for solutions but couldn;t come to one, so I worked with the Teaching assistants to refactor the code: 
+
+**Before:**
+
+    def put(self, request, pk):
+            user_to_edit = self.get_user(pk=request.user.id)
+            article_to_add = Article.objects.get(pk=pk)
+            updated_article = PopulatedArticleSerializer(article_to_add, data=request.data)   # here I am trying to add the data body to the request
+            user_to_edit.article.add(updated_article)
+            user_to_edit.save()
+            serializer_user = PopulatedUserSerializer(user_to_edit)
+            return Response(serializer_user.data, status=status.HTTP_200_OK)
+            
+**After:**
+
+    def put(self, request, pk):
+        user = self.get_user(pk=request.user.id)
+        article_to_add = Article.objects.get(pk=pk)
+        user.article.add(article_to_add)
+        user.save()
+        serializer_user = PopulatedUserSerializer(user)
+        return Response(serializer_user.data, status=status.HTTP_200_OK)
+        
+We then went on to define the URL for this path and test the URL in Insomnia. The request worked however only the article id was being passed into the array not the entire Article. We later learn't that naming conventions mean everything as our populated user serializer was showing the below: 
+
+    class PopulatedUserSerializer(UserSerializer):
+        articles = PopulatedArticleSerializer(many=True)
+        
+When the field in the model was defined as below:  
+
+    class User(AbstractUser):
+        article = models.ManyToManyField('articles.Article', related_name="articles", blank=True)
+        
+So the ```PopulatedUserSerializer``` was updated to article not articles. This then meant that the whole content of the article was pushed into the array instead of just the id.
