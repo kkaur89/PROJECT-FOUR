@@ -238,3 +238,36 @@ By adding five additional text fields, I was able to split my main article into 
 https://user-images.githubusercontent.com/77445688/117464718-d8847e80-af48-11eb-904c-8daa19e21d30.mov
 
 
+### Day Six and Seven - Adding remainig MVP Functionality
+
+The next two days were spent merging the mine and my coding partners work from the weekend and then moving onto two key feautres which was to allow the user to like a post and then render how many people have liked each post, the second was to create the user profile page so that the user can save a post to their profile.
+
+I started out to by creating the User Profile component, which required a axios get request for the user id. At the time in the User app within the views.py file we only had a post request for register and login defined, in order for the profile page to render any information about that user we would need to add a function for a GET request by user id. 
+
+Before we could request a get request we needed a component that would hold the users token from local storage and split the token so we could access the sub section which relates to the users id. 
+
+    export const getTokenFromLocalStorage = () => {
+      return window.localStorage.getItem('token')
+    }
+
+
+    export const getPayLoadFromToken = () => {
+      const token = getTokenFromLocalStorage()
+      if ( !token ) return false 
+      const parts = token.split('.')
+      if ( parts.length < 3 ) return false 
+      return JSON.parse(atob(parts[1]))
+    }
+
+    export const userIsOwner = userId => {
+      const payload = getPayLoadFromToken()
+      if ( !payload ) return false
+      return userId === payload.sub
+    }
+
+    export const userIsAuthenticated = () => {
+      const payload = getPayLoadFromToken()
+      if ( !payload ) return false
+      const now = Math.round(Date.now() / 1000)
+      return now < payload.exp
+    }
