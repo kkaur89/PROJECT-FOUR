@@ -240,9 +240,9 @@ https://user-images.githubusercontent.com/77445688/117464718-d8847e80-af48-11eb-
 
 ### Day Six and Seven - Adding remainig MVP Functionality
 
-The next two days were spent merging mine and my coding partners work from the weekend and then moving onto two key feautres which was to allow the user to like a post, the second was to create the user profile page so that the user can save a post to their profile.
+The next two days were spent merging mine and my coding partners work from the weekend and then moving onto two key features which was to allow the user to like a post, the second was to create the user profile page so that the user can save a post to their profile.
 
-I started out to by creating the User Profile component, which required a axios get request for the user id. At the time in the User app within the views.py file we only had a post request for register and login defined, in order for the profile page to render any information about that user we would need to add a function for a GET request by user id. 
+I started out by creating the User Profile component, which required an axios get request for the user id. At the time in the User app within the views.py file we only had a post request for register and login defined, in order for the profile page to render any information about that user we would need to add a function for a GET request by user id. 
 
 Before we could request a get request we needed a component that would hold the users token from local storage and split the token so we could access the sub section which relates to the users id. 
 
@@ -276,7 +276,7 @@ Now that we had all the functionality needed, we imported ```import { getPayLoad
 
 <img width="1439" alt="Screenshot 2021-05-09 at 17 48 22" src="https://user-images.githubusercontent.com/77445688/117580204-c6444500-b0ee-11eb-963d-0cd38f07c414.png">
 
-The next stage was to add the functionality for the user to save their posts. This required us to add more functionality to the use model, currently all we had was a post request for login, register, get request for user id. We needed to add a put request in the backend under views.py for the User model. I started coding this request, not really knowing as much arounf put requests. My instinct was that it was too long, I did search the internet for solutions but couldn;t come to one, so I worked with the Teaching assistants to refactor the code: 
+The next stage was to add the functionality for the user to save their posts. This required us to add more functionality to the user model, currently all we had was a post request for login, register, get request for user id. We needed to add a put request in the backend under views.py for the User model. I started coding this request, not really knowing as much around put requests. My instinct was that it was too long, I did search the internet for solutions but couldn;t come to one, so I worked with the Teaching assistants to refactor the code: 
 
 **Before:**
 
@@ -299,7 +299,7 @@ The next stage was to add the functionality for the user to save their posts. Th
         serializer_user = PopulatedUserSerializer(user)
         return Response(serializer_user.data, status=status.HTTP_200_OK)
         
-We then went on to define the URL for this path and test the URL in Insomnia. The request worked however only the article id was being passed into the array not the entire Article. We later learn't that naming conventions mean everything as our populated user serializer was showing the below: 
+We then went on to define the URL for this path and test the URL in Insomnia. The request worked however only the article id was being passed into the array not the entire Article. We later learned that naming conventions mean everything as our populated user serializer was showing the below: 
 
     class PopulatedUserSerializer(UserSerializer):
         articles = PopulatedArticleSerializer(many=True)
@@ -311,7 +311,7 @@ When the field in the model was defined as below:
         
 So the ```PopulatedUserSerializer``` was updated to article not articles. This then meant that the whole content of the article was pushed into the array instead of just the id.
 
-On the front end we then went to the ArticleShow page and created a axios PUT request to the user url, but passed in the id of the article that was being clicked, as well the token of the user. The console.log for the 'click' shows the id of the article, and the last console.log shows that the article has been added to the article array under the User model.
+On the front end we then went to the ArticleShow page and created an axios PUT request to the user url, but passed in the id of the article that was being clicked, as well the token of the user. The console.log for the 'click' shows the id of the article, and the last console.log shows that the article has been added to the article array under the User model.
 
       const handleClick = async (event) => {
         console.log('click>>>>',event.target.value)
@@ -326,3 +326,14 @@ On the front end we then went to the ArticleShow page and created a axios PUT re
         })
         console.log('Article Saved!!')
       }
+      
+### Day Eight and Nine
+
+The final few days were spent smartening up the styling of the site, and attempting additional features. Our intention was for this app to have a social feed, however due to time constraints it was looking very unlikely, however we had a workaround, I created the a page where all the users in the database are shown, and you can click to the follow them, then when you go back to your profile, it will show how many people you are following. 
+
+By doing this, we at least have the foundation to create the feed in the future as we have the like and friends fields that we can render. The only issue was that the user id was being passed into the friends array rather than the user content, which was why we had to settle for only displaying the amount of people rather than the actual users which is what we would have preferred. 
+
+
+https://user-images.githubusercontent.com/77445688/117583455-280cab00-b0ff-11eb-8c5e-99a7a9128a09.mov
+
+
