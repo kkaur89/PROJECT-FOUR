@@ -240,7 +240,7 @@ https://user-images.githubusercontent.com/77445688/117464718-d8847e80-af48-11eb-
 
 ### Day Six and Seven - Adding remainig MVP Functionality
 
-The next two days were spent merging the mine and my coding partners work from the weekend and then moving onto two key feautres which was to allow the user to like a post and then render how many people have liked each post, the second was to create the user profile page so that the user can save a post to their profile.
+The next two days were spent merging mine and my coding partners work from the weekend and then moving onto two key feautres which was to allow the user to like a post, the second was to create the user profile page so that the user can save a post to their profile.
 
 I started out to by creating the User Profile component, which required a axios get request for the user id. At the time in the User app within the views.py file we only had a post request for register and login defined, in order for the profile page to render any information about that user we would need to add a function for a GET request by user id. 
 
@@ -271,3 +271,9 @@ Before we could request a get request we needed a component that would hold the 
       const now = Math.round(Date.now() / 1000)
       return now < payload.exp
     }
+    
+Now that we had all the functionality needed, we imported ```import { getPayLoadFromToken } from './helpers/Auth'``` and assigned the sub section of the token to the const userId which we passed into the axios GET request. The styling for the main page was used for the profile page, with the user's info displayed on the menu bar on the left of the page, and the empty cards on the right ready for the user to save their posts.
+
+<img width="1439" alt="Screenshot 2021-05-09 at 17 48 22" src="https://user-images.githubusercontent.com/77445688/117580204-c6444500-b0ee-11eb-963d-0cd38f07c414.png">
+
+The next stage was to add the functionality for the user to save their posts. This required us to add more functionality to the use model. 
