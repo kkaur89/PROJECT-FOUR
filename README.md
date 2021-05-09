@@ -310,3 +310,19 @@ When the field in the model was defined as below:
         article = models.ManyToManyField('articles.Article', related_name="articles", blank=True)
         
 So the ```PopulatedUserSerializer``` was updated to article not articles. This then meant that the whole content of the article was pushed into the array instead of just the id.
+
+On the front end we then went to the ArticleShow page and created a axios PUT request to the user url, but passed in the id of the article that was being clicked, as well the token of the user. The console.log for the 'click' shows the id of the article, and the last console.log shows that the article has been added to the article array under the User model.
+
+      const handleClick = async (event) => {
+        console.log('click>>>>',event.target.value)
+        setSaved('Saved to Profile')
+        console.log(event)
+        const token = window.localStorage.getItem('token')
+        console.log('token>>>>>', token)
+        await axios.put(`/api/auth/${article.id}/savedplaces/`, null, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        console.log('Article Saved!!')
+      }
