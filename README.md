@@ -327,7 +327,8 @@ On the front end we then went to the ArticleShow page and created an axios PUT r
         console.log('Article Saved!!')
       }
       
-<img width="1437" ![Alt Text](https://media.giphy.com/media/H3gknfG9zhIvSXgnjV/giphy.gif)>
+<iframe src=![Alt Text](https://media.giphy.com/media/H3gknfG9zhIvSXgnjV/giphy.gif) width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href=![Alt Text](https://media.giphy.com/media/H3gknfG9zhIvSXgnjV/giphy.gif)>via GIPHY</a></p>
+
 
 ### Day Eight and Nine
 
