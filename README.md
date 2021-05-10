@@ -327,7 +327,7 @@ On the front end we then went to the ArticleShow page and created an axios PUT r
         console.log('Article Saved!!')
       }
       
->> Add article saved to profile GIF here!!
+<iframe src="https://giphy.com/embed/H3gknfG9zhIvSXgnjV" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/H3gknfG9zhIvSXgnjV">via GIPHY</a></p>
 
 ### Day Eight and Nine
 
