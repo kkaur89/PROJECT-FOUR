@@ -327,6 +327,8 @@ On the front end we then went to the ArticleShow page and created an axios PUT r
         console.log('Article Saved!!')
       }
       
+>> Add article saved to profile GIF here!!
+
 ### Day Eight and Nine
 
 The final few days were spent smartening up the styling of the site, and attempting a few last features. Our intention was for this app to have a social feed, however due to time constraints it was looking very unlikely. The feature we settled on as a workaround was to created the a page where all the users in the database are shown. The user can then click to the follow them and when you go back to your profile, it will show how many people you are following. 
