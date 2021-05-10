@@ -327,9 +327,6 @@ On the front end we then went to the ArticleShow page and created an axios PUT r
         console.log('Article Saved!!')
       }
       
-<img src="https://media.giphy.com/media/H3gknfG9zhIvSXgnjV/giphy.gif" width="1439" />
-
-
 ### Day Eight and Nine
 
 The final few days were spent smartening up the styling of the site, and attempting a few last features. Our intention was for this app to have a social feed, however due to time constraints it was looking very unlikely. The feature we settled on as a workaround was to created the a page where all the users in the database are shown. The user can then click to the follow them and when you go back to your profile, it will show how many people you are following. 
@@ -341,11 +338,17 @@ https://user-images.githubusercontent.com/77445688/117583535-876abb00-b0ff-11eb-
 
 
 ## Bugs
-- The save to profile feature for video and recipes are not pushing the id of that post to the correct array. I thought this might be down to the naming convention, so I changes the name of the model field as well as in the PopulatedUserSerialzier, however this did not fix the bug.  This means that user can click on the button however it will not save thier profile.
+- The save to profile feature for video and recipes are not pushing the id of that post to the correct array. I thought this might be down to the naming convention, so I changed the name of the model field as well as in the PopulatedUserSerialzier, however this did not fix the bug.  This means that users can click on the button however it will not save their profile.
 - Currently you can only show one saved article based on the conditional render that has been coded.
 - The search for a user function allows an input but does not render the name of the search, there is more refining to do on the code. 
-- The image upload on the registration page takes the upload but the functionality for the saving it to the profile is yet to be added.
+- The image upload on the registration page takes the upload but the functionality for saving it to the profile is yet to be added.
 
 ## Challenges
 
-The save to user profile feauture was the biggest challenge, it took me and coding partner a whole day and a half to crack, and in the end we had to ask for help as we had exhausted all the recources we could find. I the win from this was that my code initially and my logic was not far off the solution which gave me confidence that I was on the right track.
+The save to user profile feature was the biggest challenge, it took me and my coding partner a whole day and a half to crack, and in the end we had to ask for help as we had exhausted all the resources we could find. The win from this was that my initial code and my logic was not far off the solution, which gave me confidence that I was on the right track.
+
+Deployment to Heroku was another struggle. On the front end we had to refactor our images as they were in the public folder which we had to move into the src folder and then import each image as an object in the component so that it would render. Also we had trouble with using the AutoSlug element. Our intention for this was for each user to have their username as their URL for the site, we didn't get round to adding this functionality and this was causing build errors in Heroku, so we had to uninstall AutoSlug and then try to deploy which worked.
+
+## Wins
+
+- Being more confident to try new things and implement the features desired. I definitely feel that in this project I have semented my learnings from the past 11 weeks. I can now see how everything links a lot more, and given that it was just two of us in this project we still managed to achieve more than I thought we would.
