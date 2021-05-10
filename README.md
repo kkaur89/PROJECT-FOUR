@@ -351,4 +351,16 @@ Deployment to Heroku was another struggle. On the front end we had to refactor o
 
 ## Wins
 
-- Being more confident to try new things and implement the features desired. I definitely feel that in this project I have cemented my learnings from the past 11 weeks. I can now see how everything links a lot more, and given that it was just two of us in this project we still managed to achieve more than I thought we would.
+- Being more confident to try new things and implement the features desired. I definitely feel that in this project I have cemented my learnings from the past 12 weeks. I can now see how everything links a lot more, and given that it was just two of us in this project we still managed to achieve more than I thought we would.
+- In terms of styling, I think in my second project I felt that the styling was inconsistent across the different pages, and one of things I really want to focus on what making sure each page for the final project felt consistent, which I believe is true and has been achieved.
+
+## Future Improvements
+
+- Fix the bugs.
+- Make the site responsive.
+- Implement the social feed aspect.
+
+## Key Learnings
+
+- I'm really glad that I decided to pair code as I gained further experience in coding alongside someone else which I believe will help me when working in industry. It is important to understand and adapt to how everyone works as that will help to work as part of a team.
+- My own progression and learning journey. I still have so much to learn but have achieved so much in the past 12 weeks, and I have learnt from every hurdle and mistake made on this project as well the course.
