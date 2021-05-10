@@ -24,8 +24,8 @@ For my final project, I decided I wanted to work in a pair. I wanted the balance
 
 Please see full deployed version **[here](https://fitbox1.herokuapp.com)**. Login details are required to access the full version, feel free to use the below:
 
-- email: 
-- password: 
+- email: karenkaur@email.com
+- password: password123!
 
 https://user-images.githubusercontent.com/77445688/117290512-cbdb2a00-ae65-11eb-9d74-e04c3dce7afc.mov
 
@@ -327,7 +327,7 @@ On the front end we then went to the ArticleShow page and created an axios PUT r
         console.log('Article Saved!!')
       }
       
-### Day Eight and Nine
+### Day Eight and Nine - Styling and Final Features
 
 The final few days were spent smartening up the styling of the site, and attempting a few last features. Our intention was for this app to have a social feed, however due to time constraints it was looking very unlikely. The feature we settled on as a workaround was to created the a page where all the users in the database are shown. The user can then click to the follow them and when you go back to your profile, it will show how many people you are following. 
 
