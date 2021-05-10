@@ -351,4 +351,4 @@ Deployment to Heroku was another struggle. On the front end we had to refactor o
 
 ## Wins
 
-- Being more confident to try new things and implement the features desired. I definitely feel that in this project I have semented my learnings from the past 11 weeks. I can now see how everything links a lot more, and given that it was just two of us in this project we still managed to achieve more than I thought we would.
+- Being more confident to try new things and implement the features desired. I definitely feel that in this project I have cemented my learnings from the past 11 weeks. I can now see how everything links a lot more, and given that it was just two of us in this project we still managed to achieve more than I thought we would.
