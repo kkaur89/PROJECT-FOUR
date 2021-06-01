@@ -362,5 +362,5 @@ Deployment to Heroku was another struggle. On the front end we had to refactor o
 
 ## Key Learnings
 
-- I'm really glad that I decided to pair code as I gained further experience in coding alongside someone else which I believe will help me when working in industry. It is important to understand and adapt to how everyone works as that will help to work as part of a team.
-- My own progression and learning journey. I still have so much to learn but have achieved so much in the past 12 weeks, and I have learnt from every hurdle and mistake made on this project as well the course.
+- I'm really glad that I decided to pair code as I gained further experience in coding alongside someone else which I believe will help me when working in industry. It is important to understand and adapt to how everyone works which is essential when working as part of a team.
+- My own progression and learning journey. I still have so much to learn but have achieved so much in the past 12 weeks, and I have learned from every hurdle and mistake made on this project as well the course.
